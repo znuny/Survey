@@ -159,7 +159,7 @@
 
 [% RenderBlockStart("SurveyEditStatsQuestion") %]
                     <fieldset class="SpacingTop SurveyGraphs">
-                        <div class="Question" title="[% Data.Question %]" >[% Data.Question | truncate(100) | html %]: </div>
+                        <div class="Question" title="[% Data.Question | html %]" >[% Data.Question | truncate(100) | html %]: </div>
 [% RenderBlockStart("SurveyEditStatsAnswer") %]
                         <div class="Answer">[% Translate(Data.Answer) | html %]</div>
 
