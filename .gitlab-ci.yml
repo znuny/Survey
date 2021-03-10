@@ -1,10 +1,11 @@
-#image: registry.znuny.com/znuny/internal/docker-centos-otrs-systemd:stable
-#
-#include:
-#  - project: 'Znuny/Internal/Znuny'
-#    file: '/templates/gitlab/default/deploy.yml'
+image: registry.znuny.com/znuny/internal/docker-centos-otrs-systemd:stable
+
+include:
+  - project: 'Znuny/Internal/Znuny'
+    file: '/templates/gitlab/default/deploy.yml'
 
 stages:
+  - deploy
   - deploy-opm
 
 deploy-opm:
