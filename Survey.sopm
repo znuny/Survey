@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <otrs_package version="1.0">
     <Name>Survey</Name>
-    <Version>6.0.21</Version>
-    <ChangeLog Version="6.0.21" Date="2021-03-10 15:19:29 +0100">Added missing HTML filter.</ChangeLog>
-    <Framework Minimum="6.0.26">6.0.x</Framework>
-    <Vendor>Znuny GmbH</Vendor>
-    <URL>https://znuny.com/</URL>
+    <Version>6.1.0</Version>
+    <Framework>6.1.x</Framework>
+    <Vendor>Znuny</Vendor>
+    <URL>https://www.znuny.org/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <Description Lang="en">A customer survey tool.</Description>
     <Description Lang="de">Tool für Kundenumfragen.</Description>
