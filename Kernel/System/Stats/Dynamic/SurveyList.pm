@@ -1,5 +1,6 @@
 # --
-# Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
+# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
+# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -311,6 +312,9 @@ sub GetStatTable {
     my %SurveyRawData;
     my %Questions;
 
+    # Array to store equal order of question in rows and headers.
+    my @AllQuestions;
+
     my $StatsObject = $Kernel::OM->Get('Kernel::System::Stats');
 
     SURVEYID:
@@ -333,6 +337,9 @@ sub GetStatTable {
         );
 
         $Questions{$SurveyID} = \@QuestionsList;
+
+        # When we depends only on hashes we can get separated answers in stat.
+        push @AllQuestions, \@QuestionsList;
 
         # Get public survey keys.
         my $PublicSurveyKeys;
@@ -368,7 +375,7 @@ sub GetStatTable {
                 RequestID => $SurveyRequest{RequestID},
             );
 
-            my @Questions;
+            my %Answers;
 
             # Loop through vote data to merge votes into survey request hash.
             VOTEDATA:
@@ -401,14 +408,7 @@ sub GetStatTable {
                         }
                     }
 
-                    if ( $SurveyRequest{$Question} ) {
-
-                        $SurveyRequest{$Question} .= $Answer{Answer} . "\n";
-                    }
-                    else {
-
-                        $SurveyRequest{$Question} = $Answer{Answer};
-                    }
+                    push @{ $Answers{$QuestionID} }, $Answer{Answer};
                 }
                 elsif ( $QuestionType eq 'YesNo' || $QuestionType eq 'Textarea' ) {
 
@@ -420,22 +420,12 @@ sub GetStatTable {
                         );
                     }
 
-                    $SurveyRequest{$Question} = $VoteValue;
+                    $SurveyRequest{Questions}{$QuestionID} = $VoteValue;
                 }
             }
 
-            # Get question list.
-            my $QuestionsList = $Questions{ $SurveyRequest{SurveyID} };
-            for my $Question ( @{$QuestionsList} ) {
-
-                # Push questions into array for later use.
-                push @Questions, $Question->{Question};
-
-                # Default value.
-                if ( !defined $SurveyRequest{ $Question->{Question} } ) {
-
-                    $SurveyRequest{ $Question->{Question} } = " ";
-                }
+            for my $Question ( sort keys %Answers ) {
+                $SurveyRequest{Questions}{$Question} = join( ', ', @{ $Answers{$Question} } );
             }
 
             my @ResultRow;
@@ -477,11 +467,16 @@ sub GetStatTable {
                 push @ResultRow, $SurveyData{$Attribute};
             }
 
-            # Merge questions into result row.
-            QUESTIONS:
-            for my $Question (@Questions) {
+            # Iterate thru already existing questions from surveys.
+            for my $SurveyQuestion (@AllQuestions) {
+                for my $Question ( @{$SurveyQuestion} ) {
 
-                push @ResultRow, $SurveyData{$Question};
+                    # Merge questions into result row.
+                    if ( !defined $SurveyData{Questions}{ $Question->{QuestionID} } ) {
+                        $SurveyData{Questions}{ $Question->{QuestionID} } = '';
+                    }
+                    push @ResultRow, $SurveyData{Questions}{ $Question->{QuestionID} };
+                }
             }
 
             push @StatArray, \@ResultRow;
@@ -520,24 +515,24 @@ sub GetHeaderLine {
     # Add questions.
     # Only if survey restriction is active.
     # Get survey ids.
-    if ( $Param{Restrictions}->{SurveyIDs} ) {
+    my @SurveyIDs = $SurveyObject->SurveySearch(
+        UserID => 1,
+        %{ $Param{Restrictions} },
+    );
 
-        my @SurveyIDs = $Param{Restrictions}->{SurveyIDs};
+    SURVEYID:
+    for my $SurveyID (@SurveyIDs) {
+        next SURVEYID if $Param{Restrictions}->{SurveyIDs} && $Param{Restrictions}->{SurveyIDs} ne $SurveyID;
 
-        # Get questions.
-        my @Questions;
-        for my $SurveyID (@SurveyIDs) {
+        # Question data.
+        my @Questions = $SurveyObject->QuestionList(
+            SurveyID => $SurveyID,
+        );
 
-            my @List = $SurveyObject->QuestionList(
-                SurveyID => $SurveyID,
-            );
-
-            for my $List (@List) {
-                push @Questions, $List->{Question};
-            }
+        # Add question to header line.
+        for my $Question (@Questions) {
+            push @HeaderLine, $Question->{Question};
         }
-
-        push @HeaderLine, @Questions;
     }
 
     return \@HeaderLine;
