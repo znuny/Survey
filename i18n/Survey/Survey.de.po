@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Survey\n"
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
-"PO-Revision-Date: 2020-09-28 08:42+0000\n"
-"Last-Translator: Michael Reuther <michael.reuther@otrs.com>\n"
-"Language-Team: German <https://translate.otrs.com/projects/otrs-6/survey/de/>"
-"\n"
+"PO-Revision-Date: 2022-03-18 15:53+0000\n"
+"Last-Translator: Denny Korsukéwitz <dk@znuny.com>\n"
+"Language-Team: German <https://translations.znuny.org/projects/znuny/survey/"
+"de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.2.2\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #. Template: AgentSurveyAdd
 msgid "Create New Survey"
@@ -300,11 +300,11 @@ msgstr "Umfrage bearbeiten"
 
 #. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
 msgid "You have no permission for this survey or question!"
-msgstr "Sie haben keine Berechtigung für diese Umfrage oder Frage."
+msgstr "Sie haben keine Berechtigung für diese Umfrage oder Frage!"
 
 #. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
 msgid "You have no permission for this survey, question or answer!"
-msgstr "Sie haben keine Berechtigung für diese Umfrage, Frage oder Antwort."
+msgstr "Sie haben keine Berechtigung für diese Umfrage, Frage oder Antwort!"
 
 #. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
 msgid "Survey Edit Questions"
@@ -352,7 +352,7 @@ msgstr "Statistikübersicht"
 
 #. Perl Module: Kernel/Modules/AgentSurveyStats.pm
 msgid "You have no permission for this survey or stats detail!"
-msgstr "Sie haben keine Berechtigung für diese Umfrage- oder Statistikdetails."
+msgstr "Sie haben keine Berechtigung für diese Umfrage- oder Statistikdetails!"
 
 #. Perl Module: Kernel/Modules/AgentSurveyStats.pm
 msgid "Stats Detail"
@@ -479,7 +479,7 @@ msgstr "Ein Umfrage-Modul."
 
 #. SysConfig
 msgid "A module to edit survey questions."
-msgstr "Ein Modul, um Umfragen zu bearbeiten"
+msgstr "Ein Modul, um Umfragen zu bearbeiten."
 
 #. SysConfig
 msgid "All parameters for the Survey object in the agent interface."
@@ -538,7 +538,7 @@ msgid ""
 msgstr ""
 "Definiert die maximale Anzahl von Umfragen die ein Kunde innerhalb von 30 "
 "Tagen zugesandt bekommt. ( 0 steht für kein Maximum, alle Umfrage-E-Mails "
-"werden versandt.)"
+"werden versandt)."
 
 #. SysConfig
 msgid ""
@@ -765,7 +765,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Trigger sending delayed survey requests."
-msgstr "Auslöser zum Senden von verzögerten Anfragen"
+msgstr "Auslöser zum Senden von verzögerten Anfragen."
 
 #. SysConfig
 msgid "Zoom into statistics details."

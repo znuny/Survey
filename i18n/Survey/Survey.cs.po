@@ -2,13 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Survey\n"
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-04-27 11:09+0000\n"
+"Last-Translator: YOURWiFi <wifi@yourwifi.cz>\n"
+"Language-Team: Czech <https://translations.znuny.org/projects/znuny/survey/"
+"cs/>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #. Template: AgentSurveyAdd
 msgid "Create New Survey"
@@ -20,19 +23,19 @@ msgstr "Úvod"
 
 #. Template: AgentSurveyAdd
 msgid "Survey Introduction"
-msgstr "Úvod Průzkumu"
+msgstr "Úvod průzkumu"
 
 #. Template: AgentSurveyAdd
 msgid "Notification Body"
-msgstr "Tělo Notifikace"
+msgstr "Tělo notifikace"
 
 #. Template: AgentSurveyAdd
 msgid "Ticket Types"
-msgstr "Typy Ticket"
+msgstr "Typy ticketu"
 
 #. Template: AgentSurveyAdd
 msgid "Internal Description"
-msgstr "Interní Popis"
+msgstr "Interní popis"
 
 #. Template: AgentSurveyAdd
 msgid "Customer conditions"
@@ -52,11 +55,11 @@ msgstr "Ukázkový průzkum"
 
 #. Template: AgentSurveyEdit
 msgid "Edit General Info"
-msgstr "Upravit Základní Info"
+msgstr "Upravit základní informace"
 
 #. Template: AgentSurveyEditQuestions
 msgid "Edit Questions"
-msgstr "Upravit Otázky"
+msgstr "Upravit otázky"
 
 #. Template: AgentSurveyEditQuestions
 msgid "You are here"
@@ -64,11 +67,11 @@ msgstr "Jste zde"
 
 #. Template: AgentSurveyEditQuestions
 msgid "Survey Questions"
-msgstr "Otázky Půrzkumu"
+msgstr "Otázky průzkumu"
 
 #. Template: AgentSurveyEditQuestions
 msgid "Add Question"
-msgstr "Přidat Otázku"
+msgstr "Přidat otázku"
 
 #. Template: AgentSurveyEditQuestions
 msgid "Type the question"
@@ -92,7 +95,7 @@ msgstr "Odpověď je požadována"
 
 #. Template: AgentSurveyEditQuestions
 msgid "When you finish to edit the survey questions just close this screen."
-msgstr "Až ukončíte úpravu otázek, tak jen zavřete okno."
+msgstr "Jakmile ukončíte úpravu otázek, tak jen zavřete toto okno."
 
 #. Template: AgentSurveyEditQuestions
 msgid "Close this window"
@@ -100,7 +103,7 @@ msgstr ""
 
 #. Template: AgentSurveyEditQuestions
 msgid "Edit Question"
-msgstr "Upravit Otázky"
+msgstr "Upravit otázku"
 
 #. Template: AgentSurveyEditQuestions
 msgid "go back to questions"
@@ -151,7 +154,7 @@ msgstr ""
 
 #. Template: AgentSurveyOverviewNavBar
 msgid "Survey Create Time"
-msgstr "Čas vytvoření Průzkumu"
+msgstr "Čas vytvoření průzkumu"
 
 #. Template: AgentSurveyOverviewNavBar
 msgid "No restriction"
