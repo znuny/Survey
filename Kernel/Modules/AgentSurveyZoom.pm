@@ -7,6 +7,8 @@
 # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 
+## nofilter(TidyAll::Plugin::Znuny::Perl::DBObject)
+
 package Kernel::Modules::AgentSurveyZoom;
 
 use strict;
