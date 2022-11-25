@@ -4,279 +4,271 @@ msgstr ""
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
 "PO-Revision-Date: 2022-04-23 12:09+0000\n"
 "Last-Translator: Daniel Lisiecki <lisiecki.daniel@gmail.com>\n"
-"Language-Team: Polish <https://translations.znuny.org/projects/znuny/survey/"
-"pl/>\n"
+"Language-Team: Polish <https://translations.znuny.org/projects/znuny/survey/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.11.2\n"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Create New Survey"
 msgstr "Utwórz nową ankietę"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Introduction"
 msgstr "Wprowadzenie"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey Introduction"
 msgstr "Wstęp ankiety"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Notification Body"
 msgstr "Treść powiadomienia"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Ticket Types"
 msgstr "Typy zgłoszeń"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Internal Description"
 msgstr "Wewnętrzny opis"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Customer conditions"
 msgstr "Warunki klienta"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Please choose a Customer property to add a condition."
 msgstr "Wybierz właściwości klienta aby dodać warunek."
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr "Klucz ankiety publicznej"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Example survey"
 msgstr "Przykładowa ankieta"
 
-#. Template: AgentSurveyEdit
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
 msgid "Edit General Info"
 msgstr "Edytuj informacje ogólne"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Questions"
 msgstr "Edytuj pytania"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "You are here"
 msgstr "Jesteś tu"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Survey Questions"
 msgstr "Pytania ankiety"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Add Question"
 msgstr "Dodaj pytanie"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Type the question"
 msgstr "Wprowadź pytanie"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer required"
 msgstr "Wymagana odpowiedź"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "No questions saved for this survey."
 msgstr "Brak pytań zapisanych w tej ankiecie."
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Question"
 msgstr "Pytanie"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer Required"
 msgstr "Wymagana odpowiedź"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "When you finish to edit the survey questions just close this screen."
 msgstr "Kiedy zakończysz edycję pytań ankiety po prostu zamknij to okno."
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Close this window"
 msgstr "Zamknij to okno"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Question"
 msgstr "Edytuj pytanie"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "go back to questions"
 msgstr "powrót do pytań"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Question:"
 msgstr "Pytanie:"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Possible Answers For"
 msgstr "Możliwe odpowiedzi do"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Add Answer"
 msgstr "Dodaj odpowiedź"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "No answers saved for this question."
 msgstr "Brak zapisanych odpowiedzi na to pytanie."
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "This doesn't have several answers, a textarea will be displayed."
 msgstr "Nie posiada wielu odpowiedzi, będzie wyświetlane pole tekstowe."
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Answer"
 msgstr "Edytuj odpowiedź"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "go back to edit question"
 msgstr "powrót do edycji pytania"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer:"
 msgstr "Odpowiedz:"
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Survey overview options"
 msgstr "Opcje przeglądu ankiety"
 
-#. Template: AgentSurveyOverviewNavBar
-msgid ""
-"Searches in the attributes Number, Title, Introduction, Description, "
-"NotificationSender, NotificationSubject and NotificationBody, overriding "
-"other attributes with the same name."
-msgstr ""
-"Przeszukuje atrybuty: Numer, Tytuł, Wprowadzenie, Opis, Nadawca "
-"powiadomienia, Tytuł powiadomienia, Ciało powiadomienia, pomijając inne "
-"atrybuty o tych samych nazwach."
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
+msgid "Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name."
+msgstr "Przeszukuje atrybuty: Numer, Tytuł, Wprowadzenie, Opis, Nadawca powiadomienia, Tytuł powiadomienia, Ciało powiadomienia, pomijając inne atrybuty o tych samych nazwach."
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Survey Create Time"
 msgstr "Czas utworzenia ankiety"
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "No restriction"
 msgstr "Bez ograniczeń"
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Only surveys created between"
 msgstr "Tylko ankiety utworzone między"
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Max. shown surveys per page"
 msgstr "Maks. liczba wyświetlanych ankiet na stronę"
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Notification Sender"
 msgstr "Nadawca powiadomienia"
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Notification Subject"
 msgstr "Temat powiadomienia"
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Changed By"
 msgstr "Zmienione przez"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Stats Overview of"
 msgstr "Przegląd statystyki"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Requests Table"
 msgstr "Tabela żądań"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Select all requests"
 msgstr "Zaznacz wszystkie żądania"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Send Time"
 msgstr "Czas wysłania"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Vote Time"
 msgstr "Czas głosowania"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Select this request"
 msgstr "Zaznacz to żądanie"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "See Details"
 msgstr "Zobacz szczegóły"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Delete stats"
 msgstr "Usuń statystyki"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Survey Stat Details"
 msgstr "Szczegóły statystyki"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "go back to stats overview"
 msgstr "Wstecz do przeglądu statystyki"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Previous vote"
 msgstr "Poprzedni głos"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Next vote"
 msgstr "Następny głos"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Information"
 msgstr "Informacje o ankiecie"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Sent requests"
 msgstr "Wysłane żądania"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Received surveys"
 msgstr "Otrzymane ankiety"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Details"
 msgstr "Szczegóły ankiety"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Ticket Services"
 msgstr "Zgłoszenie Usług"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Results Graph"
 msgstr "Wykres wyników ankiety"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "No stat results."
 msgstr "Brak wyników ankiety."
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Survey"
 msgstr "Ankieta"
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Please answer these questions"
 msgstr "Proszę odpowiedzieć na te pytania"
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Show my answers"
 msgstr "Pokaż moje odpowiedzi"
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "These are your answers"
 msgstr "Oto Twoje odpowiedzi"
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Survey Title"
 msgstr "Tytuł ankiety"
 
@@ -426,8 +418,7 @@ msgstr "Moduł nie włączony."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "This functionality is not enabled, please contact your administrator."
-msgstr ""
-"Ta funkcjonalność nie jest włączona. Proszę skontaktuj się z administratorem."
+msgstr "Ta funkcjonalność nie jest włączona. Proszę skontaktuj się z administratorem."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "Survey Error!"
@@ -438,12 +429,8 @@ msgid "Invalid survey key."
 msgstr "Nieprawidłowy klucz ankiety."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
-msgid ""
-"The inserted survey key is invalid, if you followed a link maybe this is "
-"obsolete or broken."
-msgstr ""
-"Wprowadzony klucz ankiety jest nieprawidłowy. Jeśli trafiłeś tutaj przy "
-"pomocy linku, być może jest on nieaktualny lub nieprawidłowy."
+msgid "The inserted survey key is invalid, if you followed a link maybe this is obsolete or broken."
+msgstr "Wprowadzony klucz ankiety jest nieprawidłowy. Jeśli trafiłeś tutaj przy pomocy linku, być może jest on nieaktualny lub nieprawidłowy."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "Survey Vote"
@@ -461,13 +448,11 @@ msgstr "Już odpowiedziałeś na tę ankietę."
 msgid "Survey List"
 msgstr "Lista ankiet"
 
-#. JS File: Survey.Agent.SurveyEditQuestions
-msgid ""
-"Do you really want to delete this question? ALL associated data will be LOST!"
-msgstr ""
-"Czy na pewno chcesz usunąć to pytanie? Wszystkie związane dane będą USUNIĘTE!"
+#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+msgid "Do you really want to delete this question? ALL associated data will be LOST!"
+msgstr "Czy na pewno chcesz usunąć to pytanie? Wszystkie związane dane będą USUNIĘTE!"
 
-#. JS File: Survey.Agent.SurveyEditQuestions
+#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
 msgid "Do you really want to delete this answer?"
 msgstr "Czy na pewno chcesz usunąć tę odpowiedź?"
 
@@ -484,25 +469,19 @@ msgid "All parameters for the Survey object in the agent interface."
 msgstr "Wszystkie parametry dla ankiet w interfejsie agenta."
 
 #. SysConfig
-msgid ""
-"Amount of days after sending a survey mail in which no new survey requests "
-"are sent to the same customer. Selecting 0 will always send the survey mail."
-msgstr ""
-"Liczba dni po których nastąpi wysłanie żądania wypełnienia ankiety. "
-"Wprowadzenie \"0\" spowoduje wysłanie e-maila zawsze."
+msgid "Amount of days after sending a survey mail in which no new survey requests are sent to the same customer. Selecting 0 will always send the survey mail."
+msgstr "Liczba dni po których nastąpi wysłanie żądania wypełnienia ankiety. Wprowadzenie \"0\" spowoduje wysłanie e-maila zawsze."
 
 #. SysConfig
 msgid "Default body for the notification email to customers about new survey."
 msgstr "Domyślna budowa informacji dl użytkownika odnośnie nowej ankiety."
 
 #. SysConfig
-msgid ""
-"Default sender for the notification email to customers about new survey."
+msgid "Default sender for the notification email to customers about new survey."
 msgstr "Domyślny nadawca informacji o nowej ankiecie."
 
 #. SysConfig
-msgid ""
-"Default subject for the notification email to customers about new survey."
+msgid "Default subject for the notification email to customers about new survey."
 msgstr "Domyślny temat informacji o nowej ankiete."
 
 #. SysConfig
@@ -510,47 +489,24 @@ msgid "Defines an overview module to show the small view of a survey list."
 msgstr "Defniuje moduł przeglądu wyświetlania list ankiet."
 
 #. SysConfig
-msgid ""
-"Defines groups which have a permission to change survey status. Array is "
-"empty by default and agents from all groups can change survey status."
-msgstr ""
-"Określa grupy, które mają dostęp do zmiany statusów ankiet. Tabela jest "
-"domyślnie pusta i agenci ze wszystkich grup mogą zmieniać statusy."
+msgid "Defines groups which have a permission to change survey status. Array is empty by default and agents from all groups can change survey status."
+msgstr "Określa grupy, które mają dostęp do zmiany statusów ankiet. Tabela jest domyślnie pusta i agenci ze wszystkich grup mogą zmieniać statusy."
 
 #. SysConfig
 msgid "Defines if survey requests will be only send to real customers."
-msgstr ""
-"Określa, czy żądanie wypełnienia ankiety będzie wysyłane tylko do "
-"rzeczywistych klientów."
+msgstr "Określa, czy żądanie wypełnienia ankiety będzie wysyłane tylko do rzeczywistych klientów."
 
 #. SysConfig
-msgid ""
-"Defines maximum amount of surveys that get sent to a customer per 30 days. "
-"( 0 means no maximum, all survey requests will be sent)."
-msgstr ""
-"Definiuje maksymalną liczbę ankiet wysyłaniu do Klienta w ciągu 30 dni. (0 "
-"oznacza brak ograniczenia, wszystkie żądania będą wysyłane)."
+msgid "Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent)."
+msgstr "Definiuje maksymalną liczbę ankiet wysyłaniu do Klienta w ciągu 30 dni. (0 oznacza brak ograniczenia, wszystkie żądania będą wysyłane)."
 
 #. SysConfig
-msgid ""
-"Defines the amount in hours a ticket has to be closed to trigger the sending "
-"of a survey, ( 0 means send immediately after close ). Note: delayed survey "
-"sending is done by the OTRS Daemon, prior activation of 'Daemon::"
-"SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
-msgstr ""
-"Ustala liczbę godzin które muszą minąć od zamknięcia zgłoszenia do wysłania "
-"ankiety (0 oznacza bezzwłoczną wysyłkę przy zamykaniu zgłoszenia). Uwaga: "
-"opóźnione wysyłanie ankiety jest realizowane przez Demona OTRS, po "
-"uprzedniej aktywacji w ustawieniach: "
-"'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend'."
+msgid "Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
+msgstr "Ustala liczbę godzin które muszą minąć od zamknięcia zgłoszenia do wysłania ankiety (0 oznacza bezzwłoczną wysyłkę przy zamykaniu zgłoszenia). Uwaga: opóźnione wysyłanie ankiety jest realizowane przez Demona OTRS, po uprzedniej aktywacji w ustawieniach: 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend'."
 
 #. SysConfig
-msgid ""
-"Defines the columns for the dropdown list for building send conditions (0 => "
-"inactive, 1 => active)."
-msgstr ""
-"Definiuje kolumny listy rozwijanej dla budowania warunków wysyłki (0 => "
-"nieaktywny, 1 => aktywny)."
+msgid "Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active)."
+msgstr "Definiuje kolumny listy rozwijanej dla budowania warunków wysyłki (0 => nieaktywny, 1 => aktywny)."
 
 #. SysConfig
 msgid "Defines the default height for Richtext views for SurveyZoom elements."
@@ -562,16 +518,11 @@ msgstr "Definiuje grupy (rw) które mogą usuwać statystyki ankiet."
 
 #. SysConfig
 msgid "Defines the maximum height for Richtext views for SurveyZoom elements."
-msgstr ""
-"Definiuje maksymalną wysokość widoków Richtext dla elementów SurveyZoom."
+msgstr "Definiuje maksymalną wysokość widoków Richtext dla elementów SurveyZoom."
 
 #. SysConfig
-msgid ""
-"Defines the shown columns in the survey overview. This option has no effect "
-"on the position of the columns."
-msgstr ""
-"Definiuje widoczne kolumny w przeglądzie ankiet. Ta opcja nie wpływa na "
-"pozycję kolumn."
+msgid "Defines the shown columns in the survey overview. This option has no effect on the position of the columns."
+msgstr "Definiuje widoczne kolumny w przeglądzie ankiet. Ta opcja nie wpływa na pozycję kolumn."
 
 #. SysConfig
 msgid "Determines if the statistics module may generate survey lists."
@@ -586,13 +537,8 @@ msgid "Edit survey questions."
 msgstr "Edytuj pytania ankiety."
 
 #. SysConfig
-msgid ""
-"Enable or disable the ShowVoteData screen in the public interface to show "
-"data of a specific survey result when the customer tries to answer a survey "
-"the second time."
-msgstr ""
-"Włącz lub wyłącz ekran ShowVoteData w interfejsie publicznym aby pokazać "
-"wyniki ankiety gdy klient próbuje odpowiedzieć na akietę drugi raz."
+msgid "Enable or disable the ShowVoteData screen in the public interface to show data of a specific survey result when the customer tries to answer a survey the second time."
+msgstr "Włącz lub wyłącz ekran ShowVoteData w interfejsie publicznym aby pokazać wyniki ankiety gdy klient próbuje odpowiedzieć na akietę drugi raz."
 
 #. SysConfig
 msgid "Enable or disable the send condition check for the service."
@@ -619,76 +565,44 @@ msgid "Frontend module registration for survey zoom in the agent interface."
 msgstr "Moduł frontend rejestrujący podgląd ankiet w panelu agenta."
 
 #. SysConfig
-msgid ""
-"Frontend module registration for the PublicSurvey object in the public "
-"Survey area."
-msgstr ""
-"Moduł frontend rejestrujący obiekt PublicSurvey w obszarze publicznym "
-"ankiety."
+msgid "Frontend module registration for the PublicSurvey object in the public Survey area."
+msgstr "Moduł frontend rejestrujący obiekt PublicSurvey w obszarze publicznym ankiety."
 
 #. SysConfig
 msgid "If this regex matches, no customer survey will be sent."
-msgstr ""
-"Gdy to wyrażenie regularne jest spełnione, nie zostanie wysłana żadna "
-"ankieta do klienta."
+msgstr "Gdy to wyrażenie regularne jest spełnione, nie zostanie wysłana żadna ankieta do klienta."
 
 #. SysConfig
 msgid "Limit."
 msgstr "Limit."
 
 #. SysConfig
-msgid ""
-"Parameters for the pages (in which the surveys are shown) of the small "
-"survey overview."
-msgstr ""
-"Parametry dla stron (na których pokazywane są ankiety) dla małego przeglądu "
-"ankiet."
+msgid "Parameters for the pages (in which the surveys are shown) of the small survey overview."
+msgstr "Parametry dla stron (na których pokazywane są ankiety) dla małego przeglądu ankiet."
 
 #. SysConfig
 msgid "Public Survey."
 msgstr "Ankieta publiczna."
 
 #. SysConfig
-msgid ""
-"Results older than the configured amount of days will be deleted. Note: "
-"delete results done by the OTRS Daemon, prior activation of "
-"'Task###SurveyRequestsDelete' setting."
-msgstr ""
-"Wyniki starsze niż określona ilość dni zostaną usunięte. Uwaga: Wyniki są "
-"usuwane przez Demona OTRS po aktywacji ustawienia "
-"'Task###SurveyRequestsDelete'."
+msgid "Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of 'Task###SurveyRequestsDelete' setting."
+msgstr "Wyniki starsze niż określona ilość dni zostaną usunięte. Uwaga: Wyniki są usuwane przez Demona OTRS po aktywacji ustawienia 'Task###SurveyRequestsDelete'."
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to edit a survey in its zoom view of the agent "
-"interface."
-msgstr ""
-"Pokazuje link w menu do edycji ankiety w jej przybliżonym widoku w "
-"interfejsie agenta."
+msgid "Shows a link in the menu to edit a survey in its zoom view of the agent interface."
+msgstr "Pokazuje link w menu do edycji ankiety w jej przybliżonym widoku w interfejsie agenta."
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to edit survey questions in its zoom view of the "
-"agent interface."
-msgstr ""
-"Pokazuje link w menu do edycji pytań ankiety w jej przybliżonym widoku w "
-"interfejsie agenta."
+msgid "Shows a link in the menu to edit survey questions in its zoom view of the agent interface."
+msgstr "Pokazuje link w menu do edycji pytań ankiety w jej przybliżonym widoku w interfejsie agenta."
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to go back in the survey zoom view of the agent "
-"interface."
-msgstr ""
-"Pokazuje w menu link wstecz w widoku przybliżonym ankiety w interfejsie "
-"agenta."
+msgid "Shows a link in the menu to go back in the survey zoom view of the agent interface."
+msgstr "Pokazuje w menu link wstecz w widoku przybliżonym ankiety w interfejsie agenta."
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to zoom into the survey statistics details in its "
-"zoom view of the agent interface."
-msgstr ""
-"Pokazuje link w menu do przybliżania szczegółów statystyk ankiety w jej "
-"widoku przybliżonym w interfejsie agenta."
+msgid "Shows a link in the menu to zoom into the survey statistics details in its zoom view of the agent interface."
+msgstr "Pokazuje link w menu do przybliżania szczegółów statystyk ankiety w jej widoku przybliżonym w interfejsie agenta."
 
 #. SysConfig
 msgid "Stats Details"
@@ -723,17 +637,12 @@ msgid "Surveys will not be sent to the configured email addresses."
 msgstr "Ankiety nie będą wysyłane na skonfigurowane adresy email."
 
 #. SysConfig
-msgid ""
-"The identifier for a survey, e.g. Survey#, MySurvey#. The default is Survey#."
+msgid "The identifier for a survey, e.g. Survey#, MySurvey#. The default is Survey#."
 msgstr "Identyfikacja dla ankiety, np. Survey#, MySurvey#. Domyślnie: Survey#."
 
 #. SysConfig
-msgid ""
-"Ticket event module to send automatically survey email requests to customers "
-"if a ticket is closed."
-msgstr ""
-"Zdarzenie zgłoszenia wysyła automatycznie e-maila z prośbą o wypełnienie "
-"ankiety po zamknięciu zgłoszenia."
+msgid "Ticket event module to send automatically survey email requests to customers if a ticket is closed."
+msgstr "Zdarzenie zgłoszenia wysyła automatycznie e-maila z prośbą o wypełnienie ankiety po zamknięciu zgłoszenia."
 
 #. SysConfig
 msgid "Trigger delete results (including vote data and requests)."
@@ -746,3 +655,4 @@ msgstr "Wyzwalacz opóźnionej wysyłki próśb o wypełnienie ankiety."
 #. SysConfig
 msgid "Zoom into statistics details."
 msgstr "Podgląd szczegółów statystyk."
+

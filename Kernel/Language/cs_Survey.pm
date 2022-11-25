@@ -1,10 +1,9 @@
 # --
-# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::cs_Survey;
@@ -16,35 +15,35 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Template: AgentSurveyAdd
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Create New Survey'} = 'Vytvořit nový průzkum';
     $Self->{Translation}->{'Introduction'} = 'Úvod';
-    $Self->{Translation}->{'Survey Introduction'} = 'Úvod Průzkumu';
-    $Self->{Translation}->{'Notification Body'} = 'Tělo Notifikace';
-    $Self->{Translation}->{'Ticket Types'} = 'Typy Ticket';
-    $Self->{Translation}->{'Internal Description'} = 'Interní Popis';
+    $Self->{Translation}->{'Survey Introduction'} = 'Úvod průzkumu';
+    $Self->{Translation}->{'Notification Body'} = 'Tělo notifikace';
+    $Self->{Translation}->{'Ticket Types'} = 'Typy ticketu';
+    $Self->{Translation}->{'Internal Description'} = 'Interní popis';
     $Self->{Translation}->{'Customer conditions'} = '';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '';
     $Self->{Translation}->{'Public survey key'} = 'Veřejný klíč průzkumu';
     $Self->{Translation}->{'Example survey'} = 'Ukázkový průzkum';
 
-    # Template: AgentSurveyEdit
-    $Self->{Translation}->{'Edit General Info'} = 'Upravit Základní Info';
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
+    $Self->{Translation}->{'Edit General Info'} = 'Upravit základní informace';
 
-    # Template: AgentSurveyEditQuestions
-    $Self->{Translation}->{'Edit Questions'} = 'Upravit Otázky';
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
+    $Self->{Translation}->{'Edit Questions'} = 'Upravit otázky';
     $Self->{Translation}->{'You are here'} = 'Jste zde';
-    $Self->{Translation}->{'Survey Questions'} = 'Otázky Půrzkumu';
-    $Self->{Translation}->{'Add Question'} = 'Přidat Otázku';
+    $Self->{Translation}->{'Survey Questions'} = 'Otázky průzkumu';
+    $Self->{Translation}->{'Add Question'} = 'Přidat otázku';
     $Self->{Translation}->{'Type the question'} = 'Napište otázku';
     $Self->{Translation}->{'Answer required'} = 'Odpověď je požadována';
     $Self->{Translation}->{'No questions saved for this survey.'} = 'Průzkum neobsahuje žádné otázky.';
     $Self->{Translation}->{'Question'} = 'Otázka';
     $Self->{Translation}->{'Answer Required'} = 'Odpověď je požadována';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
-        'Až ukončíte úpravu otázek, tak jen zavřete okno.';
+        'Jakmile ukončíte úpravu otázek, tak jen zavřete toto okno.';
     $Self->{Translation}->{'Close this window'} = '';
-    $Self->{Translation}->{'Edit Question'} = 'Upravit Otázky';
+    $Self->{Translation}->{'Edit Question'} = 'Upravit otázku';
     $Self->{Translation}->{'go back to questions'} = 'vrátit se zpět k otázkám';
     $Self->{Translation}->{'Question:'} = 'Otázka:';
     $Self->{Translation}->{'Possible Answers For'} = 'Možné Odpovědi pro';
@@ -56,21 +55,21 @@ sub Data {
     $Self->{Translation}->{'go back to edit question'} = 'vrátit se zpět k otázce';
     $Self->{Translation}->{'Answer:'} = 'Odpověď:';
 
-    # Template: AgentSurveyOverviewNavBar
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Nastavení přehledu průzkumu';
     $Self->{Translation}->{'Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name.'} =
         '';
-    $Self->{Translation}->{'Survey Create Time'} = 'Čas vytvoření Průzkumu';
+    $Self->{Translation}->{'Survey Create Time'} = 'Čas vytvoření průzkumu';
     $Self->{Translation}->{'No restriction'} = '';
     $Self->{Translation}->{'Only surveys created between'} = 'Pouze průzkumy vytvořené mezi';
     $Self->{Translation}->{'Max. shown surveys per page'} = 'Maximum průzkumů na stránku';
 
-    # Template: AgentSurveyOverviewSmall
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
     $Self->{Translation}->{'Notification Sender'} = 'Notifikace Odesílatel';
     $Self->{Translation}->{'Notification Subject'} = 'Notifikace Předmět';
     $Self->{Translation}->{'Changed By'} = 'Změněno řešitelem';
 
-    # Template: AgentSurveyStats
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = '';
     $Self->{Translation}->{'Requests Table'} = '';
     $Self->{Translation}->{'Select all requests'} = '';
@@ -84,7 +83,7 @@ sub Data {
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
 
-    # Template: AgentSurveyZoom
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Information'} = '';
     $Self->{Translation}->{'Sent requests'} = '';
     $Self->{Translation}->{'Received surveys'} = '';
@@ -93,7 +92,7 @@ sub Data {
     $Self->{Translation}->{'Survey Results Graph'} = '';
     $Self->{Translation}->{'No stat results.'} = '';
 
-    # Template: PublicSurvey
+    # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = '';
     $Self->{Translation}->{'Please answer these questions'} = '';
     $Self->{Translation}->{'Show my answers'} = '';
@@ -160,7 +159,7 @@ sub Data {
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '';
 
-    # JS File: Survey.Agent.SurveyEditQuestions
+    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         '';
     $Self->{Translation}->{'Do you really want to delete this answer?'} = '';

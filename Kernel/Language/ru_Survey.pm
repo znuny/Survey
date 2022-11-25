@@ -1,10 +1,9 @@
 # --
-# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::ru_Survey;
@@ -16,7 +15,7 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Template: AgentSurveyAdd
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Create New Survey'} = 'Создать новый опрос';
     $Self->{Translation}->{'Introduction'} = 'Описание';
     $Self->{Translation}->{'Survey Introduction'} = 'Знакомство с опросом';
@@ -28,10 +27,10 @@ sub Data {
     $Self->{Translation}->{'Public survey key'} = '';
     $Self->{Translation}->{'Example survey'} = '';
 
-    # Template: AgentSurveyEdit
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Редактировать общую информацию';
 
-    # Template: AgentSurveyEditQuestions
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Редактировать вопросы';
     $Self->{Translation}->{'You are here'} = 'Вы здесь';
     $Self->{Translation}->{'Survey Questions'} = 'Вопросы опроса';
@@ -56,7 +55,7 @@ sub Data {
     $Self->{Translation}->{'go back to edit question'} = 'назад к редактированию вопроса';
     $Self->{Translation}->{'Answer:'} = 'Ответ:';
 
-    # Template: AgentSurveyOverviewNavBar
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = '';
     $Self->{Translation}->{'Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name.'} =
         '';
@@ -65,12 +64,12 @@ sub Data {
     $Self->{Translation}->{'Only surveys created between'} = '';
     $Self->{Translation}->{'Max. shown surveys per page'} = 'Макс. кол-во опросов на страницу';
 
-    # Template: AgentSurveyOverviewSmall
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
     $Self->{Translation}->{'Notification Sender'} = 'Отправитель уведомления';
     $Self->{Translation}->{'Notification Subject'} = 'Тема уведомления';
     $Self->{Translation}->{'Changed By'} = 'Изменивший';
 
-    # Template: AgentSurveyStats
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Подробности опроса';
     $Self->{Translation}->{'Requests Table'} = 'Таблица ответов';
     $Self->{Translation}->{'Select all requests'} = '';
@@ -84,7 +83,7 @@ sub Data {
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
 
-    # Template: AgentSurveyZoom
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Information'} = 'Информация по опросу';
     $Self->{Translation}->{'Sent requests'} = 'Отправленные запросы';
     $Self->{Translation}->{'Received surveys'} = 'Полученные опросы';
@@ -93,7 +92,7 @@ sub Data {
     $Self->{Translation}->{'Survey Results Graph'} = 'Результаты опроса в графике';
     $Self->{Translation}->{'No stat results.'} = 'Статистики нет.';
 
-    # Template: PublicSurvey
+    # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = 'Опросы';
     $Self->{Translation}->{'Please answer these questions'} = 'Ответьте на эти вопросы:';
     $Self->{Translation}->{'Show my answers'} = 'Показать мои ответы';
@@ -160,7 +159,7 @@ sub Data {
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '';
 
-    # JS File: Survey.Agent.SurveyEditQuestions
+    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         'ы действительно хотите удалить этот вопрос?  ВСЕ связанные данные будут ПОТЕРЯНЫ!';
     $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Вы действительно желаете удалить  этот ответ?';

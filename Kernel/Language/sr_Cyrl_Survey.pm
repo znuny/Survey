@@ -1,10 +1,9 @@
 # --
-# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::sr_Cyrl_Survey;
@@ -16,7 +15,7 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Template: AgentSurveyAdd
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Create New Survey'} = 'Направи нову анкету';
     $Self->{Translation}->{'Introduction'} = 'Увод';
     $Self->{Translation}->{'Survey Introduction'} = 'Увод у анкету';
@@ -28,10 +27,10 @@ sub Data {
     $Self->{Translation}->{'Public survey key'} = 'Јавни кључ анкете';
     $Self->{Translation}->{'Example survey'} = 'Пример анкете';
 
-    # Template: AgentSurveyEdit
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Уреди опште информације';
 
-    # Template: AgentSurveyEditQuestions
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Уреди питања';
     $Self->{Translation}->{'You are here'} = 'Ви сте овде';
     $Self->{Translation}->{'Survey Questions'} = 'Анкетна питања';
@@ -56,7 +55,7 @@ sub Data {
     $Self->{Translation}->{'go back to edit question'} = 'назад на уређивање питања';
     $Self->{Translation}->{'Answer:'} = 'Одговор:';
 
-    # Template: AgentSurveyOverviewNavBar
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Подешавања прегледа анкете';
     $Self->{Translation}->{'Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name.'} =
         'Претраге у атрибутима Number, Title, Introduction, Description, NotificationSender, NotificationSubject и NotificationBody, редефиниу друге атрибуте са истим именом.';
@@ -65,12 +64,12 @@ sub Data {
     $Self->{Translation}->{'Only surveys created between'} = 'Само анкете креиране између';
     $Self->{Translation}->{'Max. shown surveys per page'} = 'Максимум приказаних анкета по страни';
 
-    # Template: AgentSurveyOverviewSmall
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
     $Self->{Translation}->{'Notification Sender'} = 'Пошиљаоц обавештења';
     $Self->{Translation}->{'Notification Subject'} = 'Предмет обавештења';
     $Self->{Translation}->{'Changed By'} = 'Мењао';
 
-    # Template: AgentSurveyStats
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Преглед статистике за';
     $Self->{Translation}->{'Requests Table'} = 'Табела захтева';
     $Self->{Translation}->{'Select all requests'} = 'Изабери све захтеве';
@@ -84,7 +83,7 @@ sub Data {
     $Self->{Translation}->{'Previous vote'} = 'Претходни глас';
     $Self->{Translation}->{'Next vote'} = 'Следећи глас';
 
-    # Template: AgentSurveyZoom
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Information'} = 'Информације о анкети';
     $Self->{Translation}->{'Sent requests'} = 'Послати захтеви';
     $Self->{Translation}->{'Received surveys'} = 'Примљене анкете';
@@ -93,7 +92,7 @@ sub Data {
     $Self->{Translation}->{'Survey Results Graph'} = 'Графикон резултата анкете';
     $Self->{Translation}->{'No stat results.'} = 'Нема статистике резултата.';
 
-    # Template: PublicSurvey
+    # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = 'Анкета';
     $Self->{Translation}->{'Please answer these questions'} = 'Молимо да одговорите на ова питања';
     $Self->{Translation}->{'Show my answers'} = 'Покажи моје одговоре';
@@ -160,7 +159,7 @@ sub Data {
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'Листа анкета';
 
-    # JS File: Survey.Agent.SurveyEditQuestions
+    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         'Да ли заиста желите да обришете ово питање? СВИ повезани подаци ће бити ИЗГУБЉЕНИ!';
     $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Да ли заиста желите да избришете овај одговор?';

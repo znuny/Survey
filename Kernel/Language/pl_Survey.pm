@@ -1,10 +1,9 @@
 # --
-# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::pl_Survey;
@@ -16,7 +15,7 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Template: AgentSurveyAdd
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Create New Survey'} = 'Utwórz nową ankietę';
     $Self->{Translation}->{'Introduction'} = 'Wprowadzenie';
     $Self->{Translation}->{'Survey Introduction'} = 'Wstęp ankiety';
@@ -28,10 +27,10 @@ sub Data {
     $Self->{Translation}->{'Public survey key'} = 'Klucz ankiety publicznej';
     $Self->{Translation}->{'Example survey'} = 'Przykładowa ankieta';
 
-    # Template: AgentSurveyEdit
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Edytuj informacje ogólne';
 
-    # Template: AgentSurveyEditQuestions
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Edytuj pytania';
     $Self->{Translation}->{'You are here'} = 'Jesteś tu';
     $Self->{Translation}->{'Survey Questions'} = 'Pytania ankiety';
@@ -56,21 +55,21 @@ sub Data {
     $Self->{Translation}->{'go back to edit question'} = 'powrót do edycji pytania';
     $Self->{Translation}->{'Answer:'} = 'Odpowiedz:';
 
-    # Template: AgentSurveyOverviewNavBar
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Opcje przeglądu ankiety';
     $Self->{Translation}->{'Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name.'} =
-        '';
+        'Przeszukuje atrybuty: Numer, Tytuł, Wprowadzenie, Opis, Nadawca powiadomienia, Tytuł powiadomienia, Ciało powiadomienia, pomijając inne atrybuty o tych samych nazwach.';
     $Self->{Translation}->{'Survey Create Time'} = 'Czas utworzenia ankiety';
     $Self->{Translation}->{'No restriction'} = 'Bez ograniczeń';
     $Self->{Translation}->{'Only surveys created between'} = 'Tylko ankiety utworzone między';
     $Self->{Translation}->{'Max. shown surveys per page'} = 'Maks. liczba wyświetlanych ankiet na stronę';
 
-    # Template: AgentSurveyOverviewSmall
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
     $Self->{Translation}->{'Notification Sender'} = 'Nadawca powiadomienia';
     $Self->{Translation}->{'Notification Subject'} = 'Temat powiadomienia';
     $Self->{Translation}->{'Changed By'} = 'Zmienione przez';
 
-    # Template: AgentSurveyStats
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Przegląd statystyki';
     $Self->{Translation}->{'Requests Table'} = 'Tabela żądań';
     $Self->{Translation}->{'Select all requests'} = 'Zaznacz wszystkie żądania';
@@ -84,7 +83,7 @@ sub Data {
     $Self->{Translation}->{'Previous vote'} = 'Poprzedni głos';
     $Self->{Translation}->{'Next vote'} = 'Następny głos';
 
-    # Template: AgentSurveyZoom
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Information'} = 'Informacje o ankiecie';
     $Self->{Translation}->{'Sent requests'} = 'Wysłane żądania';
     $Self->{Translation}->{'Received surveys'} = 'Otrzymane ankiety';
@@ -93,7 +92,7 @@ sub Data {
     $Self->{Translation}->{'Survey Results Graph'} = 'Wykres wyników ankiety';
     $Self->{Translation}->{'No stat results.'} = 'Brak wyników ankiety.';
 
-    # Template: PublicSurvey
+    # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = 'Ankieta';
     $Self->{Translation}->{'Please answer these questions'} = 'Proszę odpowiedzieć na te pytania';
     $Self->{Translation}->{'Show my answers'} = 'Pokaż moje odpowiedzi';
@@ -115,7 +114,7 @@ sub Data {
     $Self->{Translation}->{'Yes/No'} = 'Tak/Nie';
     $Self->{Translation}->{'Radio (List)'} = 'Radio (Lista)';
     $Self->{Translation}->{'Checkbox (List)'} = 'Pole wyboru (Lista)';
-    $Self->{Translation}->{'Net Promoter Score'} = '';
+    $Self->{Translation}->{'Net Promoter Score'} = 'Wynik Net Promoter';
     $Self->{Translation}->{'Question Type'} = 'Typ pytania';
     $Self->{Translation}->{'Complete'} = 'Kompletne';
     $Self->{Translation}->{'Incomplete'} = 'Niekompletne';
@@ -160,14 +159,14 @@ sub Data {
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'Lista ankiet';
 
-    # JS File: Survey.Agent.SurveyEditQuestions
+    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         'Czy na pewno chcesz usunąć to pytanie? Wszystkie związane dane będą USUNIĘTE!';
     $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Czy na pewno chcesz usunąć tę odpowiedź?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Moduł ankiet.';
-    $Self->{Translation}->{'A module to edit survey questions.'} = 'Moduł do edycji pytań ankiet';
+    $Self->{Translation}->{'A module to edit survey questions.'} = 'Moduł do edycji pytań ankiet.';
     $Self->{Translation}->{'All parameters for the Survey object in the agent interface.'} =
         'Wszystkie parametry dla ankiet w interfejsie agenta.';
     $Self->{Translation}->{'Amount of days after sending a survey mail in which no new survey requests are sent to the same customer. Selecting 0 will always send the survey mail.'} =
@@ -183,22 +182,22 @@ sub Data {
     $Self->{Translation}->{'Defines groups which have a permission to change survey status. Array is empty by default and agents from all groups can change survey status.'} =
         'Określa grupy, które mają dostęp do zmiany statusów ankiet. Tabela jest domyślnie pusta i agenci ze wszystkich grup mogą zmieniać statusy.';
     $Self->{Translation}->{'Defines if survey requests will be only send to real customers.'} =
-        '';
+        'Określa, czy żądanie wypełnienia ankiety będzie wysyłane tylko do rzeczywistych klientów.';
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         'Definiuje maksymalną liczbę ankiet wysyłaniu do Klienta w ciągu 30 dni. (0 oznacza brak ograniczenia, wszystkie żądania będą wysyłane).';
     $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        'Ustala liczbę godzin które muszą minąć od zamknięcia zgłoszenia do wysłania ankiety (0 oznacza bezzwłoczną wysyłkę przy zamykaniu zgłoszenia). Uwaga: opóźnione wysyłanie ankiety jest realizowane przez Demona OTRS, po uprzedniej aktywacji w ustawieniach: \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' ';
+        'Ustala liczbę godzin które muszą minąć od zamknięcia zgłoszenia do wysłania ankiety (0 oznacza bezzwłoczną wysyłkę przy zamykaniu zgłoszenia). Uwaga: opóźnione wysyłanie ankiety jest realizowane przez Demona OTRS, po uprzedniej aktywacji w ustawieniach: \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\'.';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
-        '';
+        'Definiuje kolumny listy rozwijanej dla budowania warunków wysyłki (0 => nieaktywny, 1 => aktywny).';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =
         'Definiuje domyślną wysokość widoków Richtext dla elementów SurveyZoom.';
-    $Self->{Translation}->{'Defines the groups (rw) which can delete survey stats.'} = '';
+    $Self->{Translation}->{'Defines the groups (rw) which can delete survey stats.'} = 'Definiuje grupy (rw) które mogą usuwać statystyki ankiet.';
     $Self->{Translation}->{'Defines the maximum height for Richtext views for SurveyZoom elements.'} =
         'Definiuje maksymalną wysokość widoków Richtext dla elementów SurveyZoom.';
     $Self->{Translation}->{'Defines the shown columns in the survey overview. This option has no effect on the position of the columns.'} =
         'Definiuje widoczne kolumny w przeglądzie ankiet. Ta opcja nie wpływa na pozycję kolumn.';
     $Self->{Translation}->{'Determines if the statistics module may generate survey lists.'} =
-        '';
+        'Określa, czy moduł statystyk może generować listy ankiet.';
     $Self->{Translation}->{'Edit survey general information.'} = 'Edytuj informacje ogólne ankiety.';
     $Self->{Translation}->{'Edit survey questions.'} = 'Edytuj pytania ankiety.';
     $Self->{Translation}->{'Enable or disable the ShowVoteData screen in the public interface to show data of a specific survey result when the customer tries to answer a survey the second time.'} =
@@ -217,12 +216,12 @@ sub Data {
     $Self->{Translation}->{'Frontend module registration for the PublicSurvey object in the public Survey area.'} =
         'Moduł frontend rejestrujący obiekt PublicSurvey w obszarze publicznym ankiety.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Gdy to wyrażenie regularne jest spełnione, nie zostanie wysłana żadna ankieta do klienta.';
-    $Self->{Translation}->{'Limit.'} = '';
+    $Self->{Translation}->{'Limit.'} = 'Limit.';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parametry dla stron (na których pokazywane są ankiety) dla małego przeglądu ankiet.';
     $Self->{Translation}->{'Public Survey.'} = 'Ankieta publiczna.';
     $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
-        '';
+        'Wyniki starsze niż określona ilość dni zostaną usunięte. Uwaga: Wyniki są usuwane przez Demona OTRS po aktywacji ustawienia \'Task###SurveyRequestsDelete\'.';
     $Self->{Translation}->{'Shows a link in the menu to edit a survey in its zoom view of the agent interface.'} =
         'Pokazuje link w menu do edycji ankiety w jej przybliżonym widoku w interfejsie agenta.';
     $Self->{Translation}->{'Shows a link in the menu to edit survey questions in its zoom view of the agent interface.'} =
@@ -230,7 +229,7 @@ sub Data {
     $Self->{Translation}->{'Shows a link in the menu to go back in the survey zoom view of the agent interface.'} =
         'Pokazuje w menu link wstecz w widoku przybliżonym ankiety w interfejsie agenta.';
     $Self->{Translation}->{'Shows a link in the menu to zoom into the survey statistics details in its zoom view of the agent interface.'} =
-        'Pokazuje link w menu do przybliżania szczegółów statystyk ankiety w jej widoku przybliżonym w interfejsie agenta';
+        'Pokazuje link w menu do przybliżania szczegółów statystyk ankiety w jej widoku przybliżonym w interfejsie agenta.';
     $Self->{Translation}->{'Stats Details'} = 'Szczegóły statystyk';
     $Self->{Translation}->{'Survey Add Module.'} = 'Moduł dodawania ankiet.';
     $Self->{Translation}->{'Survey Edit Module.'} = 'Moduł edycji ankiet.';
@@ -243,7 +242,7 @@ sub Data {
         'Identyfikacja dla ankiety, np. Survey#, MySurvey#. Domyślnie: Survey#.';
     $Self->{Translation}->{'Ticket event module to send automatically survey email requests to customers if a ticket is closed.'} =
         'Zdarzenie zgłoszenia wysyła automatycznie e-maila z prośbą o wypełnienie ankiety po zamknięciu zgłoszenia.';
-    $Self->{Translation}->{'Trigger delete results (including vote data and requests).'} = '';
+    $Self->{Translation}->{'Trigger delete results (including vote data and requests).'} = 'Wyzwalacz usuwania wyników (również wyników głosowań i żądań).';
     $Self->{Translation}->{'Trigger sending delayed survey requests.'} = 'Wyzwalacz opóźnionej wysyłki próśb o wypełnienie ankiety.';
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Podgląd szczegółów statystyk.';
 

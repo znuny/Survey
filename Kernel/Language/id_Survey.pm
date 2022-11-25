@@ -1,10 +1,9 @@
 # --
-# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::id_Survey;
@@ -16,7 +15,7 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Template: AgentSurveyAdd
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Create New Survey'} = 'Buat survey baru';
     $Self->{Translation}->{'Introduction'} = 'Pengantar';
     $Self->{Translation}->{'Survey Introduction'} = 'Keta pengantar survey.';
@@ -28,10 +27,10 @@ sub Data {
     $Self->{Translation}->{'Public survey key'} = '';
     $Self->{Translation}->{'Example survey'} = '';
 
-    # Template: AgentSurveyEdit
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Ubah informasi umum';
 
-    # Template: AgentSurveyEditQuestions
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Ubah pertanyaan';
     $Self->{Translation}->{'You are here'} = 'Anda berada disini';
     $Self->{Translation}->{'Survey Questions'} = 'Pertanyaan survey';
@@ -56,7 +55,7 @@ sub Data {
     $Self->{Translation}->{'go back to edit question'} = 'Kembali ke ubah pertanyaan';
     $Self->{Translation}->{'Answer:'} = 'Jawaban:';
 
-    # Template: AgentSurveyOverviewNavBar
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = '';
     $Self->{Translation}->{'Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name.'} =
         '';
@@ -65,12 +64,12 @@ sub Data {
     $Self->{Translation}->{'Only surveys created between'} = '';
     $Self->{Translation}->{'Max. shown surveys per page'} = 'Jumlah maksimal survey yang di tampilkan per halaman.';
 
-    # Template: AgentSurveyOverviewSmall
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
     $Self->{Translation}->{'Notification Sender'} = 'Pengirim notifikasi.';
     $Self->{Translation}->{'Notification Subject'} = 'Subjek notifikasi';
     $Self->{Translation}->{'Changed By'} = 'diubah oleh';
 
-    # Template: AgentSurveyStats
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Gambaran status dari';
     $Self->{Translation}->{'Requests Table'} = 'Tabel permintaan.';
     $Self->{Translation}->{'Select all requests'} = '';
@@ -84,7 +83,7 @@ sub Data {
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
 
-    # Template: AgentSurveyZoom
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Information'} = 'Informasi survey';
     $Self->{Translation}->{'Sent requests'} = 'Permintaan yang telah dikirim';
     $Self->{Translation}->{'Received surveys'} = 'Survey yang diterima';
@@ -93,7 +92,7 @@ sub Data {
     $Self->{Translation}->{'Survey Results Graph'} = 'Grafik hasil survey';
     $Self->{Translation}->{'No stat results.'} = 'Tidak ada hasil stat';
 
-    # Template: PublicSurvey
+    # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = 'Survey';
     $Self->{Translation}->{'Please answer these questions'} = 'Mohon jawab pertanyaan berikut.';
     $Self->{Translation}->{'Show my answers'} = 'Tampilkan jawaban saya';
@@ -160,7 +159,7 @@ sub Data {
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '';
 
-    # JS File: Survey.Agent.SurveyEditQuestions
+    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         'Apakah anda yakin ingin menghapus pertanyaan ini? SEMUA data yang berhubungan akan HILANG!';
     $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Apakah anda yakin ingin menghapus jawaban ini?';

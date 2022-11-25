@@ -1,10 +1,9 @@
 # --
-# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::zh_CN_Survey;
@@ -16,7 +15,7 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Template: AgentSurveyAdd
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Create New Survey'} = '创建新的调查';
     $Self->{Translation}->{'Introduction'} = '介绍';
     $Self->{Translation}->{'Survey Introduction'} = '调查介绍';
@@ -28,10 +27,10 @@ sub Data {
     $Self->{Translation}->{'Public survey key'} = '公共调查密钥';
     $Self->{Translation}->{'Example survey'} = '调查示例';
 
-    # Template: AgentSurveyEdit
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = '编辑一般信息';
 
-    # Template: AgentSurveyEditQuestions
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = '编辑问题';
     $Self->{Translation}->{'You are here'} = '你在这里';
     $Self->{Translation}->{'Survey Questions'} = '调查问题';
@@ -56,7 +55,7 @@ sub Data {
     $Self->{Translation}->{'go back to edit question'} = '返回到编辑问题';
     $Self->{Translation}->{'Answer:'} = '回答：';
 
-    # Template: AgentSurveyOverviewNavBar
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = '调查概览选项';
     $Self->{Translation}->{'Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name.'} =
         '在编号、标题、简介、描述、通知发件人、通知标题和通知正文属性中搜索，覆盖其他具有相同名称的属性。';
@@ -65,12 +64,12 @@ sub Data {
     $Self->{Translation}->{'Only surveys created between'} = '仅在此期间创建的调查：';
     $Self->{Translation}->{'Max. shown surveys per page'} = '每页显示调查的最大数';
 
-    # Template: AgentSurveyOverviewSmall
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
     $Self->{Translation}->{'Notification Sender'} = '通知发件人';
     $Self->{Translation}->{'Notification Subject'} = '通知主题';
     $Self->{Translation}->{'Changed By'} = '修改人';
 
-    # Template: AgentSurveyStats
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = '统计概况';
     $Self->{Translation}->{'Requests Table'} = '请求表';
     $Self->{Translation}->{'Select all requests'} = '选择所有请求';
@@ -84,7 +83,7 @@ sub Data {
     $Self->{Translation}->{'Previous vote'} = '上一个投票';
     $Self->{Translation}->{'Next vote'} = '下一个投票';
 
-    # Template: AgentSurveyZoom
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Information'} = '调查信息';
     $Self->{Translation}->{'Sent requests'} = '己发送的请求';
     $Self->{Translation}->{'Received surveys'} = '已接收的调查';
@@ -93,7 +92,7 @@ sub Data {
     $Self->{Translation}->{'Survey Results Graph'} = '调查结果图';
     $Self->{Translation}->{'No stat results.'} = '没有统计结果。';
 
-    # Template: PublicSurvey
+    # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = '调查';
     $Self->{Translation}->{'Please answer these questions'} = '请回答这些问题';
     $Self->{Translation}->{'Show my answers'} = '显示我的回答';
@@ -160,7 +159,7 @@ sub Data {
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '调查列表';
 
-    # JS File: Survey.Agent.SurveyEditQuestions
+    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         '您真的要删除这个问题吗？所有相关数据都将丢失！';
     $Self->{Translation}->{'Do you really want to delete this answer?'} = '您真的要删除这个回答吗？';

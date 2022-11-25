@@ -4,8 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
 "PO-Revision-Date: 2020-03-13 15:25+0000\n"
 "Last-Translator: Mohsen Ebrahimi <ebrahimi.m@of.iut.ac.ir>\n"
-"Language-Team: Persian <https://translate.app.otrs.com/projects/otrs-6/"
-"survey/fa/>\n"
+"Language-Team: Persian <https://translate.app.otrs.com/projects/otrs-6/survey/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,266 +12,263 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.11.2\n"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Create New Survey"
 msgstr "ساختن نظرسنجی جدید"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Introduction"
 msgstr "معرفی"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey Introduction"
 msgstr "معرفی نظرسنجی"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Notification Body"
 msgstr "بدنه هشدار"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Ticket Types"
 msgstr "انواع درخواست"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Internal Description"
 msgstr "توضیحات داخلی"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Customer conditions"
 msgstr "شرایط مشتری"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Please choose a Customer property to add a condition."
 msgstr "لطفا یک ویژگی مشتری را برای اضافه شدن به شرایط انتخاب کنید."
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr "کلید عمومی نظرسنجی"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Example survey"
 msgstr "نظرسنجی نمونه"
 
-#. Template: AgentSurveyEdit
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
 msgid "Edit General Info"
 msgstr "ویرایش اطلاعات عمومی"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Questions"
 msgstr "ویرایش سوالات"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "You are here"
 msgstr "تو اینجایی"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Survey Questions"
 msgstr "سوالات نظرسنجی ها"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Add Question"
 msgstr "افزودن سوال"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Type the question"
 msgstr "سوال را بنویسید"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer required"
 msgstr "پاسخ الزامی است"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "No questions saved for this survey."
 msgstr "سوالی برای این نظرسنجی ذخیره نشده است."
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Question"
 msgstr "سوال"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer Required"
 msgstr "پاسخ الزامی است"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "When you finish to edit the survey questions just close this screen."
 msgstr "وقتی کار ویرایش سوالات نظرسنجی تمام شد این پنجره را ببندید."
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Close this window"
 msgstr "بستن این پنجره"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Question"
 msgstr "ویرایش سوال"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "go back to questions"
 msgstr "بازگشت به سوالات"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Question:"
 msgstr "سوال:"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Possible Answers For"
 msgstr "پاسخ های ممکن برای"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Add Answer"
 msgstr "افزودن پاسخ"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "No answers saved for this question."
 msgstr "پاسخی برای این سوالات ذخیره نشده است."
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "This doesn't have several answers, a textarea will be displayed."
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Answer"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "go back to edit question"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer:"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Survey overview options"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
-msgid ""
-"Searches in the attributes Number, Title, Introduction, Description, "
-"NotificationSender, NotificationSubject and NotificationBody, overriding "
-"other attributes with the same name."
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
+msgid "Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name."
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Survey Create Time"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "No restriction"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Only surveys created between"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Max. shown surveys per page"
 msgstr ""
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Notification Sender"
 msgstr ""
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Notification Subject"
 msgstr ""
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Changed By"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Stats Overview of"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Requests Table"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Select all requests"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Send Time"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Vote Time"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Select this request"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "See Details"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Delete stats"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Survey Stat Details"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "go back to stats overview"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Previous vote"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Next vote"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Information"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Sent requests"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Received surveys"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Details"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Ticket Services"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Results Graph"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "No stat results."
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Survey"
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Please answer these questions"
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Show my answers"
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "These are your answers"
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Survey Title"
 msgstr ""
 
@@ -433,9 +429,7 @@ msgid "Invalid survey key."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
-msgid ""
-"The inserted survey key is invalid, if you followed a link maybe this is "
-"obsolete or broken."
+msgid "The inserted survey key is invalid, if you followed a link maybe this is obsolete or broken."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
@@ -454,12 +448,11 @@ msgstr ""
 msgid "Survey List"
 msgstr ""
 
-#. JS File: Survey.Agent.SurveyEditQuestions
-msgid ""
-"Do you really want to delete this question? ALL associated data will be LOST!"
+#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr ""
 
-#. JS File: Survey.Agent.SurveyEditQuestions
+#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
 msgid "Do you really want to delete this answer?"
 msgstr ""
 
@@ -476,9 +469,7 @@ msgid "All parameters for the Survey object in the agent interface."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Amount of days after sending a survey mail in which no new survey requests "
-"are sent to the same customer. Selecting 0 will always send the survey mail."
+msgid "Amount of days after sending a survey mail in which no new survey requests are sent to the same customer. Selecting 0 will always send the survey mail."
 msgstr ""
 
 #. SysConfig
@@ -486,13 +477,11 @@ msgid "Default body for the notification email to customers about new survey."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Default sender for the notification email to customers about new survey."
+msgid "Default sender for the notification email to customers about new survey."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Default subject for the notification email to customers about new survey."
+msgid "Default subject for the notification email to customers about new survey."
 msgstr ""
 
 #. SysConfig
@@ -500,9 +489,7 @@ msgid "Defines an overview module to show the small view of a survey list."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Defines groups which have a permission to change survey status. Array is "
-"empty by default and agents from all groups can change survey status."
+msgid "Defines groups which have a permission to change survey status. Array is empty by default and agents from all groups can change survey status."
 msgstr ""
 
 #. SysConfig
@@ -510,23 +497,15 @@ msgid "Defines if survey requests will be only send to real customers."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Defines maximum amount of surveys that get sent to a customer per 30 days. "
-"( 0 means no maximum, all survey requests will be sent)."
+msgid "Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent)."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Defines the amount in hours a ticket has to be closed to trigger the sending "
-"of a survey, ( 0 means send immediately after close ). Note: delayed survey "
-"sending is done by the OTRS Daemon, prior activation of 'Daemon::"
-"SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
+msgid "Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Defines the columns for the dropdown list for building send conditions (0 => "
-"inactive, 1 => active)."
+msgid "Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active)."
 msgstr ""
 
 #. SysConfig
@@ -542,9 +521,7 @@ msgid "Defines the maximum height for Richtext views for SurveyZoom elements."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Defines the shown columns in the survey overview. This option has no effect "
-"on the position of the columns."
+msgid "Defines the shown columns in the survey overview. This option has no effect on the position of the columns."
 msgstr ""
 
 #. SysConfig
@@ -560,10 +537,7 @@ msgid "Edit survey questions."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Enable or disable the ShowVoteData screen in the public interface to show "
-"data of a specific survey result when the customer tries to answer a survey "
-"the second time."
+msgid "Enable or disable the ShowVoteData screen in the public interface to show data of a specific survey result when the customer tries to answer a survey the second time."
 msgstr ""
 
 #. SysConfig
@@ -591,9 +565,7 @@ msgid "Frontend module registration for survey zoom in the agent interface."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Frontend module registration for the PublicSurvey object in the public "
-"Survey area."
+msgid "Frontend module registration for the PublicSurvey object in the public Survey area."
 msgstr ""
 
 #. SysConfig
@@ -605,9 +577,7 @@ msgid "Limit."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Parameters for the pages (in which the surveys are shown) of the small "
-"survey overview."
+msgid "Parameters for the pages (in which the surveys are shown) of the small survey overview."
 msgstr ""
 
 #. SysConfig
@@ -615,34 +585,23 @@ msgid "Public Survey."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Results older than the configured amount of days will be deleted. Note: "
-"delete results done by the OTRS Daemon, prior activation of "
-"'Task###SurveyRequestsDelete' setting."
+msgid "Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of 'Task###SurveyRequestsDelete' setting."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to edit a survey in its zoom view of the agent "
-"interface."
+msgid "Shows a link in the menu to edit a survey in its zoom view of the agent interface."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to edit survey questions in its zoom view of the "
-"agent interface."
+msgid "Shows a link in the menu to edit survey questions in its zoom view of the agent interface."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to go back in the survey zoom view of the agent "
-"interface."
+msgid "Shows a link in the menu to go back in the survey zoom view of the agent interface."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to zoom into the survey statistics details in its "
-"zoom view of the agent interface."
+msgid "Shows a link in the menu to zoom into the survey statistics details in its zoom view of the agent interface."
 msgstr ""
 
 #. SysConfig
@@ -678,14 +637,11 @@ msgid "Surveys will not be sent to the configured email addresses."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"The identifier for a survey, e.g. Survey#, MySurvey#. The default is Survey#."
+msgid "The identifier for a survey, e.g. Survey#, MySurvey#. The default is Survey#."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Ticket event module to send automatically survey email requests to customers "
-"if a ticket is closed."
+msgid "Ticket event module to send automatically survey email requests to customers if a ticket is closed."
 msgstr ""
 
 #. SysConfig
@@ -699,3 +655,4 @@ msgstr ""
 #. SysConfig
 msgid "Zoom into statistics details."
 msgstr ""
+

@@ -1,10 +1,9 @@
 # --
-# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::nl_Survey;
@@ -16,7 +15,7 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Template: AgentSurveyAdd
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Create New Survey'} = 'Nieuwe enquête maken';
     $Self->{Translation}->{'Introduction'} = 'Introductie';
     $Self->{Translation}->{'Survey Introduction'} = 'Enquête introductie';
@@ -28,10 +27,10 @@ sub Data {
     $Self->{Translation}->{'Public survey key'} = 'Openbare enquêtesleutel';
     $Self->{Translation}->{'Example survey'} = 'Voorbeeld enquête';
 
-    # Template: AgentSurveyEdit
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Algemene info bewerken';
 
-    # Template: AgentSurveyEditQuestions
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Vragen bewerken';
     $Self->{Translation}->{'You are here'} = 'Je bevindt je hier';
     $Self->{Translation}->{'Survey Questions'} = 'Enquêtevragen';
@@ -56,7 +55,7 @@ sub Data {
     $Self->{Translation}->{'go back to edit question'} = 'ga terug om de vraag te bewerken';
     $Self->{Translation}->{'Answer:'} = 'Antwoord:';
 
-    # Template: AgentSurveyOverviewNavBar
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Enquête overzichtopties';
     $Self->{Translation}->{'Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name.'} =
         'Zoekt in de attributen Nummer, Titel, Inleiding, Beschrijving, NotificationSender, NotificationSubject en NotificationBody, waarbij andere attributen met dezelfde naam worden vervangen.';
@@ -65,12 +64,12 @@ sub Data {
     $Self->{Translation}->{'Only surveys created between'} = 'Alleen enquêtes gemaakt tussen';
     $Self->{Translation}->{'Max. shown surveys per page'} = 'Max. weergegeven enquêtes per pagina';
 
-    # Template: AgentSurveyOverviewSmall
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
     $Self->{Translation}->{'Notification Sender'} = 'Afzender van melding';
     $Self->{Translation}->{'Notification Subject'} = 'Meldingonderwerp';
     $Self->{Translation}->{'Changed By'} = 'Gewijzigd door';
 
-    # Template: AgentSurveyStats
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Statistieken overzicht van';
     $Self->{Translation}->{'Requests Table'} = 'Verzoeken tabel';
     $Self->{Translation}->{'Select all requests'} = 'Selecteer alle verzoeken';
@@ -84,7 +83,7 @@ sub Data {
     $Self->{Translation}->{'Previous vote'} = 'Vorige stem';
     $Self->{Translation}->{'Next vote'} = 'Volgende stem';
 
-    # Template: AgentSurveyZoom
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Information'} = 'Enquête informatie';
     $Self->{Translation}->{'Sent requests'} = 'Verzonden verzoeken';
     $Self->{Translation}->{'Received surveys'} = 'Ontvangen enquêtes';
@@ -93,7 +92,7 @@ sub Data {
     $Self->{Translation}->{'Survey Results Graph'} = 'Enquête resultaten grafiek';
     $Self->{Translation}->{'No stat results.'} = 'Geen statistische resultaten.';
 
-    # Template: PublicSurvey
+    # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = 'Enquête';
     $Self->{Translation}->{'Please answer these questions'} = 'Beantwoord deze vragen';
     $Self->{Translation}->{'Show my answers'} = 'Mijn antwoorden weergeven';
@@ -160,7 +159,7 @@ sub Data {
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'Enquête lijst';
 
-    # JS File: Survey.Agent.SurveyEditQuestions
+    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         'Wil je deze vraag echt verwijderen? ALLE bijbehorende gegevens gaan VERLOREN!';
     $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Wil je dit antwoord echt verwijderen?';

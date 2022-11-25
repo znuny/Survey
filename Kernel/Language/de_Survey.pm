@@ -1,10 +1,9 @@
 # --
-# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::de_Survey;
@@ -16,7 +15,7 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Template: AgentSurveyAdd
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Create New Survey'} = 'Neue Umfrage erstellen';
     $Self->{Translation}->{'Introduction'} = 'Einleitungstext';
     $Self->{Translation}->{'Survey Introduction'} = 'Umfrage Einleitung';
@@ -28,10 +27,10 @@ sub Data {
     $Self->{Translation}->{'Public survey key'} = 'Öffentlicher Umfrageschlüssel';
     $Self->{Translation}->{'Example survey'} = 'Beispielumfrage';
 
-    # Template: AgentSurveyEdit
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Allgemeine Angaben bearbeiten';
 
-    # Template: AgentSurveyEditQuestions
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Fragen bearbeiten';
     $Self->{Translation}->{'You are here'} = 'Sie sind hier';
     $Self->{Translation}->{'Survey Questions'} = 'Umfrage-Fragen';
@@ -56,7 +55,7 @@ sub Data {
     $Self->{Translation}->{'go back to edit question'} = 'Zurück zum Bearbeiten der Frage';
     $Self->{Translation}->{'Answer:'} = 'Antwort:';
 
-    # Template: AgentSurveyOverviewNavBar
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Umfrage-Übersichtsoptionen';
     $Self->{Translation}->{'Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name.'} =
         'Sucht in den Attributen: Name, Titel, Einleitung, Beschreibung, Benachrichtigungs-Absender, Benachrichtigungs-Betreff und Benachrichtigungs-Text, überschreibt andere Attribute mit dem gleichen Namen.';
@@ -65,12 +64,12 @@ sub Data {
     $Self->{Translation}->{'Only surveys created between'} = 'Nur erstellte Umfragen zwischen';
     $Self->{Translation}->{'Max. shown surveys per page'} = 'Maximale Anzahl angezeigter Umfragen pro Seite';
 
-    # Template: AgentSurveyOverviewSmall
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
     $Self->{Translation}->{'Notification Sender'} = 'Benachrichtigungs-Absender';
     $Self->{Translation}->{'Notification Subject'} = 'Benachrichtigungs-Betreff';
     $Self->{Translation}->{'Changed By'} = 'Geändert von';
 
-    # Template: AgentSurveyStats
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Statistikübersicht von';
     $Self->{Translation}->{'Requests Table'} = 'Anfragentabelle';
     $Self->{Translation}->{'Select all requests'} = 'Alle Anfragen auswählen';
@@ -84,7 +83,7 @@ sub Data {
     $Self->{Translation}->{'Previous vote'} = 'Vorherige Bewertung';
     $Self->{Translation}->{'Next vote'} = 'Nächste Bewertung';
 
-    # Template: AgentSurveyZoom
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Information'} = 'Umfrageinformationen';
     $Self->{Translation}->{'Sent requests'} = 'Gesendete Anfragen';
     $Self->{Translation}->{'Received surveys'} = 'Erhaltene Umfragen';
@@ -93,7 +92,7 @@ sub Data {
     $Self->{Translation}->{'Survey Results Graph'} = 'Umfrageergebnisse-Graph';
     $Self->{Translation}->{'No stat results.'} = 'Keine Statistikergebnisse.';
 
-    # Template: PublicSurvey
+    # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = 'Umfrage';
     $Self->{Translation}->{'Please answer these questions'} = 'Bitte beantworten Sie diese Fragen';
     $Self->{Translation}->{'Show my answers'} = 'Zeige meine Antworten';
@@ -109,8 +108,8 @@ sub Data {
     $Self->{Translation}->{'Survey Edit'} = 'Umfrage bearbeiten';
 
     # Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
-    $Self->{Translation}->{'You have no permission for this survey or question!'} = 'Sie haben keine Berechtigung für diese Umfrage oder Frage.';
-    $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = 'Sie haben keine Berechtigung für diese Umfrage, Frage oder Antwort.';
+    $Self->{Translation}->{'You have no permission for this survey or question!'} = 'Sie haben keine Berechtigung für diese Umfrage oder Frage!';
+    $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = 'Sie haben keine Berechtigung für diese Umfrage, Frage oder Antwort!';
     $Self->{Translation}->{'Survey Edit Questions'} = 'Fragen der Umfrage bearbeiten';
     $Self->{Translation}->{'Yes/No'} = 'Ja/Nein';
     $Self->{Translation}->{'Radio (List)'} = 'Optionsfeld (Liste)';
@@ -124,7 +123,7 @@ sub Data {
 
     # Perl Module: Kernel/Modules/AgentSurveyStats.pm
     $Self->{Translation}->{'Stats Overview'} = 'Statistikübersicht';
-    $Self->{Translation}->{'You have no permission for this survey or stats detail!'} = 'Sie haben keine Berechtigung für diese Umfrage- oder Statistikdetails.';
+    $Self->{Translation}->{'You have no permission for this survey or stats detail!'} = 'Sie haben keine Berechtigung für diese Umfrage- oder Statistikdetails!';
     $Self->{Translation}->{'Stats Detail'} = 'Statistikdetail';
 
     # Perl Module: Kernel/Modules/AgentSurveyZoom.pm
@@ -160,14 +159,14 @@ sub Data {
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'Umfragen-Liste';
 
-    # JS File: Survey.Agent.SurveyEditQuestions
+    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         'Wollen Sie diese Frage wirklich löschen? Alle darin enthaltenen Daten werden GELÖSCHT!';
     $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Wollen Sie diese Frage wirklich löschen?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Ein Umfrage-Modul.';
-    $Self->{Translation}->{'A module to edit survey questions.'} = 'Ein Modul, um Umfragen zu bearbeiten';
+    $Self->{Translation}->{'A module to edit survey questions.'} = 'Ein Modul, um Umfragen zu bearbeiten.';
     $Self->{Translation}->{'All parameters for the Survey object in the agent interface.'} =
         'Alle Parameter für das Umfrage-Modul im Agenten-Interface.';
     $Self->{Translation}->{'Amount of days after sending a survey mail in which no new survey requests are sent to the same customer. Selecting 0 will always send the survey mail.'} =
@@ -185,7 +184,7 @@ sub Data {
     $Self->{Translation}->{'Defines if survey requests will be only send to real customers.'} =
         'Definiert, ob Umfrage-Anfragen nur an reale Kunden gesendet werden.';
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
-        'Definiert die maximale Anzahl von Umfragen die ein Kunde innerhalb von 30 Tagen zugesandt bekommt. ( 0 steht für kein Maximum, alle Umfrage-E-Mails werden versandt.)';
+        'Definiert die maximale Anzahl von Umfragen die ein Kunde innerhalb von 30 Tagen zugesandt bekommt. ( 0 steht für kein Maximum, alle Umfrage-E-Mails werden versandt).';
     $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
         'Definiert die Anzahl an Stunden für die ein Ticket geschlossen sein muss, um den Versand einer Umfrage auszulösen ( 0 bedeutet, sofort nach Schließen eines Tickets senden ). Hinweis: Das Absenden der verzögerten Umfrage wird durch den OTRS Daemon erledigt, vorherige Aktivierung durch die \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' Einstellung.';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
@@ -244,7 +243,7 @@ sub Data {
     $Self->{Translation}->{'Ticket event module to send automatically survey email requests to customers if a ticket is closed.'} =
         'Ticket-Event-Modul, um automatisch Umfrage-E-Mails an Kunden zu senden, wenn ein Ticket geschlossen wird.';
     $Self->{Translation}->{'Trigger delete results (including vote data and requests).'} = 'Auslöser zum Löschen von Ergebnissen (inklusive Abstimmungsdaten und Anfragen).';
-    $Self->{Translation}->{'Trigger sending delayed survey requests.'} = 'Auslöser zum Senden von verzögerten Anfragen';
+    $Self->{Translation}->{'Trigger sending delayed survey requests.'} = 'Auslöser zum Senden von verzögerten Anfragen.';
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Statistik-Details erhöhen.';
 
 

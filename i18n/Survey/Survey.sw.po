@@ -10,266 +10,263 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Create New Survey"
 msgstr "Tengeneza tafiti mpya"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Introduction"
 msgstr "Utangulizi"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey Introduction"
 msgstr "Utangulizi wa tafiti"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Notification Body"
 msgstr "Kiini cha taarifa"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Ticket Types"
 msgstr "Aina za tiketi"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Internal Description"
 msgstr "Maelezo ya ndani"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Customer conditions"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Please choose a Customer property to add a condition."
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Example survey"
 msgstr ""
 
-#. Template: AgentSurveyEdit
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
 msgid "Edit General Info"
 msgstr "Hariri taarifa za ujumla"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Questions"
 msgstr "Hariri maswali"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "You are here"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Survey Questions"
 msgstr "Maswali ya tafiti"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Add Question"
 msgstr "Ongeza swali"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Type the question"
 msgstr "Chapa swali"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer required"
 msgstr "Jibu linahitajika"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "No questions saved for this survey."
 msgstr "Hakuna maswali yaliyo hifadhiwa kwa hii tafiti"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Question"
 msgstr "Swali"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer Required"
 msgstr "Jibu linahitajika"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "When you finish to edit the survey questions just close this screen."
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Close this window"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Question"
 msgstr "Hariri swali"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "go back to questions"
 msgstr "rudi kwenye maswali"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Question:"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Possible Answers For"
 msgstr "Majibu yawezekana kwa"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Add Answer"
 msgstr "Ongeza jibu"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "No answers saved for this question."
 msgstr "Hakuna majibu yaliyohifadhiwa kwa hili swali"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "This doesn't have several answers, a textarea will be displayed."
 msgstr "Hili halina majibu mengi, sehemu ya nakala itaonyeshwa."
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Answer"
 msgstr "Hariri jibu"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "go back to edit question"
 msgstr "Rudi nyuma kuhariri swali"
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer:"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Survey overview options"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
-msgid ""
-"Searches in the attributes Number, Title, Introduction, Description, "
-"NotificationSender, NotificationSubject and NotificationBody, overriding "
-"other attributes with the same name."
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
+msgid "Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name."
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Survey Create Time"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "No restriction"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Only surveys created between"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Max. shown surveys per page"
 msgstr ""
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Notification Sender"
 msgstr "Mtumaji taarifa"
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Notification Subject"
 msgstr "Somo la taafifa"
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Changed By"
 msgstr "Imebadilishwa na"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Stats Overview of"
 msgstr "Mapitio ya takwimu ya"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Requests Table"
 msgstr "Jedwali la maombi"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Select all requests"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Send Time"
 msgstr "Muda wa kutuma"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Vote Time"
 msgstr "Muda wa kupiga kura"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Select this request"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "See Details"
 msgstr "Ona maelezo"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Delete stats"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Survey Stat Details"
 msgstr "Maelezo ya takwimu za tafiti"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "go back to stats overview"
 msgstr "Rudi nyuma kwenye mapitio ya takwimu"
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Previous vote"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Next vote"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Information"
 msgstr "Taarifa za takwimu"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Sent requests"
 msgstr "Maombi yaliyotumwa"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Received surveys"
 msgstr "Tafiti zilizopokelewa"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Details"
 msgstr "Maelezo ya tafiti"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Ticket Services"
 msgstr "Huduma za tiketi"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Results Graph"
 msgstr "Grafu ya matokeo ya tafiti"
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "No stat results."
 msgstr "Hakuna matokeo ya takwimu"
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Survey"
 msgstr "Tafiti"
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Please answer these questions"
 msgstr "Tafadhali jibu haya maswali"
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Show my answers"
 msgstr "Onyesha majibu yangu"
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "These are your answers"
 msgstr "Haya ni majibu yako"
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Survey Title"
 msgstr "Kichwa cha habari cha utafiti"
 
@@ -430,9 +427,7 @@ msgid "Invalid survey key."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
-msgid ""
-"The inserted survey key is invalid, if you followed a link maybe this is "
-"obsolete or broken."
+msgid "The inserted survey key is invalid, if you followed a link maybe this is obsolete or broken."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
@@ -451,12 +446,11 @@ msgstr "Umekwishajibu tafiti"
 msgid "Survey List"
 msgstr ""
 
-#. JS File: Survey.Agent.SurveyEditQuestions
-msgid ""
-"Do you really want to delete this question? ALL associated data will be LOST!"
+#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr "Je unataka kufuta hili swali? Data zote zita POTEA!"
 
-#. JS File: Survey.Agent.SurveyEditQuestions
+#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
 msgid "Do you really want to delete this answer?"
 msgstr "Je unataka kufuta hili jibu?"
 
@@ -473,40 +467,27 @@ msgid "All parameters for the Survey object in the agent interface."
 msgstr "Parameta zote za vitu vya savei katika kiolesura cha wakala"
 
 #. SysConfig
-msgid ""
-"Amount of days after sending a survey mail in which no new survey requests "
-"are sent to the same customer. Selecting 0 will always send the survey mail."
-msgstr ""
-"Idadi ya siku baada ya kutuma barua pepe ya tafiti ambapo hakuna maombi "
-"mapya ya tafiti kutumwa kwa mteja huyo. Kuchagua 0 daima kutatuma barua pepe "
-"ya savei"
+msgid "Amount of days after sending a survey mail in which no new survey requests are sent to the same customer. Selecting 0 will always send the survey mail."
+msgstr "Idadi ya siku baada ya kutuma barua pepe ya tafiti ambapo hakuna maombi mapya ya tafiti kutumwa kwa mteja huyo. Kuchagua 0 daima kutatuma barua pepe ya savei"
 
 #. SysConfig
 msgid "Default body for the notification email to customers about new survey."
-msgstr ""
-"Chaguo-msingi la kiini cha barua pepe ya taarifa kwa wateja kuhusu savei "
-"mpya."
+msgstr "Chaguo-msingi la kiini cha barua pepe ya taarifa kwa wateja kuhusu savei mpya."
 
 #. SysConfig
-msgid ""
-"Default sender for the notification email to customers about new survey."
+msgid "Default sender for the notification email to customers about new survey."
 msgstr "Chaguo-msingi la mtumaji wa barua pepe ya taarifa kuhusu savei mpya."
 
 #. SysConfig
-msgid ""
-"Default subject for the notification email to customers about new survey."
-msgstr ""
-"Chaguo-msingi la somo la barua pepe ya taarifa kwa wateja kuhusu savei mpya."
+msgid "Default subject for the notification email to customers about new survey."
+msgstr "Chaguo-msingi la somo la barua pepe ya taarifa kwa wateja kuhusu savei mpya."
 
 #. SysConfig
 msgid "Defines an overview module to show the small view of a survey list."
-msgstr ""
-"Inafafanua mapitio ya moduli kuonyesha muonekano mdogo wa orodha ya savei."
+msgstr "Inafafanua mapitio ya moduli kuonyesha muonekano mdogo wa orodha ya savei."
 
 #. SysConfig
-msgid ""
-"Defines groups which have a permission to change survey status. Array is "
-"empty by default and agents from all groups can change survey status."
+msgid "Defines groups which have a permission to change survey status. Array is empty by default and agents from all groups can change survey status."
 msgstr ""
 
 #. SysConfig
@@ -514,32 +495,20 @@ msgid "Defines if survey requests will be only send to real customers."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Defines maximum amount of surveys that get sent to a customer per 30 days. "
-"( 0 means no maximum, all survey requests will be sent)."
-msgstr ""
-"Inafafanua kikomo cha juu cha idadi ya savei zinazotumwa kwa mteja kwa siku "
-"30. (0 inamaanisha hakuna kikomo, savei zote zitatumwa). "
+msgid "Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent)."
+msgstr "Inafafanua kikomo cha juu cha idadi ya savei zinazotumwa kwa mteja kwa siku 30. (0 inamaanisha hakuna kikomo, savei zote zitatumwa). "
 
 #. SysConfig
-msgid ""
-"Defines the amount in hours a ticket has to be closed to trigger the sending "
-"of a survey, ( 0 means send immediately after close ). Note: delayed survey "
-"sending is done by the OTRS Daemon, prior activation of 'Daemon::"
-"SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
+msgid "Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Defines the columns for the dropdown list for building send conditions (0 => "
-"inactive, 1 => active)."
+msgid "Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active)."
 msgstr ""
 
 #. SysConfig
 msgid "Defines the default height for Richtext views for SurveyZoom elements."
-msgstr ""
-"Inafafanua chaguo-msingi la urefu wa muonekano wa Richtext kwa elementi za "
-"UtafitiKuzwa."
+msgstr "Inafafanua chaguo-msingi la urefu wa muonekano wa Richtext kwa elementi za UtafitiKuzwa."
 
 #. SysConfig
 msgid "Defines the groups (rw) which can delete survey stats."
@@ -550,12 +519,8 @@ msgid "Defines the maximum height for Richtext views for SurveyZoom elements."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Defines the shown columns in the survey overview. This option has no effect "
-"on the position of the columns."
-msgstr ""
-"Inafafanua safu iliyoonyeshwa kwenye mapitio ya utafiti. Hili chaguo halina "
-"athari kwa nafasi ya safu. "
+msgid "Defines the shown columns in the survey overview. This option has no effect on the position of the columns."
+msgstr "Inafafanua safu iliyoonyeshwa kwenye mapitio ya utafiti. Hili chaguo halina athari kwa nafasi ya safu. "
 
 #. SysConfig
 msgid "Determines if the statistics module may generate survey lists."
@@ -570,14 +535,8 @@ msgid "Edit survey questions."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Enable or disable the ShowVoteData screen in the public interface to show "
-"data of a specific survey result when the customer tries to answer a survey "
-"the second time."
-msgstr ""
-"Wezesha au Usiwezeshe skrini ya OneshaKuraData kwa kiolesura cha umma ili "
-"kuonyesha data za utafiti fulani maalumu pale mteja anapojaribu kujibu "
-"utafiti kwa mara ya pili."
+msgid "Enable or disable the ShowVoteData screen in the public interface to show data of a specific survey result when the customer tries to answer a survey the second time."
+msgstr "Wezesha au Usiwezeshe skrini ya OneshaKuraData kwa kiolesura cha umma ili kuonyesha data za utafiti fulani maalumu pale mteja anapojaribu kujibu utafiti kwa mara ya pili."
 
 #. SysConfig
 msgid "Enable or disable the send condition check for the service."
@@ -589,34 +548,23 @@ msgstr "Wezesha au Usiwezeshe kuchagua hali ya kutuma kwa aina ya tiketi. "
 
 #. SysConfig
 msgid "Frontend module registration for survey add in the agent interface."
-msgstr ""
-"Moduli ya Frontend ya kusajili ili kuongeza  utafiti katika kiolesura cha "
-"wakala."
+msgstr "Moduli ya Frontend ya kusajili ili kuongeza  utafiti katika kiolesura cha wakala."
 
 #. SysConfig
 msgid "Frontend module registration for survey edit in the agent interface."
-msgstr ""
-"Moduli ya Frontend ya kusajili ili kuhariri utafiti katika kiolesura cha "
-"wakala."
+msgstr "Moduli ya Frontend ya kusajili ili kuhariri utafiti katika kiolesura cha wakala."
 
 #. SysConfig
 msgid "Frontend module registration for survey stats in the agent interface."
-msgstr ""
-"Moduli ya Frontend ya kusajili takwimu za utafiti katika kiolesura cha "
-"wakala."
+msgstr "Moduli ya Frontend ya kusajili takwimu za utafiti katika kiolesura cha wakala."
 
 #. SysConfig
 msgid "Frontend module registration for survey zoom in the agent interface."
-msgstr ""
-"Moduli ya Frontend ya kusajili utafiti kuza katika kiolesura cha wakala."
+msgstr "Moduli ya Frontend ya kusajili utafiti kuza katika kiolesura cha wakala."
 
 #. SysConfig
-msgid ""
-"Frontend module registration for the PublicSurvey object in the public "
-"Survey area."
-msgstr ""
-"Moduli ya Frontend ya kusajili kwa ajili ya UtafitiUmma katika eneo la "
-"utafiti wa umma."
+msgid "Frontend module registration for the PublicSurvey object in the public Survey area."
+msgstr "Moduli ya Frontend ya kusajili kwa ajili ya UtafitiUmma katika eneo la utafiti wa umma."
 
 #. SysConfig
 msgid "If this regex matches, no customer survey will be sent."
@@ -627,55 +575,32 @@ msgid "Limit."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Parameters for the pages (in which the surveys are shown) of the small "
-"survey overview."
-msgstr ""
-"Parameta kwa ajili ya kurasa (ambazo ndani yake utafiti umeonyeshwa) za "
-"mapitio ya utafiti mdogo. "
+msgid "Parameters for the pages (in which the surveys are shown) of the small survey overview."
+msgstr "Parameta kwa ajili ya kurasa (ambazo ndani yake utafiti umeonyeshwa) za mapitio ya utafiti mdogo. "
 
 #. SysConfig
 msgid "Public Survey."
 msgstr "Savei ya umma"
 
 #. SysConfig
-msgid ""
-"Results older than the configured amount of days will be deleted. Note: "
-"delete results done by the OTRS Daemon, prior activation of "
-"'Task###SurveyRequestsDelete' setting."
+msgid "Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of 'Task###SurveyRequestsDelete' setting."
 msgstr ""
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to edit a survey in its zoom view of the agent "
-"interface."
-msgstr ""
-"Inaonyesha kiungo katika menyu ili kuhariri utafiti katika muonekano "
-"uliokuzwa wa kiolesura cha wakala."
+msgid "Shows a link in the menu to edit a survey in its zoom view of the agent interface."
+msgstr "Inaonyesha kiungo katika menyu ili kuhariri utafiti katika muonekano uliokuzwa wa kiolesura cha wakala."
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to edit survey questions in its zoom view of the "
-"agent interface."
-msgstr ""
-"Inaonyesha kiungo katika menyu ili kuhariri maswali ya utafiti katika "
-"muonekano uliokuzwa wa kiolesura cha wakala."
+msgid "Shows a link in the menu to edit survey questions in its zoom view of the agent interface."
+msgstr "Inaonyesha kiungo katika menyu ili kuhariri maswali ya utafiti katika muonekano uliokuzwa wa kiolesura cha wakala."
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to go back in the survey zoom view of the agent "
-"interface."
-msgstr ""
-"Inaonyesha kiungo katika menyu ili kurudi katika muonekano uliokuzwa wa "
-"kiolesura cha wakala."
+msgid "Shows a link in the menu to go back in the survey zoom view of the agent interface."
+msgstr "Inaonyesha kiungo katika menyu ili kurudi katika muonekano uliokuzwa wa kiolesura cha wakala."
 
 #. SysConfig
-msgid ""
-"Shows a link in the menu to zoom into the survey statistics details in its "
-"zoom view of the agent interface."
-msgstr ""
-"Inaonyesha kiungo katika menyu ili kukuza maelezo ya takwimu za utafiti "
-"katika muonekano uliokuzwa wa kiolesura cha wakala."
+msgid "Shows a link in the menu to zoom into the survey statistics details in its zoom view of the agent interface."
+msgstr "Inaonyesha kiungo katika menyu ili kukuza maelezo ya takwimu za utafiti katika muonekano uliokuzwa wa kiolesura cha wakala."
 
 #. SysConfig
 msgid "Stats Details"
@@ -710,19 +635,12 @@ msgid "Surveys will not be sent to the configured email addresses."
 msgstr "Savei hazitatumwa kwa barua pepe zilizowekwa."
 
 #. SysConfig
-msgid ""
-"The identifier for a survey, e.g. Survey#, MySurvey#. The default is Survey#."
-msgstr ""
-"Kitambulisho cha utafiti, mf. Utafiti#, Utafiti wangu#. Chaguo-msingi ni "
-"Utafiti#."
+msgid "The identifier for a survey, e.g. Survey#, MySurvey#. The default is Survey#."
+msgstr "Kitambulisho cha utafiti, mf. Utafiti#, Utafiti wangu#. Chaguo-msingi ni Utafiti#."
 
 #. SysConfig
-msgid ""
-"Ticket event module to send automatically survey email requests to customers "
-"if a ticket is closed."
-msgstr ""
-"Moduli ya tukio la tiketi kwa ajili ya kutuma barua pepe za maombi ya tafiti "
-"moja kwa moja kwa wateja kama tiketi imefungwa."
+msgid "Ticket event module to send automatically survey email requests to customers if a ticket is closed."
+msgstr "Moduli ya tukio la tiketi kwa ajili ya kutuma barua pepe za maombi ya tafiti moja kwa moja kwa wateja kama tiketi imefungwa."
 
 #. SysConfig
 msgid "Trigger delete results (including vote data and requests)."
@@ -735,3 +653,4 @@ msgstr ""
 #. SysConfig
 msgid "Zoom into statistics details."
 msgstr ""
+

@@ -1,10 +1,9 @@
 # --
-# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::uk_Survey;
@@ -16,7 +15,7 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    # Template: AgentSurveyAdd
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Create New Survey'} = 'Створити нове опитування';
     $Self->{Translation}->{'Introduction'} = 'Вступ';
     $Self->{Translation}->{'Survey Introduction'} = 'Вступ до опитування';
@@ -28,10 +27,10 @@ sub Data {
     $Self->{Translation}->{'Public survey key'} = 'Публічний ключ опитування';
     $Self->{Translation}->{'Example survey'} = 'Приклад опитування';
 
-    # Template: AgentSurveyEdit
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Редагувати загальну інформацію';
 
-    # Template: AgentSurveyEditQuestions
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Редагувати запитання';
     $Self->{Translation}->{'You are here'} = 'Ви тут';
     $Self->{Translation}->{'Survey Questions'} = 'Запитання опитування';
@@ -56,7 +55,7 @@ sub Data {
     $Self->{Translation}->{'go back to edit question'} = 'повернутись до редагування запитання';
     $Self->{Translation}->{'Answer:'} = 'Відповідь';
 
-    # Template: AgentSurveyOverviewNavBar
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Опція перегляду опитування';
     $Self->{Translation}->{'Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name.'} =
         'Пошук по атрибутах (різні)';
@@ -65,12 +64,12 @@ sub Data {
     $Self->{Translation}->{'Only surveys created between'} = 'Тільки опитування створені між';
     $Self->{Translation}->{'Max. shown surveys per page'} = 'Максимальна кількість опитувань на сторінку';
 
-    # Template: AgentSurveyOverviewSmall
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
     $Self->{Translation}->{'Notification Sender'} = 'Відправник інформувань';
     $Self->{Translation}->{'Notification Subject'} = 'Тема інформування';
     $Self->{Translation}->{'Changed By'} = 'Змінений';
 
-    # Template: AgentSurveyStats
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Огляд статистики';
     $Self->{Translation}->{'Requests Table'} = 'Таблиця запитів';
     $Self->{Translation}->{'Select all requests'} = 'Вибрати всі запити';
@@ -84,7 +83,7 @@ sub Data {
     $Self->{Translation}->{'Previous vote'} = 'Попередня оцінка';
     $Self->{Translation}->{'Next vote'} = 'Наступна оцінка';
 
-    # Template: AgentSurveyZoom
+    # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Information'} = 'Інформація опитування';
     $Self->{Translation}->{'Sent requests'} = 'Надіслані запити';
     $Self->{Translation}->{'Received surveys'} = 'Отримані опитування';
@@ -93,7 +92,7 @@ sub Data {
     $Self->{Translation}->{'Survey Results Graph'} = 'Графік результатів опитування';
     $Self->{Translation}->{'No stat results.'} = 'Немає статистики';
 
-    # Template: PublicSurvey
+    # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = 'Опитування';
     $Self->{Translation}->{'Please answer these questions'} = 'Будь ласка, дайте відповідь на наступні запитання';
     $Self->{Translation}->{'Show my answers'} = 'Показати мої відповіді';
@@ -160,7 +159,7 @@ sub Data {
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'Перелік опитувань';
 
-    # JS File: Survey.Agent.SurveyEditQuestions
+    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         'Ви дійсно хочете видалити це запитання? Всі повязані дані будуть ВТРАЧЕНІ';
     $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Ви дійсно хочете видалити це запитання?';
