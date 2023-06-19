@@ -1,0 +1,26 @@
+# --
+# Copyright (C) 2021 Znuny GmbH, https://znuny.org/
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+## nofilter(TidyAll::Plugin::Znuny::TT::Breadcrumb)
+
+<dt><code>&lt;OTRS_PublicSurveyKey&gt;</code></dt>
+<dd>
+    [% Translate("Public survey key") | html %] ([% Translate("e. g.") | html %]
+    <code>&lt;OTRS_PublicSurveyKey&gt;</code>).
+</dd>
+
+<dt><code>&lt;OTRS_TICKET_*&gt;</code></dt>
+<dd>
+    [% Translate("Options of the ticket data") | html %] ([% Translate("e. g.") | html %]
+    <code>&lt;OTRS_TICKET_TicketNumber&gt;, &lt;OTRS_TICKET_TicketID&gt;, &lt;OTRS_TICKET_Queue&gt;, &lt;OTRS_TICKET_State&gt;</code>).
+</dd>
+
+<dt><code>&lt;OTRS_CUSTOMER_DATA_*&gt;</code></dt>
+<dd>
+    [% Translate("Options of the current customer user data") | html %] ([% Translate("e. g.") | html %]
+    <code>&lt;OTRS_CUSTOMER_DATA_UserFirstname&gt;</code>).
+</dd>

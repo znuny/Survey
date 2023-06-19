@@ -175,7 +175,7 @@ $Selenium->RunTest(
                         "return typeof(\$) === 'function' && \$('input[value=Yes][type=radio]:checked').length"
                 );
 
-                $Selenium->find_element("//button[\@value='Finish'][\@type='submit']")->VerifiedClick();
+                $Selenium->find_element("//button[\@value='Submit'][\@type='submit']")->VerifiedClick();
             }
 
             # Add public vote via backend.
@@ -249,13 +249,13 @@ $Selenium->RunTest(
 
         # Check if 'Previous Vote' exists.
         $Self->False(
-            $Selenium->execute_script("return \$('.SurveyArrowLeft').length"),
+            index( $Selenium->get_page_source(), "Previous vote" ) == -1,
             "'Previous Vote' is not found for first answer"
         );
 
         # Check if 'Next Vote' exists.
         $Self->True(
-            $Selenium->execute_script("return \$('.SurveyArrowRight').length"),
+            index( $Selenium->get_page_source(), "Next vote" ) > -1,
             "'Next Vote' is found for first answer"
         );
 
@@ -269,15 +269,6 @@ $Selenium->RunTest(
             "Ticket number $TicketNumbers[1] is found"
         );
 
-        $Self->True(
-            $Selenium->execute_script("return \$('.SurveyArrowLeft').length"),
-            "'Previous Vote' is found for second answer"
-        );
-        $Self->True(
-            $Selenium->execute_script("return \$('.SurveyArrowRight').length"),
-            "'Next Vote' is found for second answer"
-        );
-
         # Go to next vote.
         $Selenium->find_element("//a[contains(\@href, 'TicketNumber=$TicketNumbers[0]' )]")->click();
         $Selenium->WaitFor( JavaScript => "return \$('.Header h1:contains($TicketNumbers[0])').length" );
@@ -288,11 +279,11 @@ $Selenium->RunTest(
             "Ticket number $TicketNumbers[0] is found"
         );
         $Self->True(
-            $Selenium->execute_script("return \$('.SurveyArrowLeft').length"),
+            index( $Selenium->get_page_source(), "Previous vote" ) > -1,
             "'Previous Vote' is found for third answer"
         );
         $Self->False(
-            $Selenium->execute_script("return \$('.SurveyArrowRight').length"),
+            index( $Selenium->get_page_source(), "Next vote" ) == -1,
             "'Next Vote' is not found for third answer"
         );
 

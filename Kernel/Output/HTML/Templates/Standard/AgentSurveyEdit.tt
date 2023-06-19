@@ -15,176 +15,143 @@
 
     <div class="LayoutPopup ARIARoleMain">
         <div class="Header">
-            <h1>[% Translate("Edit General Info") | html %]: [% Translate(Config("Survey::Hook")) | html %][% Data.SurveyNumber | html %] - [% Data.Title | html %]</h1>
-            <p class="AsteriskExplanation">[% Translate("All fields marked with an asterisk (*) are mandatory.") | html %]</p>
-            <p>
-                <a class="CancelClosePopup" href="#">[% Translate("Cancel & close") | html %]</a>
-            </p>
+            <div>
+                <h1>[% Translate("Edit General Info") | html %]: [% Translate(Config("Survey::Hook")) | html %][% Data.SurveyNumber | html %] - [% Data.Title | html %]</h1>
+            </div>
+            <div>
+               <a class="CancelClosePopup btn-cancel-ghost btn-main btn-width-md" href="#">
+                [% Translate("Close and Back") | html %]
+               </a>
+            </div>
         </div>
         <div class="Content">
 
-            <fieldset class="TableLike FixedLabel">
-
-                <label class="Mandatory" for="Title"><span class="Marker">*</span> [% Translate("Title") | html %]:</label>
-                <div class="Field">
-                    <input id="Title" name="Title" type="text" class="W75pc Validate_Required [% Data.TitleServerError | html %]" value="[% Data.Title | html %]" />
+            <div class="WidgetSimple">
+                <div class="Header">
+                    <div class="WidgetAction Toggle">
+                        <a href="#" title="[% Translate("Toggle this widget") | html %]"><i class="fa fa-caret-right"></i><i class="fa fa-caret-down"></i></a>
+                    </div>
+                    <h2>[% Translate(Config("Survey::Hook")) | html %][% Data.SurveyNumber | html %] - [% Data.Title | html %]</h2>
                 </div>
+                <div class="Content">
+                    <fieldset class="TableLike card-item-wrapper">
+                        <div class="card-item col-wide-100 col-desktop-100 col-tablet-100">
+                            <h2 class="card-title">[% Translate("Edit General Info") | html %]</h2>
+                            <div class="field-wrapper">
+                                <label class="Mandatory" for="Title">[% Translate("Title") | html %]</label>
+                                <div class="Field">
+                                    <input id="Title" name="Title" type="text" class="W50pc Validate_Required [% Data.TitleServerError | html %]" value="[% Data.Title | html %]" />
+                                </div>
+                            </div>
 
 [% RenderBlockStart("Introduction") %]
-                <label class="Mandatory" for="Introduction"><span class="Marker">*</span> [% Translate("Introduction") | html %]:</label>
-                <div class="RichTextField">
-                    <textarea id="Introduction" name="Introduction" name="Introduction" class="RichText Validate_Required [% Data.IntroductionServerError | html %]" title="[% Translate("Survey Introduction") | html %]" rows="15" cols="[% Config("Ticket::Frontend::TextAreaNote") %]">[% Data.Introduction %]</textarea>
-                </div>
-                <div class="Clear"></div>
+                            <div class="field-wrapper">
+                                <label class="Mandatory" for="Introduction">[% Translate("Introduction") | html %]</label>
+                                <div class="RichTextField">
+                                    <textarea id="Introduction" name="Introduction" class="RichText Validate_Required [% Data.IntroductionServerError | html %]" title="[% Translate("Survey Introduction") | html %]" rows="15" cols="[% Config("Ticket::Frontend::TextAreaNote") %]">[% Data.Introduction %]</textarea>
+                                </div>
+                            </div>
 [% RenderBlockEnd("Introduction") %]
 
-                <label class="Mandatory" for="NotificationSender"><span class="Marker">*</span> [% Translate("Sender") | html %]:</label>
-                <div class="Field">
-                    <input id="NotificationSender" name="NotificationSender" type="text" class="W75pc Validate_Required [% Data.NotificationSenderServerError | html %]" value="[% Data.NotificationSender | html %]" />
-                </div>
-                <div class="Clear"></div>
+                            <div class="field-wrapper">
+                                <label class="Mandatory" for="NotificationSender">[% Translate("Sender") | html %]</label>
+                                <div class="Field">
+                                    <input id="NotificationSender" name="NotificationSender" type="text" class="W50pc Validate_Required [% Data.NotificationSenderServerError | html %]" value="[% Data.NotificationSender | html %]" />
+                                </div>
+                            </div>
 
-                <label class="Mandatory" for="NotificationSubject"><span class="Marker">*</span> [% Translate("Subject") | html %]:</label>
-                <div class="Field">
-                    <input id="NotificationSubject" name="NotificationSubject" type="text" class="W75pc Validate_Required [% Data.NotificationSubjectServerError | html %]" value="[% Data.NotificationSubject | html %]" />
-                </div>
-                <div class="Clear"></div>
+                            <div class="field-wrapper">
+                                <label class="Mandatory" for="NotificationSubject">[% Translate("Subject") | html %]</label>
+                                <div class="Field">
+                                    <input id="NotificationSubject" name="NotificationSubject" type="text" class="W50pc Validate_Required [% Data.NotificationSubjectServerError | html %]" value="[% Data.NotificationSubject | html %]" />
+                                </div>
+                            </div>
 
 [% RenderBlockStart("NotificationBody") %]
-                <label class="Mandatory" for="NotificationBody"><span class="Marker">*</span> [% Translate("Body") | html %]:</label>
-                <div class="RichTextField">
-                    <textarea id="NotificationBody" name="NotificationBody" class="RichText Validate_Required [% Data.NotificationBodyServerError | html %]" title="[% Translate("Notification Body") | html %]" rows="15" cols="[% Config("Ticket::Frontend::TextAreaNote") %]">[% Data.NotificationBody | html %]</textarea>
-                </div>
-                <div class="Clear"></div>
+                            <div class="field-wrapper">
+                                <label class="Mandatory" for="NotificationBody">[% Translate("Body") | html %]</label>
+                                <div class="RichTextField">
+                                    <textarea id="NotificationBody" name="NotificationBody" class="RichText Validate_Required [% Data.NotificationBodyServerError | html %]" title="[% Translate("Notification Body") | html %]" rows="15" cols="[% Config("Ticket::Frontend::TextAreaNote") %]">[% Data.NotificationBody | html %]</textarea>
+                                </div>
+                            </div>
 [% RenderBlockEnd("NotificationBody") %]
 
-                <label for="Queues">[% Translate("Queues") | html %]:</label>
-                <div class="Field">
-                    [% Data.QueueString %]
-                </div>
-                <div class="Clear"></div>
+                            <div class="field-wrapper">
+                                <label for="Queues">[% Translate("Queues") | html %]</label>
+                                <div class="Field">
+                                    [% Data.QueueString %]
+                                </div>
+                            </div>
 
 [% RenderBlockStart("TicketTypes") %]
-                <label for="TicketTypeIDs">[% Translate("Ticket Types") | html %]:</label>
-                <div class="Field">
-                    [% Data.TicketTypeStrg %]
-                </div>
-                <div class="Clear"></div>
+                            <div class="field-wrapper">
+                                <label for="TicketTypeIDs">[% Translate("Ticket Types") | html %]</label>
+                                <div class="Field">
+                                    [% Data.TicketTypeStrg %]
+                                </div>
+                            </div>
 [% RenderBlockEnd("TicketTypes") %]
 
 [% RenderBlockStart("TicketServices") %]
-                <label for="ServiceIDs">[% Translate("Services") | html %]:</label>
-                <div class="Field">
-                    [% Data.ServiceStrg %]
-                </div>
-                <div class="Clear"></div>
+                            <div class="field-wrapper">
+                                <label for="ServiceIDs">[% Translate("Services") | html %]</label>
+                                <div class="Field">
+                                    [% Data.ServiceStrg %]
+                                </div>
+                            </div>
 [% RenderBlockEnd("TicketServices") %]
 
 [% RenderBlockStart("InternalDescription") %]
-                <label class="Mandatory" for="Description"><span class="Marker">*</span> [% Translate("Internal Description") | html %]:</label>
-                <div class="RichTextField">
-                    <textarea id="Description" name="Description" class="RichText Validate_Required [% Data.DescriptionServerError | html %]" title="[% Translate("Internal Description") | html %]" rows="15" cols="[% Config("Ticket::Frontend::TextAreaNote") %]">[% Data.Description | html %]</textarea>
-                </div>
-                <div class="Clear"></div>
+                            <div class="field-wrapper">
+                                <label class="Mandatory" for="Description">[% Translate("Internal Description") | html %]</label>
+                                <div class="RichTextField">
+                                    <textarea id="Description" name="Description" class="RichText Validate_Required [% Data.DescriptionServerError | html %]" title="[% Translate("Internal Description") | html %]" rows="15" cols="[% Config("Ticket::Frontend::TextAreaNote") %]">[% Data.Description | html %]</textarea>
+                                </div>
+                            </div>
 [% RenderBlockEnd("InternalDescription") %]
 
 [% RenderBlockStart("SendCustomerUserConditions") %]
-                    <label for="CustomerUserConditions">[% Translate("Customer conditions") | html %]:</label>
-                    <div class="Field">
-                        [% Data.CustomerUserConditionsFieldsStrg %]
-                        <p class="FieldExplanation">
-                            [% Translate("Please choose a Customer property to add a condition.") | html %]
-                        </p>
-                    </div>
-                    <div class="Clear"></div>
-                    <div class="Field Hidden" id="TemplateLevel1">
-                        <ul class="CustomerUserConditionsList">
-                            <li class="DataItem">
-                                <span class="Icon RemoveButtonCustomerField"><i class="fa fa-minus-square-o"></i></span>
-                                <strong></strong>
-                                <ul>
-                                    <li class="Even Last">
-                                        <label>Negate:</label>
-                                        <input type="hidden" value="0" />
-                                        <input class="CustomerUserConditionsCheckbox" type="checkbox" value="0" />
-                                        <input type="text" class="W50pc" value="" />
-                                        <div class="TooltipErrorMessage">
-                                            <p>[% Translate("The field needs to be a valid regular expression or a literal word.") | html %]</p>
-                                        </div>
-                                        <span class="Icon RemoveButtonCustomerCondition Hidden"><i class="fa fa-minus-square-o"></i></span>
-                                        <span class="Icon AddButtonCustomerCondition"><i class="fa fa-plus-square-o"></i></span>
+                            <div class="field-wrapper">
+                                <label for="CustomerUserConditions">[% Translate("Customer conditions") | html %]</label>
+                                <div class="Field">
+                                    [% Data.CustomerUserConditionsFieldsStrg %]
+                                    <p class="FieldExplanation">
+                                        [% Translate("Please choose a Customer property to add a condition.") | html %]
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="Field Hidden" id="TemplateLevel1">
+                                <ul class="CustomerUserConditionsList">
+                                    <li class="DataItem">
+                                        <span title="[% Translate("Remove this entry") | html %]" class="Icon RemoveButton icon-hover RemoveButtonCustomerField"><i class="fa fa-minus-square-o"></i></span>
+                                        <strong></strong>
+                                        <ul>
+                                            <li class="Even Last">
+                                                <label class="Negate">[% Translate("Negate") | html %]:</label>
+                                                <input type="hidden" value="0" />
+                                                <input class="CustomerUserConditionsCheckbox" type="checkbox" value="0" />
+                                                <input type="text" class="TextCustomerCondition" value="" />
+                                                <div class="TooltipErrorMessage">
+                                                    <p>[% Translate("The field needs to be a valid regular expression or a literal word.") | html %]</p>
+                                                </div>
+                                                <span title="[% Translate("Remove this Condition") | html %]" class="Icon Hidden icon-hover RemoveButtonCustomerCondition"><i class="fa fa-minus-square-o"></i></span>
+                                                <span title="[% Translate("Add New Condition") | html %]" class="Icon AddButton icon-hover AddButtonCustomerCondition"><i class="fa fa-plus-square-o"></i></span>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="Clear"></div>
+                            </div>
 [% RenderBlockEnd("SendCustomerUserConditions") %]
-
-[% RenderBlockStart("GenericError") %]
-                <div id="[% Data.ItemName | html %]" class="TooltipErrorMessage">
-                    <p>[% Translate("This field is required.") | html %]</p>
+                        </div>
+                    </fieldset>
                 </div>
-[% RenderBlockEnd("GenericError") %]
-
-[% RenderBlockStart("ServerError") %]
-                <div id="[% Data.ItemName | html %]" class="TooltipErrorMessage">
-                    <p>[% Translate("This field is required.") | html %]</p>
-                </div>
-[% RenderBlockEnd("ServerError") %]
-
-            </fieldset>
+            </div>
+[% INCLUDE "SmartTags/Default.tt" %]
         </div>
         <div class="Footer">
-            <button class="Primary CallForAction" type="submit" value="[% Translate("Update") | html %]"><span><i class="fa fa-check-square-o"></i> [% Translate("Update") | html %]</span></button>
+            <button class="CallForAction Primary btn-primary btn-main btn-width-md" accesskey="g" title="[% Translate("Submit") | html %] (g)" type="submit" value="[% Translate("Submit") | html %]">
+                <span>[% Translate("Submit") | html %]</span>
+            </button>
         </div>
     </div>
 </form>
-<div class="Field WidgetSimple Collapsed Spacing WidgetSpacingRight">
-    <div class="Header">
-        <div class="WidgetAction Toggle">
-            <a href="#" title="[% Translate("Show or hide the content") | html %]">
-                <i class="fa fa-caret-right"></i>
-                <i class="fa fa-caret-down"></i>
-            </a>
-        </div>
-        <h2>[% Translate("Tag Reference") | html %]</h2>
-    </div>
-    <div class="Content">
-
-        <p>[% Translate("You can use the following tags") | html %]:</p>
-        <dl>
-            <dt><code>&lt;OTRS_TICKET_*&gt;</code></dt>
-            <dd>
-                [% Translate("Options of the ticket data") | html %] ([% Translate("e. g.") | html %]
-                <code>&lt;OTRS_TICKET_TicketNumber&gt;, &lt;OTRS_TICKET_TicketID&gt;, &lt;OTRS_TICKET_Queue&gt;, &lt;OTRS_TICKET_State&gt;</code>).
-            </dd>
-
-            <dt><code>&lt;OTRS_CUSTOMER_DATA_*&gt;</code></dt>
-            <dd>
-                [% Translate("Options of the current customer user data") | html %] ([% Translate("e. g.") | html %]
-                <code>&lt;OTRS_CUSTOMER_DATA_UserFirstname&gt;</code>).
-            </dd>
-
-            <dt><code>&lt;OTRS_CONFIG_*&gt;</code></dt>
-            <dd>
-                [% Translate("Config options") | html %] ([% Translate("e. g.") | html %] <code>&lt;OTRS_CONFIG_HttpType&gt;</code>).
-            </dd>
-
-            <dt><code>&lt;OTRS_PublicSurveyKey&gt;</code></dt>
-            <dd>
-                [% Translate("Public survey key") | html %] ([% Translate("e. g.") | html %]
-                <code>&lt;OTRS_PublicSurveyKey&gt;</code>).
-            </dd>
-        </dl>
-
-        <p class="SpacingTop">
-            [% Translate("Example survey") | html %]:
-        </p>
-        <textarea rows="5" cols="60" name="TmpSurvey" disabled="disabled">
-[% Translate("The current ticket state is") | html %]: "&lt;OTRS_TICKET_State&gt;"
-
-[% Translate("Your email address is") | html %]: "&lt;OTRS_CUSTOMER_UserEmail&gt;"
-        </textarea>
-    </div>
-</div>

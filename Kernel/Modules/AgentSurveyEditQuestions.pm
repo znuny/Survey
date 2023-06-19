@@ -628,23 +628,28 @@ sub _MaskQuestionOverview {
 
                 my $Status = Translatable('Complete');
 
+                $Question->{TypeTranslation} = $Question->{Type};
+
                 if ( $Question->{Type} eq 'Radio' ) {
                     if ( $AnswerCount < 2 ) {
-                        $Class  = 'Warning';
                         $Status = Translatable('Incomplete');
                     }
+                    $Question->{TypeTranslation} = "Radio (List)";
                 }
                 elsif ( $Question->{Type} eq 'Checkbox' ) {
                     if ( $AnswerCount < 1 ) {
-                        $Class  = 'Warning';
                         $Status = Translatable('Incomplete');
                     }
+                    $Question->{TypeTranslation} = "Checkbox (List)";
                 }
                 elsif ( $Question->{Type} eq 'NPS' ) {
                     if ( $AnswerCount < 2 ) {
-                        $Class  = 'Warning';
                         $Status = Translatable('Incomplete');
                     }
+                    $Question->{TypeTranslation} = "Net Promoter Score";
+                }
+                elsif ( $Question->{Type} eq 'YesNo' ) {
+                    $Question->{TypeTranslation} = "Yes/No";
                 }
 
                 my $AnswerRequired = $Question->{AnswerRequired} ? 'Yes' : 'No';
@@ -697,6 +702,21 @@ sub _MaskQuestionOverview {
             }
 
             my $AnswerRequired = $Question->{AnswerRequired} ? 'Yes' : 'No';
+
+            $Question->{TypeTranslation} = $Question->{Type};
+
+            if ( $Question->{Type} eq 'Radio' ) {
+                $Question->{TypeTranslation} = "Radio (List)";
+            }
+            elsif ( $Question->{Type} eq 'Checkbox' ) {
+                $Question->{TypeTranslation} = "Checkbox (List)";
+            }
+            elsif ( $Question->{Type} eq 'NPS' ) {
+                $Question->{TypeTranslation} = "Net Promoter Score";
+            }
+            elsif ( $Question->{Type} eq 'YesNo' ) {
+                $Question->{TypeTranslation} = "Yes/No";
+            }
 
             $LayoutObject->Block(
                 Name => 'SurveyQuestionsSaved',
@@ -794,11 +814,21 @@ sub _MaskQuestionEdit {
     if ( $Question{Type} eq 'YesNo' ) {
         $LayoutObject->Block(
             Name => 'QuestionEditTable',
-            Data => {},
+            Data => {
+                TypeTranslation => 'Yes/No',
+            },
         );
         $LayoutObject->Block(
             Name => 'QuestionEditYesno',
-            Data => {},
+            Data => {
+                TypeTranslation => 'Yes/No',
+            },
+        );
+        $LayoutObject->Block(
+            Name => 'NoAnswersYesNo',
+            Data => {
+                TypeTranslation => 'Yes/No',
+            },
         );
     }
     elsif ( $Question{Type} eq 'Radio' || $Question{Type} eq 'Checkbox' || $Question{Type} eq 'NPS' ) {
@@ -807,17 +837,34 @@ sub _MaskQuestionEdit {
         my @List = $SurveyObject->AnswerList(
             QuestionID => $Param{QuestionID},
         );
+
+        my $TypeTranslation;
+        if ( $Type eq 'Radio' ) {
+            $TypeTranslation = 'Radio (List)';
+        }
+        if ( $Type eq 'Checkbox' ) {
+            $TypeTranslation = 'Checkbox (List)';
+        }
+        if ( $Type eq 'NPS' ) {
+            $TypeTranslation = 'Net Promoter Score';
+        }
+
         if ( scalar @List ) {
 
             $LayoutObject->Block(
                 Name => 'QuestionEditTable',
-                Data => {},
+                Data => {
+                    Type            => $Type,
+                    TypeTranslation => $TypeTranslation,
+                },
             );
             if ( $Survey{Status} eq 'New' ) {
 
                 $LayoutObject->Block(
                     Name => 'QuestionEditTableDelete',
-                    Data => {},
+                    Data => {
+                        Type => $Type,
+                    },
                 );
 
                 my $Counter = 0;
@@ -904,7 +951,9 @@ sub _MaskQuestionEdit {
     elsif ( $Question{Type} eq 'Textarea' ) {
         $LayoutObject->Block(
             Name => 'QuestionEditTextArea',
-            Data => {},
+            Data => {
+                TypeTranslation => 'Textarea',
+            },
         );
     }
     $Output .= $LayoutObject->Output(

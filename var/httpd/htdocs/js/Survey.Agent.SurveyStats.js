@@ -27,9 +27,11 @@ Survey.Agent.SurveyStats = (function (TargetNS) {
      */
     TargetNS.Init = function () {
         $('a.LinkZoomView').on('click', function () {
-
-            parent.Core.UI.Popup.FirePopupEvent('URL', { URL: $(this).attr('href')});
-            parent.Core.UI.Popup.Close();
+            var that = this;
+            Core.UI.Popup.ExecuteInParentWindow(function(WindowObject) {
+                WindowObject.Core.UI.Popup.FirePopupEvent('URL', { URL: $(that).attr('href')});
+            });
+            Core.UI.Popup.ClosePopup();
         });
 
         $('#SelectAllRequests').on('click', function () {

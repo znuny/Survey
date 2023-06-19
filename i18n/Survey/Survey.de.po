@@ -454,7 +454,7 @@ msgstr "Wollen Sie diese Frage wirklich löschen? Alle darin enthaltenen Daten w
 
 #. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
 msgid "Do you really want to delete this answer?"
-msgstr "Wollen Sie diese Frage wirklich löschen?"
+msgstr "Wollen Sie diese Antwort wirklich löschen?"
 
 #. SysConfig
 msgid "A Survey Module."

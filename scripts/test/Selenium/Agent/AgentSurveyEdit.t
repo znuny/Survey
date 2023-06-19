@@ -143,7 +143,7 @@ $Selenium->RunTest(
         $Selenium->execute_script("\$('#UserLoginInput1').val('John edited');");
 
         # Submit updates and switch back window.
-        $Selenium->find_element("//button[\@value='Update'][\@type='submit']")->VerifiedClick();
+        $Selenium->find_element("//button[\@value='Submit'][\@type='submit']")->VerifiedClick();
 
         # Navigate to AgentSurveyEdit of created test survey again.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentSurveyEdit;SurveyID=$SurveyID");

@@ -559,22 +559,17 @@ sub Run {
                 # 3. join the resulting Array by putting "</p>\n</p>" in between the Array keys
                 # 4. add '<p>' at the beginning and '</p>' at the end.
 
-                $ErrorText = '<p>'
+                $ErrorText = '<div>'
                     . (
-                    join "</p>\n<p>",
+                    join "</div>\n<div>",
                     map { $LayoutObject->{LanguageObject}->Translate($_) }
                         keys %{ $Errors{ $Question->{QuestionID} } }
                     )
-                    . '</p>';
+                    . '</div>';
 
                 $ErrorText = <<END;
                 <div class="TooltipError">
-                <div class="Tooltip TongueLeft">
-                    <div class="Tongue" ></div>
-                    <div class="Content" role="tooltip" style="word-wrap: break-word;">
-                            $ErrorText
-                    </div>
-                </div>
+                    $ErrorText
                 </div>
 END
                 $Class .= ' Error';

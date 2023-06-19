@@ -162,7 +162,7 @@ sub Data {
     # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
     $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
         'Wollen Sie diese Frage wirklich löschen? Alle darin enthaltenen Daten werden GELÖSCHT!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Wollen Sie diese Frage wirklich löschen?';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Wollen Sie diese Antwort wirklich löschen?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Ein Umfrage-Modul.';

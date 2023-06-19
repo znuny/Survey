@@ -319,7 +319,7 @@ $Selenium->RunTest(
         }
 
         # Submit vote.
-        $Selenium->find_element("//button[\@value='Finish'][\@type='submit']")->VerifiedClick();
+        $Selenium->find_element("//button[\@value='Submit'][\@type='submit']")->VerifiedClick();
 
         # Verify post vote messages.
         my $PostVote = [ "Survey Information", "Thank you for your feedback.", "The survey is finished." ];

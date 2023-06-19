@@ -174,7 +174,7 @@ Enable or disable the send condition check for the ticket type.
 Navigation: Core::Survey.
 
 Results older than the configured amount of days will be deleted. Note:
-delete results done by the OTRS Daemon, prior activation of
+delete results done by the Znuny Daemon, prior activation of
 `Task###SurveyRequestsDelete` setting.
 
 ## Survey::Frontend::AgentSurveyOverview###ShowColumns.
@@ -275,7 +275,7 @@ Navigation: Core::Survey.
 
 Defines the amount in hours a ticket has to be closed to trigger the
 sending of a survey, ( 0 means send immediately after close ). Note:
-delayed survey sending is done by the OTRS Daemon, prior activation of
+delayed survey sending is done by the Znuny Daemon, prior activation of
 `Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend`
 setting.
 

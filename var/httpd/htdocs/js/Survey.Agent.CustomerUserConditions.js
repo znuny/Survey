@@ -137,6 +137,10 @@ Survey.Agent.CustomerUserConditions = (function (TargetNS) {
             .insertBefore('#TemplateLevel1.Field.Hidden');
 
         // Perform AJAX call to check whether the field is an input or select field.
+        if (Action !== 'AgentSurveyEdit') {
+            Action = 'AgentSurveyAdd';
+        }
+
         Data = {
             Action: Action,
             Subaction: 'AJAXRequest',

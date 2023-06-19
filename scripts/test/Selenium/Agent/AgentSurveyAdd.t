@@ -85,15 +85,15 @@ $Selenium->RunTest(
 
         # Scroll down.
         $Selenium->execute_script(
-            "\$('button[value=Create][type=submit]')[0].scrollIntoView(true);",
+            "\$('button[value=Save][type=submit]')[0].scrollIntoView(true);",
         );
         $Self->True(
-            $Selenium->execute_script("return \$('button[value=Create][type=submit]').length;"),
+            $Selenium->execute_script("return \$('button[value=Save][type=submit]').length;"),
             "Submit button is found"
         );
 
         # UserLogin.
-        $Selenium->find_element("//button[\@value='Create'][\@type='submit']")->VerifiedClick();
+        $Selenium->find_element("//button[\@value='Save'][\@type='submit']")->VerifiedClick();
 
         # Check for test created survey values.
         $Self->True(

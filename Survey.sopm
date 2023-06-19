@@ -2,7 +2,7 @@
 <otrs_package version="1.0">
     <Name>Survey</Name>
     <Version>6.5.1</Version>
-    <Framework>6.5.x</Framework>
+    <Framework>7.0.x</Framework>
     <Vendor>Znuny</Vendor>
     <URL>https://www.znuny.org/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
@@ -15,7 +15,6 @@
     <ChangeLog Version="6.3.1" Date="2022-03-22 22:07:57 +0100">Ported to 6.3</ChangeLog>
     <ChangeLog Version="6.2.1" Date="2021-11-09 10:49:42 +0100">Ported to 6.2</ChangeLog>
     <Filelist>
-        <File Permission="660" Location="doc/survey-database.png"/>
         <File Permission="660" Location="Kernel/Config/Files/XML/Survey.xml"/>
         <File Permission="660" Location="Kernel/Language/bg_Survey.pm"/>
         <File Permission="660" Location="Kernel/Language/cs_Survey.pm"/>
@@ -71,6 +70,8 @@
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt"/>
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt"/>
         <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt"/>
+        <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt"/>
+        <File Permission="660" Location="Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyEdit.tt"/>
         <File Permission="660" Location="Kernel/System/Console/Command/Maint/Survey/RequestsDelete.pm"/>
         <File Permission="660" Location="Kernel/System/Console/Command/Maint/Survey/RequestsSend.pm"/>
         <File Permission="660" Location="Kernel/System/Stats/Dynamic/SurveyList.pm"/>
@@ -82,20 +83,20 @@
         <File Permission="660" Location="Kernel/System/Ticket/Event/SurveySendRequest.pm"/>
         <File Permission="660" Location="scripts/test/Console/Command/Maint/Survey/RequestsDelete.t"/>
         <File Permission="660" Location="scripts/test/Console/Command/Maint/Survey/RequestsSend.t"/>
-        <File Permission="660" Location="scripts/test/Survey/Vote/VoteGetAll.t"/>
-        <File Permission="660" Location="scripts/test/Survey/GetRequestRecipient.t"/>
-        <File Permission="660" Location="scripts/test/Survey/PublicAnswerSet.t"/>
-        <File Permission="660" Location="scripts/test/Survey.t"/>
         <File Permission="660" Location="scripts/test/Selenium/Agent/AgentSurveyAdd.t"/>
         <File Permission="660" Location="scripts/test/Selenium/Agent/AgentSurveyEdit.t"/>
-        <File Permission="660" Location="scripts/test/Selenium/Agent/AgentSurveyOverview.t"/>
-        <File Permission="660" Location="scripts/test/Selenium/Agent/AgentSurveyZoom.t"/>
         <File Permission="660" Location="scripts/test/Selenium/Agent/AgentSurveyEditQuestions.t"/>
+        <File Permission="660" Location="scripts/test/Selenium/Agent/AgentSurveyOverview.t"/>
         <File Permission="660" Location="scripts/test/Selenium/Agent/AgentSurveyStats.t"/>
+        <File Permission="660" Location="scripts/test/Selenium/Agent/AgentSurveyZoom.t"/>
         <File Permission="660" Location="scripts/test/Selenium/Output/SurveyMenu/Generic.t"/>
         <File Permission="660" Location="scripts/test/Selenium/Output/SurveyOverview/Small.t"/>
         <File Permission="660" Location="scripts/test/Selenium/Public/PublicSurvey.t"/>
         <File Permission="660" Location="scripts/test/Stats/Dynamic/DynamicList.t"/>
+        <File Permission="660" Location="scripts/test/Survey.t"/>
+        <File Permission="660" Location="scripts/test/Survey/GetRequestRecipient.t"/>
+        <File Permission="660" Location="scripts/test/Survey/PublicAnswerSet.t"/>
+        <File Permission="660" Location="scripts/test/Survey/Vote/VoteGetAll.t"/>
         <File Permission="660" Location="var/httpd/htdocs/js/Survey.Agent.CustomerUserConditions.js"/>
         <File Permission="660" Location="var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js"/>
         <File Permission="660" Location="var/httpd/htdocs/js/Survey.Agent.SurveyOverview.js"/>
@@ -268,8 +269,6 @@
         You are about to install the Survey add-on.<br>
         <br>
         <br>
-        ((enjoy))<br>
-        <br>
 
     ]]></IntroInstall>
     <IntroInstall Type="pre" Title="Installation Information" Lang="de"><![CDATA[
@@ -280,8 +279,6 @@
         <br>
         Sie sind im Begriff das Add-on Survey zu installieren.<br>
         <br>
-        <br>
-        ((enjoy))<br>
         <br>
 
     ]]></IntroInstall>
@@ -294,8 +291,6 @@
         El módulo de encuesta para Znuny se instalará en breve.<br>
         <br>
         <br>
-        ((enjoy))<br>
-        <br>
 
     ]]></IntroInstall>
     <IntroInstall Type="pre" Title="Telepítési információk" Lang="hu"><![CDATA[
@@ -306,8 +301,6 @@
         <br>
         Ön a Survey Znuny csomag telepítésére készül.<br>
         <br>
-        <br>
-        ((enjoy))<br>
         <br>
 
     ]]></IntroInstall>
@@ -320,8 +313,6 @@
         You are about to upgrade the Survey add-on.<br>
         <br>
         <br>
-        ((enjoy))<br>
-        <br>
 
     ]]></IntroUpgrade>
     <IntroUpgrade Type="pre" Title="Upgrade Information" Lang="de"><![CDATA[
@@ -332,8 +323,6 @@
         <br>
         Sie sind im Begriff das Survey Add-on zu aktualisieren.<br>
         <br>
-        <br>
-        ((enjoy))<br>
         <br>
 
     ]]></IntroUpgrade>
@@ -346,8 +335,6 @@
         Esta apunto de actualizar el módulo de encuestas de Znuny.<br>
         <br>
         <br>
-        ((enjoy))<br>
-        <br>
 
     ]]></IntroUpgrade>
     <IntroUpgrade Type="pre" Title="Frissítési információk" Lang="hu"><![CDATA[
@@ -358,8 +345,6 @@
         <br>
         Ön a Survey Znuny csomag frissítésére készül.<br>
         <br>
-        <br>
-        ((enjoy))<br>
         <br>
 
     ]]></IntroUpgrade>
@@ -373,8 +358,6 @@
         All data from these tables will be irrevocably lost!
         <br>
         <br>
-        ((enjoy))<br>
-        <br>
 
     ]]></IntroUninstall>
     <IntroUninstall Type="pre" Title="Uninstallation Information" Lang="de"><![CDATA[
@@ -386,8 +369,6 @@
         Bei der Deinstallation werden die von diesem Paket angelegten Datenbank-Tabellen gelöscht.
         Alle darin enthaltenen Daten gehen unwiderruflich verloren!
         <br>
-        <br>
-        ((enjoy))<br>
         <br>
 
     ]]></IntroUninstall>
@@ -401,8 +382,6 @@
         ¡Todos los datos de esas tablas serán irrevocablemente perdidos!.
         <br>
         <br>
-        ((enjoy))<br>
-        <br>
 
     ]]></IntroUninstall>
     <IntroUninstall Type="pre" Title="Eltávolítási információk" Lang="hu"><![CDATA[
@@ -414,8 +393,6 @@
         Ha eltávolítja ezt a csomagot, akkor a telepítés során létrehozott összes adatbázistábla törlésre kerül.
         Az ezekben a táblákban lévő összes adat visszavonhatatlanul el fog veszni!
         <br>
-        <br>
-        ((enjoy))<br>
         <br>
 
     ]]></IntroUninstall>

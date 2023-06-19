@@ -84,6 +84,10 @@ Survey.Agent.SurveyOverview = (function (TargetNS) {
             );
             Event.preventDefault();
             Event.stopPropagation();
+
+            // Datepickers don't work if added dynamically atm, so hide for now.
+            $('a.DatepickerIcon').hide();
+
             return false;
         });
     };

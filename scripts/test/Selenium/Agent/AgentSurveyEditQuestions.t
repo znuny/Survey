@@ -130,7 +130,7 @@ $Selenium->RunTest(
                 );
 
                 # Click on test created question.
-                $Selenium->find_element( $Questions->{Name}, 'link_text' )->VerifiedClick();
+                $Selenium->find_element( ".QuestionEdit", 'css' )->click();
 
                 $Selenium->find_element( "#Answer", 'css' )->send_keys( $Questions->{Answer1} );
                 $Selenium->find_element("//button[\@value='Add'][\@type='submit']")->VerifiedClick();
@@ -139,9 +139,13 @@ $Selenium->RunTest(
                 $Selenium->find_element("//button[\@value='Add'][\@type='submit']")->VerifiedClick();
 
                 # Return back to add question screen.
-                $Selenium->find_element("//button[\@value='Go back'][\@type='submit']")->VerifiedClick();
+                $Selenium->find_element( "#BreadCrumbSurveyQuestions", 'css' )->VerifiedClick();
 
             }
+
+            $Selenium->execute_script(
+                "\$('.Footer')[0].scrollIntoView(true);",
+            );
 
             # Verify question is in complete state.
             $Self->True(
@@ -151,8 +155,7 @@ $Selenium->RunTest(
 
             # Delete test question.
             $Selenium->find_element( ".QuestionDelete", 'css' )->click();
-            $Selenium->WaitFor( AlertPresent => 1 );
-            $Selenium->accept_alert();
+            $Selenium->find_element( "#DialogButton2",  'css' )->VerifiedClick();
 
             $Selenium->WaitFor(
                 JavaScript =>

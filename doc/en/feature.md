@@ -12,7 +12,7 @@ This text contains complete or partial text passages which have been created by 
 
 ## Create new Survey
 
-This feature lets OTRS users create new Survey by selecting the menu
+This feature lets Znuny users create new Survey by selecting the menu
 "SURVEY" and choosing "New".
 
 New Surveys require a title, an introduction text, a sender mail
@@ -71,7 +71,7 @@ have at least two answers to be valid. Furthermore, questions of type
 
 ## Start sending Survey requests
 
-When the OTRS user has finished adding or modifying questions and
+When the Znuny user has finished adding or modifying questions and
 possible answers, he can leave the "Edit Questions" area by clicking
 "Close window".
 

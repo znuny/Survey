@@ -27,26 +27,71 @@ Survey.Agent.SurveyEditQuestions = (function (TargetNS) {
      *      Init edit survey screen.
      */
     TargetNS.Init = function () {
-        $('.QuestionDelete').on('click', function (Event) {
 
-            if(window.confirm(Core.Language.Translate("Do you really want to delete this question? ALL associated data will be LOST!"))) {
-                window.location = Core.Config.Get('Baselink') + $(this).data('query-string');
-            }
-            Event.stopPropagation();
-            Event.preventDefault();
+        $('.QuestionDelete').on('click', function () {
+            var $Element = $(this);
+
+            Core.UI.Dialog.ShowContentDialog(
+                $('#DeleteQuestionDialogContainer'),
+                Core.Language.Translate('Delete'),
+                '240px',
+                'Center',
+                true,
+                [
+                    {
+                        Label: Core.Language.Translate("Cancel"),
+                        Type: 'Secondary',
+                        Function: function () {
+                            Core.UI.Dialog.CloseDialog($('#DeleteQuestionDialog'));
+                        }
+                    },
+                    {
+                        Label: Core.Language.Translate("Delete"),
+                        Type: 'Warning',
+                        Function: function() {
+                            $('.Dialog .InnerContent .Center').text(Core.Language.Translate("Delete") + ' ...');
+                            $('.Dialog .Content .ContentFooter').remove();
+
+                            window.location = Core.Config.Get('Baselink') + $Element.data('query-string');
+                        }
+                    },
+                ]
+            );
             return false;
         });
 
-        $('.AnswerDelete').on('click', function (Event) {
 
-            if(window.confirm(Core.Language.Translate("Do you really want to delete this answer?"))) {
-                window.location = Core.Config.Get('Baselink') + $(this).data('query-string');
-            }
-            Event.stopPropagation();
-            Event.preventDefault();
+        $('.AnswerDelete').on('click', function () {
+            var $Element = $(this);
+
+            Core.UI.Dialog.ShowContentDialog(
+                $('#DeleteAnswerDialogContainer'),
+                Core.Language.Translate('Delete'),
+                '240px',
+                'Center',
+                true,
+                [
+                    {
+                        Label: Core.Language.Translate("Cancel"),
+                        Type: 'Secondary',
+                        Function: function () {
+                            Core.UI.Dialog.CloseDialog($('#DeleteAnswerDialog'));
+                        }
+                    },
+                    {
+                        Label: Core.Language.Translate("Delete"),
+                        Type: 'Warning',
+                        Function: function() {
+                            $('.Dialog .InnerContent .Center').text(Core.Language.Translate("Delete") + ' ...');
+                            $('.Dialog .Content .ContentFooter').remove();
+
+                            window.location = Core.Config.Get('Baselink') + $Element.data('query-string');
+                        }
+                    },
+                ]
+            );
             return false;
         });
-
     };
 
     Core.Init.RegisterNamespace(TargetNS, 'APP_MODULE');
