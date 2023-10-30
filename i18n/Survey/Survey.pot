@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Survey\n"
-"POT-Creation-Date: 2020-01-24 14:38+0000\n"
+"POT-Creation-Date: 2023-10-30 12:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,263 +10,271 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Create New Survey"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Introduction"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey Introduction"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Notification Body"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Ticket Types"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Internal Description"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Customer conditions"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Please choose a Customer property to add a condition."
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr ""
 
-#. Template: AgentSurveyAdd
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Example survey"
 msgstr ""
 
-#. Template: AgentSurveyEdit
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
 msgid "Edit General Info"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Questions"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "You are here"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Survey Questions"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Add Question"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Type the question"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer required"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "No questions saved for this survey."
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Question"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer Required"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "When you finish to edit the survey questions just close this screen."
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Close this window"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Question"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "go back to questions"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Question:"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Possible Answers For"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Add Answer"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "No answers saved for this question."
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "This doesn't have several answers, a textarea will be displayed."
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Edit Answer"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "go back to edit question"
 msgstr ""
 
-#. Template: AgentSurveyEditQuestions
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Answer:"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Survey overview options"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Searches in the attributes Number, Title, Introduction, Description, NotificationSender, NotificationSubject and NotificationBody, overriding other attributes with the same name."
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Survey Create Time"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "No restriction"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Only surveys created between"
 msgstr ""
 
-#. Template: AgentSurveyOverviewNavBar
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
 msgid "Max. shown surveys per page"
 msgstr ""
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Notification Sender"
 msgstr ""
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Notification Subject"
 msgstr ""
 
-#. Template: AgentSurveyOverviewSmall
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewSmall.tt
 msgid "Changed By"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Stats Overview of"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Requests Table"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Select all requests"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Send Time"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Vote Time"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Select this request"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "See Details"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Delete stats"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Survey Stat Details"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "go back to stats overview"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Previous vote"
 msgstr ""
 
-#. Template: AgentSurveyStats
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "Next vote"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Information"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Sent requests"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Received surveys"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Details"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Ticket Services"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "Survey Results Graph"
 msgstr ""
 
-#. Template: AgentSurveyZoom
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
 msgid "No stat results."
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Survey"
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Please answer these questions"
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Show my answers"
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "These are your answers"
 msgstr ""
 
-#. Template: PublicSurvey
+#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
 msgid "Survey Title"
 msgstr ""
 
@@ -446,11 +454,11 @@ msgstr ""
 msgid "Survey List"
 msgstr ""
 
-#. JS File: Survey.Agent.SurveyEditQuestions
+#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
 msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr ""
 
-#. JS File: Survey.Agent.SurveyEditQuestions
+#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
 msgid "Do you really want to delete this answer?"
 msgstr ""
 

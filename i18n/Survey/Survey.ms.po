@@ -654,3 +654,11 @@ msgstr "Pencetus menghantar permohonan soal selidik ditangguhkan"
 msgid "Zoom into statistics details."
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+

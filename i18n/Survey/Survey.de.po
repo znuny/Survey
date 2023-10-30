@@ -656,3 +656,11 @@ msgstr "Auslöser zum Senden von verzögerten Anfragen."
 msgid "Zoom into statistics details."
 msgstr "Statistik-Details erhöhen."
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+

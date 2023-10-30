@@ -656,3 +656,11 @@ msgstr "Тригер відправки відкладених запитів о
 msgid "Zoom into statistics details."
 msgstr "Перейти в деталі статистики"
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+

@@ -26,6 +26,8 @@ sub Data {
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = 'Por favor elija una propiedad del Cliente para añadir la condición.';
     $Self->{Translation}->{'Public survey key'} = 'Llave púbica de la encuesta';
     $Self->{Translation}->{'Example survey'} = 'Ejemplo de encuesta';
+    $Self->{Translation}->{'The current ticket state is'} = '';
+    $Self->{Translation}->{'Your email address is'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Editar información General';

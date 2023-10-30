@@ -654,3 +654,11 @@ msgstr "Окидач одложеног слања захтева за анке�
 msgid "Zoom into statistics details."
 msgstr "Улаз у детаљни приказ статистике."
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+

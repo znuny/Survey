@@ -654,3 +654,11 @@ msgstr "追ってのアンケート要求を送信するトリガ"
 msgid "Zoom into statistics details."
 msgstr "統計情報の詳細をズームインする。"
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+

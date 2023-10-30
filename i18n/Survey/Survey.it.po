@@ -656,3 +656,11 @@ msgstr "Attiva l'invio di richieste di sondaggi ritardate."
 msgid "Zoom into statistics details."
 msgstr "Ingrandisci i dettagli delle statistiche."
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+

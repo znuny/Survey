@@ -26,6 +26,8 @@ sub Data {
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '';
     $Self->{Translation}->{'Public survey key'} = '';
     $Self->{Translation}->{'Example survey'} = '';
+    $Self->{Translation}->{'The current ticket state is'} = '';
+    $Self->{Translation}->{'Your email address is'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Редактиране на основната информация';
@@ -95,7 +97,7 @@ sub Data {
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
     $Self->{Translation}->{'Survey'} = 'Проучване';
     $Self->{Translation}->{'Please answer these questions'} = 'Моля отговорете на следните въпроси';
-    $Self->{Translation}->{'Show my answers'} = 'Мойте отговори';
+    $Self->{Translation}->{'Show my answers'} = 'Моите отговори';
     $Self->{Translation}->{'These are your answers'} = 'Това са твойте отговори';
     $Self->{Translation}->{'Survey Title'} = 'Заглавие';
 

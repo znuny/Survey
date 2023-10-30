@@ -654,3 +654,11 @@ msgstr "Disparador para solicitudes de envío de encuestas retrasadas "
 msgid "Zoom into statistics details."
 msgstr "Ir a los detalles de la estadística."
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+

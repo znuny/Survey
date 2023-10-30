@@ -654,3 +654,11 @@ msgstr "Disparar o envio de pedidos de questionários atrasados."
 msgid "Zoom into statistics details."
 msgstr "Zoom em detalhes de estatísticas."
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+

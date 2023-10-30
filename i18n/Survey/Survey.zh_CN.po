@@ -654,3 +654,11 @@ msgstr "触发器发送延迟的调查请求。"
 msgid "Zoom into statistics details."
 msgstr "进入调查统计详情。"
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "The current ticket state is"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+msgid "Your email address is"
+msgstr ""
+
