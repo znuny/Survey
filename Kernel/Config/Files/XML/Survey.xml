@@ -375,7 +375,7 @@
         </Value>
     </Setting>
     <Setting Name="Loader::Module::PublicSurvey###002-Survey" Required="0" Valid="1">
-        <Description Translatable="1">Loader module registration for the agent interface.</Description>
+        <Description Translatable="1">Loader module registration for the public interface.</Description>
         <Navigation>Frontend::Public::ModuleRegistration</Navigation>
         <Value>
             <Hash>
