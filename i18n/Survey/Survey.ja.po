@@ -42,7 +42,7 @@ msgstr "お客様の条件"
 msgid "Please choose a Customer property to add a condition."
 msgstr "条件を追加するには、顧客プロパティを選択して下さい。"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr "公開アンケートキー"
 
@@ -250,7 +250,7 @@ msgstr "アンケート結果のグラフ"
 msgid "No stat results."
 msgstr "統計結果がありません。"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey"
 msgstr "アンケート"
 
@@ -298,7 +298,7 @@ msgstr "あなたはこのアンケート、質問、または回答の権限が
 msgid "Survey Edit Questions"
 msgstr "アンケートの質問を編集"
 
-#. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Yes/No"
 msgstr "はい/いいえ"
 
@@ -446,11 +446,11 @@ msgstr "アンケートに回答済みです。"
 msgid "Survey List"
 msgstr "アンケート・リスト"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr "この質問を本当に削除してもいいですか？　関連しているすべてのデーターが失われます!"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this answer?"
 msgstr "本当にこの答えを削除してもいいですか？"
 
@@ -653,4 +653,8 @@ msgstr "追ってのアンケート要求を送信するトリガ"
 #. SysConfig
 msgid "Zoom into statistics details."
 msgstr "統計情報の詳細をズームインする。"
+
+#. SysConfig
+msgid "Loader module registration for the public interface."
+msgstr ""
 

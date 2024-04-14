@@ -42,7 +42,7 @@ msgstr "客户条件"
 msgid "Please choose a Customer property to add a condition."
 msgstr "请选择一个客户属性以添加条件。"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr "公共调查密钥"
 
@@ -250,7 +250,7 @@ msgstr "调查结果图"
 msgid "No stat results."
 msgstr "没有统计结果。"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey"
 msgstr "调查"
 
@@ -298,7 +298,7 @@ msgstr "你没有权限使用此调查、问卷或答案！"
 msgid "Survey Edit Questions"
 msgstr "编辑调查问题"
 
-#. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Yes/No"
 msgstr "是/否"
 
@@ -446,11 +446,11 @@ msgstr "你已经回答了这个调查。"
 msgid "Survey List"
 msgstr "调查列表"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr "您真的要删除这个问题吗？所有相关数据都将丢失！"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this answer?"
 msgstr "您真的要删除这个回答吗？"
 
@@ -653,4 +653,8 @@ msgstr "触发器发送延迟的调查请求。"
 #. SysConfig
 msgid "Zoom into statistics details."
 msgstr "进入调查统计详情。"
+
+#. SysConfig
+msgid "Loader module registration for the public interface."
+msgstr ""
 

@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'アンケート';
     $Self->{Translation}->{'Create New Survey'} = '新規アンケートの作成';
     $Self->{Translation}->{'Introduction'} = '紹介文';
     $Self->{Translation}->{'Survey Introduction'} = 'アンケートの紹介文';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = '内部向け説明';
     $Self->{Translation}->{'Customer conditions'} = 'お客様の条件';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '条件を追加するには、顧客プロパティを選択して下さい。';
-    $Self->{Translation}->{'Public survey key'} = '公開アンケートキー';
-    $Self->{Translation}->{'Example survey'} = 'アンケート例';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = '一般情報の編集';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = '質問の編集';
-    $Self->{Translation}->{'You are here'} = 'あなたの現在地';
     $Self->{Translation}->{'Survey Questions'} = 'アンケート質問';
     $Self->{Translation}->{'Add Question'} = '質問の追加';
     $Self->{Translation}->{'Type the question'} = '質問の入力';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = '回答が必須の項目です';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         'このアンケートの設問を編集したら、画面を閉じて下さい。';
-    $Self->{Translation}->{'Close this window'} = 'このウインドウを閉じて下さい。';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        'この質問を本当に削除してもいいですか？　関連しているすべてのデーターが失われます!';
     $Self->{Translation}->{'Edit Question'} = '質問編集';
-    $Self->{Translation}->{'go back to questions'} = '質問へ戻る';
     $Self->{Translation}->{'Question:'} = '設問:';
-    $Self->{Translation}->{'Possible Answers For'} = '選択肢';
     $Self->{Translation}->{'Add Answer'} = '回答の追加';
+    $Self->{Translation}->{'Answer:'} = '回答:';
     $Self->{Translation}->{'No answers saved for this question.'} = 'この質問への回答はまだありません';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'この質問には選択肢がありません。テキストエリアが表示されます。';
+    $Self->{Translation}->{'Yes/No'} = 'はい/いいえ';
+    $Self->{Translation}->{'Possible Answers For'} = '選択肢';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = '本当にこの答えを削除してもいいですか？';
     $Self->{Translation}->{'Edit Answer'} = '回答の編集';
-    $Self->{Translation}->{'go back to edit question'} = '質問の編集に戻る';
-    $Self->{Translation}->{'Answer:'} = '回答:';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'アンケートの概要オプション';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = '統計一覧';
+    $Self->{Translation}->{'Survey Stat Details'} = 'アンケート統計の詳細';
     $Self->{Translation}->{'Requests Table'} = '回答一覧';
     $Self->{Translation}->{'Select all requests'} = '全てのリクエストを選択して下さい。';
     $Self->{Translation}->{'Send Time'} = '送信日時';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = 'このリクエストを選択して下さい。';
     $Self->{Translation}->{'See Details'} = '詳細を確認';
     $Self->{Translation}->{'Delete stats'} = '統計を削除';
-    $Self->{Translation}->{'Survey Stat Details'} = 'アンケート統計の詳細';
-    $Self->{Translation}->{'go back to stats overview'} = '統計一覧に戻る';
     $Self->{Translation}->{'Previous vote'} = '前の投票';
     $Self->{Translation}->{'Next vote'} = '次の投票';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'アンケートの詳細';
+    $Self->{Translation}->{'Ticket Services'} = 'チケット・サービス';
     $Self->{Translation}->{'Survey Information'} = 'アンケートの情報';
     $Self->{Translation}->{'Sent requests'} = '送信数';
     $Self->{Translation}->{'Received surveys'} = '返信数';
-    $Self->{Translation}->{'Survey Details'} = 'アンケートの詳細';
-    $Self->{Translation}->{'Ticket Services'} = 'チケット・サービス';
     $Self->{Translation}->{'Survey Results Graph'} = 'アンケート結果のグラフ';
     $Self->{Translation}->{'No stat results.'} = '統計結果がありません。';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'アンケート';
     $Self->{Translation}->{'Please answer these questions'} = 'これらの質問に回答してください。';
     $Self->{Translation}->{'Show my answers'} = '過去の回答を表示';
     $Self->{Translation}->{'These are your answers'} = 'これらは過去に回答されたものです。';
-    $Self->{Translation}->{'Survey Title'} = 'アンケートのタイトル';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = '公開アンケートキー';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = '新規アンケートの追加';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = 'あなたはこのアンケートや質問の権限がありません！';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = 'あなたはこのアンケート、質問、または回答の権限がありません！';
     $Self->{Translation}->{'Survey Edit Questions'} = 'アンケートの質問を編集';
-    $Self->{Translation}->{'Yes/No'} = 'はい/いいえ';
     $Self->{Translation}->{'Radio (List)'} = 'ラジオボタン (一覧)';
     $Self->{Translation}->{'Checkbox (List)'} = 'チェックボックス (一覧)';
     $Self->{Translation}->{'Net Promoter Score'} = 'ネット・プロモーター・スコア';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'アンケート・リスト';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        'この質問を本当に削除してもいいですか？　関連しているすべてのデーターが失われます!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = '本当にこの答えを削除してもいいですか？';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'アンケート・モジュール';
@@ -217,6 +210,7 @@ sub Data {
         '公開インターフェースのPublicSurveyオブジェクトに対するフロントエンド・モジュールの登録です。';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'この正規表現にマッチする場合、調査は顧客に送信されません。';
     $Self->{Translation}->{'Limit.'} = 'リミット';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'アンケート一覧 (Small) の (アンケートが表示される) ページに対するパラメータ';
     $Self->{Translation}->{'Public Survey.'} = '公開インターフェースのPublicSurveyオブジェクトに対するフロントエンドモジュール登録です。';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

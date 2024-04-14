@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'Tafiti';
     $Self->{Translation}->{'Create New Survey'} = 'Tengeneza tafiti mpya';
     $Self->{Translation}->{'Introduction'} = 'Utangulizi';
     $Self->{Translation}->{'Survey Introduction'} = 'Utangulizi wa tafiti';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = 'Maelezo ya ndani';
     $Self->{Translation}->{'Customer conditions'} = '';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '';
-    $Self->{Translation}->{'Public survey key'} = '';
-    $Self->{Translation}->{'Example survey'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Hariri taarifa za ujumla';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Hariri maswali';
-    $Self->{Translation}->{'You are here'} = '';
     $Self->{Translation}->{'Survey Questions'} = 'Maswali ya tafiti';
     $Self->{Translation}->{'Add Question'} = 'Ongeza swali';
     $Self->{Translation}->{'Type the question'} = 'Chapa swali';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = 'Jibu linahitajika';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         '';
-    $Self->{Translation}->{'Close this window'} = '';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        'Je unataka kufuta hili swali? Data zote zita POTEA!';
     $Self->{Translation}->{'Edit Question'} = 'Hariri swali';
-    $Self->{Translation}->{'go back to questions'} = 'rudi kwenye maswali';
     $Self->{Translation}->{'Question:'} = '';
-    $Self->{Translation}->{'Possible Answers For'} = 'Majibu yawezekana kwa';
     $Self->{Translation}->{'Add Answer'} = 'Ongeza jibu';
+    $Self->{Translation}->{'Answer:'} = '';
     $Self->{Translation}->{'No answers saved for this question.'} = 'Hakuna majibu yaliyohifadhiwa kwa hili swali';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'Hili halina majibu mengi, sehemu ya nakala itaonyeshwa.';
+    $Self->{Translation}->{'Yes/No'} = 'Ndio/Hapana';
+    $Self->{Translation}->{'Possible Answers For'} = 'Majibu yawezekana kwa';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Je unataka kufuta hili jibu?';
     $Self->{Translation}->{'Edit Answer'} = 'Hariri jibu';
-    $Self->{Translation}->{'go back to edit question'} = 'Rudi nyuma kuhariri swali';
-    $Self->{Translation}->{'Answer:'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = '';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Mapitio ya takwimu ya';
+    $Self->{Translation}->{'Survey Stat Details'} = 'Maelezo ya takwimu za tafiti';
     $Self->{Translation}->{'Requests Table'} = 'Jedwali la maombi';
     $Self->{Translation}->{'Select all requests'} = '';
     $Self->{Translation}->{'Send Time'} = 'Muda wa kutuma';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = '';
     $Self->{Translation}->{'See Details'} = 'Ona maelezo';
     $Self->{Translation}->{'Delete stats'} = '';
-    $Self->{Translation}->{'Survey Stat Details'} = 'Maelezo ya takwimu za tafiti';
-    $Self->{Translation}->{'go back to stats overview'} = 'Rudi nyuma kwenye mapitio ya takwimu';
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'Maelezo ya tafiti';
+    $Self->{Translation}->{'Ticket Services'} = 'Huduma za tiketi';
     $Self->{Translation}->{'Survey Information'} = 'Taarifa za takwimu';
     $Self->{Translation}->{'Sent requests'} = 'Maombi yaliyotumwa';
     $Self->{Translation}->{'Received surveys'} = 'Tafiti zilizopokelewa';
-    $Self->{Translation}->{'Survey Details'} = 'Maelezo ya tafiti';
-    $Self->{Translation}->{'Ticket Services'} = 'Huduma za tiketi';
     $Self->{Translation}->{'Survey Results Graph'} = 'Grafu ya matokeo ya tafiti';
     $Self->{Translation}->{'No stat results.'} = 'Hakuna matokeo ya takwimu';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'Tafiti';
     $Self->{Translation}->{'Please answer these questions'} = 'Tafadhali jibu haya maswali';
     $Self->{Translation}->{'Show my answers'} = 'Onyesha majibu yangu';
     $Self->{Translation}->{'These are your answers'} = 'Haya ni majibu yako';
-    $Self->{Translation}->{'Survey Title'} = 'Kichwa cha habari cha utafiti';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = '';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = 'Ongeza utafiti mpya';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = '';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = '';
     $Self->{Translation}->{'Survey Edit Questions'} = 'Hariri maswali ya utafiti';
-    $Self->{Translation}->{'Yes/No'} = 'Ndio/Hapana';
     $Self->{Translation}->{'Radio (List)'} = 'Redio (Orodha)';
     $Self->{Translation}->{'Checkbox (List)'} = 'Cheki boksi (orodha)';
     $Self->{Translation}->{'Net Promoter Score'} = '';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        'Je unataka kufuta hili swali? Data zote zita POTEA!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Je unataka kufuta hili jibu?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Moduli ya utafiti';
@@ -217,6 +210,7 @@ sub Data {
         'Moduli ya Frontend ya kusajili kwa ajili ya UtafitiUmma katika eneo la utafiti wa umma.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Kama hii regex inafanana, utafiti wa mteja hautatumwa.';
     $Self->{Translation}->{'Limit.'} = '';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parameta kwa ajili ya kurasa (ambazo ndani yake utafiti umeonyeshwa) za mapitio ya utafiti mdogo. ';
     $Self->{Translation}->{'Public Survey.'} = 'Savei ya umma';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

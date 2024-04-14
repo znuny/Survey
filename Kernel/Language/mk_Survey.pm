@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'Анкета';
     $Self->{Translation}->{'Create New Survey'} = 'Креирај нова анкета';
     $Self->{Translation}->{'Introduction'} = 'Вовед';
     $Self->{Translation}->{'Survey Introduction'} = 'Вовед во анкета';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = 'Внатрешен Опис';
     $Self->{Translation}->{'Customer conditions'} = '';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '';
-    $Self->{Translation}->{'Public survey key'} = '';
-    $Self->{Translation}->{'Example survey'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Уреди ги Општите информации';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Уреди ги Прашања';
-    $Self->{Translation}->{'You are here'} = '';
     $Self->{Translation}->{'Survey Questions'} = 'Прашања од Анкета';
     $Self->{Translation}->{'Add Question'} = 'Додади прашање';
     $Self->{Translation}->{'Type the question'} = 'Внесете го прашањето';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = 'Задолжителен Одговор ';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         '';
-    $Self->{Translation}->{'Close this window'} = '';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        'Дали навистина сакате да го избришете ова прашање? Сите поврзани податоци ќе бидат ИЗГУБЕНИ!';
     $Self->{Translation}->{'Edit Question'} = 'Уреди ги Прашањета';
-    $Self->{Translation}->{'go back to questions'} = 'врати ме на прашања';
     $Self->{Translation}->{'Question:'} = '';
-    $Self->{Translation}->{'Possible Answers For'} = 'Можни одговори за';
     $Self->{Translation}->{'Add Answer'} = 'Додади Одговор';
+    $Self->{Translation}->{'Answer:'} = '';
     $Self->{Translation}->{'No answers saved for this question.'} = 'За ова прашање не е зачуван одговор.';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'Ова нема повеќе одговори, полето за текст ќе биде прикажан.';
+    $Self->{Translation}->{'Yes/No'} = 'Да/Не';
+    $Self->{Translation}->{'Possible Answers For'} = 'Можни одговори за';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Дали навистина сакате да го избришете овој одговор?';
     $Self->{Translation}->{'Edit Answer'} = 'Уреди го Одговорот';
-    $Self->{Translation}->{'go back to edit question'} = 'врати се на уредување на прашања';
-    $Self->{Translation}->{'Answer:'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = '';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Преглед на Статистика за';
+    $Self->{Translation}->{'Survey Stat Details'} = ' Детали за статистика на Анкета';
     $Self->{Translation}->{'Requests Table'} = 'барањата за Табела';
     $Self->{Translation}->{'Select all requests'} = '';
     $Self->{Translation}->{'Send Time'} = 'Испрати Време';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = '';
     $Self->{Translation}->{'See Details'} = 'Види Детали';
     $Self->{Translation}->{'Delete stats'} = '';
-    $Self->{Translation}->{'Survey Stat Details'} = ' Детали за статистика на Анкета';
-    $Self->{Translation}->{'go back to stats overview'} = 'врати ме на преглед на статистика ';
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'Детали за анкета';
+    $Self->{Translation}->{'Ticket Services'} = 'Услуги за тикет';
     $Self->{Translation}->{'Survey Information'} = 'информации за анкета';
     $Self->{Translation}->{'Sent requests'} = 'Испратени барања';
     $Self->{Translation}->{'Received surveys'} = 'Добиени анкети';
-    $Self->{Translation}->{'Survey Details'} = 'Детали за анкета';
-    $Self->{Translation}->{'Ticket Services'} = 'Услуги за тикет';
     $Self->{Translation}->{'Survey Results Graph'} = 'Графикон за Резултатите од истражувањето';
     $Self->{Translation}->{'No stat results.'} = 'Нема статистички резултати.';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'Анкета';
     $Self->{Translation}->{'Please answer these questions'} = '';
     $Self->{Translation}->{'Show my answers'} = '';
     $Self->{Translation}->{'These are your answers'} = 'Овие се ваши одговори';
-    $Self->{Translation}->{'Survey Title'} = '';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = '';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = 'Додади Новa Анкета';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = '';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = '';
     $Self->{Translation}->{'Survey Edit Questions'} = 'Уреди ги прашањата за анкетата';
-    $Self->{Translation}->{'Yes/No'} = 'Да/Не';
     $Self->{Translation}->{'Radio (List)'} = 'Листа од копчиња';
     $Self->{Translation}->{'Checkbox (List)'} = 'Обележувач (Листа)';
     $Self->{Translation}->{'Net Promoter Score'} = '';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        'Дали навистина сакате да го избришете ова прашање? Сите поврзани податоци ќе бидат ИЗГУБЕНИ!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Дали навистина сакате да го избришете овој одговор?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Модул за Анкета';
@@ -217,6 +210,7 @@ sub Data {
         '';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Ако овој израз се совпаѓа, анкета нема да биде испратена на клиентот.';
     $Self->{Translation}->{'Limit.'} = '';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Параметри за страници (во кој се прикажуваат анкетите) на мала преглед на анкета.';
     $Self->{Translation}->{'Public Survey.'} = '';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

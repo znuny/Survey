@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'Kysely';
     $Self->{Translation}->{'Create New Survey'} = 'Luo uusi kysely';
     $Self->{Translation}->{'Introduction'} = 'Esittely';
     $Self->{Translation}->{'Survey Introduction'} = 'Kyselyn esittely';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = 'Sisäinen kuvaus';
     $Self->{Translation}->{'Customer conditions'} = '';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '';
-    $Self->{Translation}->{'Public survey key'} = '';
-    $Self->{Translation}->{'Example survey'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Muokkaa tietoja';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Muokkaa kysymyksiä';
-    $Self->{Translation}->{'You are here'} = '';
     $Self->{Translation}->{'Survey Questions'} = 'Kyselyn kysymykset';
     $Self->{Translation}->{'Add Question'} = 'Lisää kysymys';
     $Self->{Translation}->{'Type the question'} = 'Syötä kysymys';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = '';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         '';
-    $Self->{Translation}->{'Close this window'} = '';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        '';
     $Self->{Translation}->{'Edit Question'} = 'Muokkaa kysymystä';
-    $Self->{Translation}->{'go back to questions'} = 'mene takaisin kysymyksiin';
     $Self->{Translation}->{'Question:'} = '';
-    $Self->{Translation}->{'Possible Answers For'} = 'Vastausvaihtoehdot';
     $Self->{Translation}->{'Add Answer'} = 'Lisää vastaus';
+    $Self->{Translation}->{'Answer:'} = '';
     $Self->{Translation}->{'No answers saved for this question.'} = '';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'Tässä ei ole useita vastauksia, näytetään tekstialue.';
+    $Self->{Translation}->{'Yes/No'} = 'Kyllä / Ei';
+    $Self->{Translation}->{'Possible Answers For'} = 'Vastausvaihtoehdot';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = '';
     $Self->{Translation}->{'Edit Answer'} = 'Muokkaa vastausta';
-    $Self->{Translation}->{'go back to edit question'} = 'mene takaisin muokkaamaan kysymystä';
-    $Self->{Translation}->{'Answer:'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = '';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Tulosten yhteenveto';
+    $Self->{Translation}->{'Survey Stat Details'} = 'Kyselyn tulosten yksityiskohdat';
     $Self->{Translation}->{'Requests Table'} = '';
     $Self->{Translation}->{'Select all requests'} = '';
     $Self->{Translation}->{'Send Time'} = 'Lähetysaika';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = '';
     $Self->{Translation}->{'See Details'} = '';
     $Self->{Translation}->{'Delete stats'} = '';
-    $Self->{Translation}->{'Survey Stat Details'} = 'Kyselyn tulosten yksityiskohdat';
-    $Self->{Translation}->{'go back to stats overview'} = 'mene takaisin yhteenvetoon';
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'Kyselyn yksityiskohdat';
+    $Self->{Translation}->{'Ticket Services'} = '';
     $Self->{Translation}->{'Survey Information'} = 'Kyselyn tiedot';
     $Self->{Translation}->{'Sent requests'} = 'Lähetettyjä kyselyitä';
     $Self->{Translation}->{'Received surveys'} = 'Vastausten määrä';
-    $Self->{Translation}->{'Survey Details'} = 'Kyselyn yksityiskohdat';
-    $Self->{Translation}->{'Ticket Services'} = '';
     $Self->{Translation}->{'Survey Results Graph'} = 'Tulosten graafit';
     $Self->{Translation}->{'No stat results.'} = 'Ei tuloksia.';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'Kysely';
     $Self->{Translation}->{'Please answer these questions'} = 'Vastaa seuraaviin kysymyksiin';
     $Self->{Translation}->{'Show my answers'} = 'Näytä vastaukseni';
     $Self->{Translation}->{'These are your answers'} = 'Nämä ovat vastauksesi';
-    $Self->{Translation}->{'Survey Title'} = 'Kyselyn otsikko';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = '';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = 'Lisää uusi kysely';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = '';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = '';
     $Self->{Translation}->{'Survey Edit Questions'} = 'Muokkaa kysymyksiä';
-    $Self->{Translation}->{'Yes/No'} = 'Kyllä / Ei';
     $Self->{Translation}->{'Radio (List)'} = 'Valitse yksi monesta (Lista)';
     $Self->{Translation}->{'Checkbox (List)'} = 'Valitse yksi tai useampia (Lista)';
     $Self->{Translation}->{'Net Promoter Score'} = '';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        '';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = '';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Kyselyominaisuus';
@@ -217,6 +210,7 @@ sub Data {
         '';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = '';
     $Self->{Translation}->{'Limit.'} = '';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         '';
     $Self->{Translation}->{'Public Survey.'} = '';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

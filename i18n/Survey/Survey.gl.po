@@ -42,7 +42,7 @@ msgstr ""
 msgid "Please choose a Customer property to add a condition."
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgstr "Gráfico Resultados Enquisa"
 msgid "No stat results."
 msgstr "No resultados estatística"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey"
 msgstr "Enquisa"
 
@@ -298,7 +298,7 @@ msgstr ""
 msgid "Survey Edit Questions"
 msgstr "Editar Preguntas da Enquisa"
 
-#. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Yes/No"
 msgstr "Si/Non"
 
@@ -446,11 +446,11 @@ msgstr "Xa respondeu a esta enquisa."
 msgid "Survey List"
 msgstr ""
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr "Confirma que desexa eliminar esta pregunta. Hanse PERDER TODOS os datos asociados!"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this answer?"
 msgstr "Confirma que desexa eliminar esta pregunta?"
 
@@ -652,5 +652,9 @@ msgstr ""
 
 #. SysConfig
 msgid "Zoom into statistics details."
+msgstr ""
+
+#. SysConfig
+msgid "Loader module registration for the public interface."
 msgstr ""
 

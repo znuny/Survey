@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = '調查';
     $Self->{Translation}->{'Create New Survey'} = '創建新的調查';
     $Self->{Translation}->{'Introduction'} = '介紹';
     $Self->{Translation}->{'Survey Introduction'} = '調查介紹';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = '内部描述';
     $Self->{Translation}->{'Customer conditions'} = '';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '';
-    $Self->{Translation}->{'Public survey key'} = '';
-    $Self->{Translation}->{'Example survey'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = '編輯一般信息';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = '編輯問題';
-    $Self->{Translation}->{'You are here'} = '您在此';
     $Self->{Translation}->{'Survey Questions'} = '調查問題';
     $Self->{Translation}->{'Add Question'} = '添加問題';
     $Self->{Translation}->{'Type the question'} = '問題類型';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = '必須回答';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         '';
-    $Self->{Translation}->{'Close this window'} = '';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        '';
     $Self->{Translation}->{'Edit Question'} = '編輯問題';
-    $Self->{Translation}->{'go back to questions'} = '返回問題';
     $Self->{Translation}->{'Question:'} = '問題：';
-    $Self->{Translation}->{'Possible Answers For'} = '可選的回答';
     $Self->{Translation}->{'Add Answer'} = '添加回答';
+    $Self->{Translation}->{'Answer:'} = '答：';
     $Self->{Translation}->{'No answers saved for this question.'} = '';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         '';
+    $Self->{Translation}->{'Yes/No'} = '是/否';
+    $Self->{Translation}->{'Possible Answers For'} = '可選的回答';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = '您確定要刪除此答案？';
     $Self->{Translation}->{'Edit Answer'} = '編輯回答';
-    $Self->{Translation}->{'go back to edit question'} = '返回到編輯問題';
-    $Self->{Translation}->{'Answer:'} = '答：';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = '';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = '統計概況';
+    $Self->{Translation}->{'Survey Stat Details'} = '調查統計詳情';
     $Self->{Translation}->{'Requests Table'} = '請求表';
     $Self->{Translation}->{'Select all requests'} = '';
     $Self->{Translation}->{'Send Time'} = '發送時間';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = '';
     $Self->{Translation}->{'See Details'} = '查看詳情';
     $Self->{Translation}->{'Delete stats'} = '';
-    $Self->{Translation}->{'Survey Stat Details'} = '調查統計詳情';
-    $Self->{Translation}->{'go back to stats overview'} = '返回統計概況';
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = '調查詳情';
+    $Self->{Translation}->{'Ticket Services'} = '工單服務';
     $Self->{Translation}->{'Survey Information'} = '調查信息';
     $Self->{Translation}->{'Sent requests'} = '已發送的請求';
     $Self->{Translation}->{'Received surveys'} = '已接收的調查';
-    $Self->{Translation}->{'Survey Details'} = '調查詳情';
-    $Self->{Translation}->{'Ticket Services'} = '工單服務';
     $Self->{Translation}->{'Survey Results Graph'} = '調查結果圖';
     $Self->{Translation}->{'No stat results.'} = '沒有統計結果。';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = '調查';
     $Self->{Translation}->{'Please answer these questions'} = '請回答這些問題';
     $Self->{Translation}->{'Show my answers'} = '顯示我的回答';
     $Self->{Translation}->{'These are your answers'} = '這些是你的回答';
-    $Self->{Translation}->{'Survey Title'} = '調查標題';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = '';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = '創建新的調查';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = '';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = '';
     $Self->{Translation}->{'Survey Edit Questions'} = '編輯調查問題';
-    $Self->{Translation}->{'Yes/No'} = '是/否';
     $Self->{Translation}->{'Radio (List)'} = '單選（列表）';
     $Self->{Translation}->{'Checkbox (List)'} = '複選框（列表）';
     $Self->{Translation}->{'Net Promoter Score'} = '';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        '';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = '您確定要刪除此答案？';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = '調查模組';
@@ -217,6 +210,7 @@ sub Data {
         '';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = '';
     $Self->{Translation}->{'Limit.'} = '';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         '';
     $Self->{Translation}->{'Public Survey.'} = '公開的調查';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

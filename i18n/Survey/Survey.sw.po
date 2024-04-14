@@ -42,7 +42,7 @@ msgstr ""
 msgid "Please choose a Customer property to add a condition."
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgstr "Grafu ya matokeo ya tafiti"
 msgid "No stat results."
 msgstr "Hakuna matokeo ya takwimu"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey"
 msgstr "Tafiti"
 
@@ -298,7 +298,7 @@ msgstr ""
 msgid "Survey Edit Questions"
 msgstr "Hariri maswali ya utafiti"
 
-#. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Yes/No"
 msgstr "Ndio/Hapana"
 
@@ -446,11 +446,11 @@ msgstr "Umekwishajibu tafiti"
 msgid "Survey List"
 msgstr ""
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr "Je unataka kufuta hili swali? Data zote zita POTEA!"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this answer?"
 msgstr "Je unataka kufuta hili jibu?"
 
@@ -652,5 +652,9 @@ msgstr ""
 
 #. SysConfig
 msgid "Zoom into statistics details."
+msgstr ""
+
+#. SysConfig
+msgid "Loader module registration for the public interface."
 msgstr ""
 

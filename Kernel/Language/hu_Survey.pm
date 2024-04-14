@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'Kérdőív';
     $Self->{Translation}->{'Create New Survey'} = 'Új kérdőív létrehozása';
     $Self->{Translation}->{'Introduction'} = 'Bevezetés';
     $Self->{Translation}->{'Survey Introduction'} = 'Kérdőív bevezetése';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = 'Belső leírás';
     $Self->{Translation}->{'Customer conditions'} = 'Ügyfél feltételek';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = 'Válasszon egy ügyféltulajdonságot egy feltételhez való hozzáadáshoz.';
-    $Self->{Translation}->{'Public survey key'} = 'Nyilvános kérdőívkulcs';
-    $Self->{Translation}->{'Example survey'} = 'Példa kérdőív';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Általános információk szerkesztése';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Kérdések szerkesztése';
-    $Self->{Translation}->{'You are here'} = 'Ön itt áll';
     $Self->{Translation}->{'Survey Questions'} = 'Kérdőív kérdések';
     $Self->{Translation}->{'Add Question'} = 'Kérdés hozzáadása';
     $Self->{Translation}->{'Type the question'} = 'Gépelje be a kérdést';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = 'Válasz kötelező';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         'Amikor befejezte a kérdőív kérdéseinek szerkesztését, akkor egyszerűen zárja be ezt a képernyőt.';
-    $Self->{Translation}->{'Close this window'} = 'Ablak bezárása';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        'Valóban törölni szeretné ezt a kérdést? MINDEN kapcsolódó adat el fog VESZNI!';
     $Self->{Translation}->{'Edit Question'} = 'Kérdés szerkesztése';
-    $Self->{Translation}->{'go back to questions'} = 'vissza a kérdésekhez';
     $Self->{Translation}->{'Question:'} = 'Kérdés:';
-    $Self->{Translation}->{'Possible Answers For'} = 'Lehetséges válaszok a következőhöz';
     $Self->{Translation}->{'Add Answer'} = 'Válasz hozzáadása';
+    $Self->{Translation}->{'Answer:'} = 'Válasz:';
     $Self->{Translation}->{'No answers saved for this question.'} = 'Nincsenek válaszok elmentve ehhez a kérdéshez.';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'Ennek nincs több válasza, egy szövegdoboz lesz megjelenítve.';
+    $Self->{Translation}->{'Yes/No'} = 'Igen/Nem';
+    $Self->{Translation}->{'Possible Answers For'} = 'Lehetséges válaszok a következőhöz';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Valóban törölni szeretné ezt a választ?';
     $Self->{Translation}->{'Edit Answer'} = 'Válasz szerkesztése';
-    $Self->{Translation}->{'go back to edit question'} = 'vissza a kérdés szerkesztéséhez';
-    $Self->{Translation}->{'Answer:'} = 'Válasz:';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Kérdőív áttekintő lehetőségek';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'A következő statisztikáinak áttekintése';
+    $Self->{Translation}->{'Survey Stat Details'} = 'Kérdőív statisztika részletek';
     $Self->{Translation}->{'Requests Table'} = 'Kérések táblázat';
     $Self->{Translation}->{'Select all requests'} = 'Az összes kérés kijelölése';
     $Self->{Translation}->{'Send Time'} = 'Küldés ideje';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = 'Ezen kérés kijelölése';
     $Self->{Translation}->{'See Details'} = 'Részletek megtekintése';
     $Self->{Translation}->{'Delete stats'} = 'Statisztikák törlése';
-    $Self->{Translation}->{'Survey Stat Details'} = 'Kérdőív statisztika részletek';
-    $Self->{Translation}->{'go back to stats overview'} = 'vissza a statisztikák áttekintőjéhez';
     $Self->{Translation}->{'Previous vote'} = 'Előző szavazat';
     $Self->{Translation}->{'Next vote'} = 'Következő szavazat';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'Kérdőív részletek';
+    $Self->{Translation}->{'Ticket Services'} = 'Jegyszolgáltatások';
     $Self->{Translation}->{'Survey Information'} = 'Kérdőív információk';
     $Self->{Translation}->{'Sent requests'} = 'Elküldött kérések';
     $Self->{Translation}->{'Received surveys'} = 'Beérkezett kérdőívek';
-    $Self->{Translation}->{'Survey Details'} = 'Kérdőív részletek';
-    $Self->{Translation}->{'Ticket Services'} = 'Jegyszolgáltatások';
     $Self->{Translation}->{'Survey Results Graph'} = 'Kérdőív eredmények grafikonja';
     $Self->{Translation}->{'No stat results.'} = 'Nincsenek statisztika eredmények.';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'Kérdőív';
     $Self->{Translation}->{'Please answer these questions'} = 'Válaszoljon ezekre a kérdésekre';
     $Self->{Translation}->{'Show my answers'} = 'Saját válaszaim megjelenítése';
     $Self->{Translation}->{'These are your answers'} = 'Ezek az Ön válaszai';
-    $Self->{Translation}->{'Survey Title'} = 'Kérdőív címe';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = 'Nyilvános kérdőívkulcs';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = 'Új kérdőív hozzáadása';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = 'Nincs jogosultsága ehhez a kérdőívhez vagy kérdéshez!';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = 'Nincs jogosultsága ehhez a kérdőívhez, kérdéshez vagy válaszhoz!';
     $Self->{Translation}->{'Survey Edit Questions'} = 'Kérdőív kérdések szerkesztése';
-    $Self->{Translation}->{'Yes/No'} = 'Igen/Nem';
     $Self->{Translation}->{'Radio (List)'} = 'Választógomb (lista)';
     $Self->{Translation}->{'Checkbox (List)'} = 'Jelölőnégyzet (lista)';
     $Self->{Translation}->{'Net Promoter Score'} = 'Valós ügyféltámogatottsági érték';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'Kérdőívlista';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        'Valóban törölni szeretné ezt a kérdést? MINDEN kapcsolódó adat el fog VESZNI!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Valóban törölni szeretné ezt a választ?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Egy kérdőív modul.';
@@ -217,6 +210,7 @@ sub Data {
         'Előtétprogram modul regisztráció a nyilvános kérdőív objektumhoz a nyilvános kérdőív területen.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Ha ez a reguláris kifejezés illeszkedik, akkor az ügyfélkérdőív nem kerül kiküldésre.';
     $Self->{Translation}->{'Limit.'} = 'Korlát.';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Paraméterek a kis kérdőív áttekintő oldalaihoz (amelyekben a kérdőívek megjelennek).';
     $Self->{Translation}->{'Public Survey.'} = 'Nyilvános kérdőív.';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

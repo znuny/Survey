@@ -44,7 +44,7 @@ msgstr "Kundenbedingungen"
 msgid "Please choose a Customer property to add a condition."
 msgstr "Bitte wählen Sie eine Kundeneigenschaft, um eine Bedingung hinzuzufügen."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr "Öffentlicher Umfrageschlüssel"
 
@@ -252,7 +252,7 @@ msgstr "Umfrageergebnisse-Graph"
 msgid "No stat results."
 msgstr "Keine Statistikergebnisse."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey"
 msgstr "Umfrage"
 
@@ -300,7 +300,7 @@ msgstr "Sie haben keine Berechtigung für diese Umfrage, Frage oder Antwort!"
 msgid "Survey Edit Questions"
 msgstr "Fragen der Umfrage bearbeiten"
 
-#. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Yes/No"
 msgstr "Ja/Nein"
 
@@ -448,11 +448,11 @@ msgstr "Sie haben die Umfrage schon beantwortet."
 msgid "Survey List"
 msgstr "Umfragen-Liste"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr "Wollen Sie diese Frage wirklich löschen? Alle darin enthaltenen Daten werden GELÖSCHT!"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this answer?"
 msgstr "Wollen Sie diese Antwort wirklich löschen?"
 
@@ -655,4 +655,8 @@ msgstr "Auslöser zum Senden von verzögerten Anfragen."
 #. SysConfig
 msgid "Zoom into statistics details."
 msgstr "Statistik-Details erhöhen."
+
+#. SysConfig
+msgid "Loader module registration for the public interface."
+msgstr ""
 

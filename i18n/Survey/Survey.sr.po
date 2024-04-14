@@ -42,7 +42,7 @@ msgstr "Услови клијента"
 msgid "Please choose a Customer property to add a condition."
 msgstr "Молимо изаберите атрибут клијента за додавање услова."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr "Јавни кључ анкете"
 
@@ -250,7 +250,7 @@ msgstr "Графикон резултата анкете"
 msgid "No stat results."
 msgstr "Нема статистике резултата."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey"
 msgstr "Анкета"
 
@@ -298,7 +298,7 @@ msgstr "Немате дозволу за ову анкету, питање ил�
 msgid "Survey Edit Questions"
 msgstr "Уреди анкетна питања"
 
-#. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Yes/No"
 msgstr "Да/Не"
 
@@ -446,11 +446,11 @@ msgstr "Већ сте одговорили на анкету."
 msgid "Survey List"
 msgstr "Листа анкета"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr "Да ли заиста желите да обришете ово питање? СВИ повезани подаци ће бити ИЗГУБЉЕНИ!"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this answer?"
 msgstr "Да ли заиста желите да избришете овај одговор?"
 
@@ -653,4 +653,8 @@ msgstr "Окидач одложеног слања захтева за анке�
 #. SysConfig
 msgid "Zoom into statistics details."
 msgstr "Улаз у детаљни приказ статистике."
+
+#. SysConfig
+msgid "Loader module registration for the public interface."
+msgstr ""
 

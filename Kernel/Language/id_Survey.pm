@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'Survey';
     $Self->{Translation}->{'Create New Survey'} = 'Buat survey baru';
     $Self->{Translation}->{'Introduction'} = 'Pengantar';
     $Self->{Translation}->{'Survey Introduction'} = 'Keta pengantar survey.';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = 'Deskripsi internal';
     $Self->{Translation}->{'Customer conditions'} = '';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '';
-    $Self->{Translation}->{'Public survey key'} = '';
-    $Self->{Translation}->{'Example survey'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Ubah informasi umum';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Ubah pertanyaan';
-    $Self->{Translation}->{'You are here'} = 'Anda berada disini';
     $Self->{Translation}->{'Survey Questions'} = 'Pertanyaan survey';
     $Self->{Translation}->{'Add Question'} = 'Tambah pertanyaan.';
     $Self->{Translation}->{'Type the question'} = 'Ketik pertanyaannya.';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = 'Jawaban dibutuhkan';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         'Ketika anda selesai mengubah pertanyaan survey ini, silahkan tutup tampilan ini.';
-    $Self->{Translation}->{'Close this window'} = '';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        'Apakah anda yakin ingin menghapus pertanyaan ini? SEMUA data yang berhubungan akan HILANG!';
     $Self->{Translation}->{'Edit Question'} = 'Ubah pertanyaan';
-    $Self->{Translation}->{'go back to questions'} = 'Kembali ke pertanyaan.';
     $Self->{Translation}->{'Question:'} = 'Pertanyaan: ';
-    $Self->{Translation}->{'Possible Answers For'} = 'Jawaban yang memungkinkan untuk';
     $Self->{Translation}->{'Add Answer'} = 'Tambah jawaban';
+    $Self->{Translation}->{'Answer:'} = 'Jawaban:';
     $Self->{Translation}->{'No answers saved for this question.'} = 'Tidak ada jawaban yang di simpan untuk pertanyaan ini';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'Tidak memiliki beberapa jawaban, bidangteks akan di tampilkan.';
+    $Self->{Translation}->{'Yes/No'} = 'Ya/Tidak';
+    $Self->{Translation}->{'Possible Answers For'} = 'Jawaban yang memungkinkan untuk';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Apakah anda yakin ingin menghapus jawaban ini?';
     $Self->{Translation}->{'Edit Answer'} = 'ubah jawaban';
-    $Self->{Translation}->{'go back to edit question'} = 'Kembali ke ubah pertanyaan';
-    $Self->{Translation}->{'Answer:'} = 'Jawaban:';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = '';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Gambaran status dari';
+    $Self->{Translation}->{'Survey Stat Details'} = 'Rincian status survey';
     $Self->{Translation}->{'Requests Table'} = 'Tabel permintaan.';
     $Self->{Translation}->{'Select all requests'} = '';
     $Self->{Translation}->{'Send Time'} = 'Waktu pengiriman.';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = '';
     $Self->{Translation}->{'See Details'} = 'Lihat rincian';
     $Self->{Translation}->{'Delete stats'} = '';
-    $Self->{Translation}->{'Survey Stat Details'} = 'Rincian status survey';
-    $Self->{Translation}->{'go back to stats overview'} = 'Kembali ke gambaran status';
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'Rincian survey';
+    $Self->{Translation}->{'Ticket Services'} = 'Layanan tiket';
     $Self->{Translation}->{'Survey Information'} = 'Informasi survey';
     $Self->{Translation}->{'Sent requests'} = 'Permintaan yang telah dikirim';
     $Self->{Translation}->{'Received surveys'} = 'Survey yang diterima';
-    $Self->{Translation}->{'Survey Details'} = 'Rincian survey';
-    $Self->{Translation}->{'Ticket Services'} = 'Layanan tiket';
     $Self->{Translation}->{'Survey Results Graph'} = 'Grafik hasil survey';
     $Self->{Translation}->{'No stat results.'} = 'Tidak ada hasil stat';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'Survey';
     $Self->{Translation}->{'Please answer these questions'} = 'Mohon jawab pertanyaan berikut.';
     $Self->{Translation}->{'Show my answers'} = 'Tampilkan jawaban saya';
     $Self->{Translation}->{'These are your answers'} = 'Berikut ini adalah jawaban anda';
-    $Self->{Translation}->{'Survey Title'} = 'Judul survey';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = '';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = 'Tambahkan survey baru';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = '';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = '';
     $Self->{Translation}->{'Survey Edit Questions'} = 'Ubah pertanyaan survey';
-    $Self->{Translation}->{'Yes/No'} = 'Ya/Tidak';
     $Self->{Translation}->{'Radio (List)'} = 'Radio (daftar)';
     $Self->{Translation}->{'Checkbox (List)'} = 'Kotak centang (daftar)';
     $Self->{Translation}->{'Net Promoter Score'} = '';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        'Apakah anda yakin ingin menghapus pertanyaan ini? SEMUA data yang berhubungan akan HILANG!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Apakah anda yakin ingin menghapus jawaban ini?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Sebuah modul survey';
@@ -217,6 +210,7 @@ sub Data {
         'Pendaftaran modul frontend  untuk objek PublicSurvey di area survey.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Jika regex ini cocok, maka tidak ada survey pelanggan yang akan di kirim.';
     $Self->{Translation}->{'Limit.'} = '';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parameter untuk halaman (dimana survey tersebut di tampilkan) gambaran kecil survey.';
     $Self->{Translation}->{'Public Survey.'} = 'Survey umum';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

@@ -44,7 +44,7 @@ msgstr "Умови клієнта"
 msgid "Please choose a Customer property to add a condition."
 msgstr "Будь ласка виберіть коректно клієнта щоб додати умову"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr "Публічний ключ опитування"
 
@@ -252,7 +252,7 @@ msgstr "Графік результатів опитування"
 msgid "No stat results."
 msgstr "Немає статистики"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey"
 msgstr "Опитування"
 
@@ -300,7 +300,7 @@ msgstr "Ви не маєте повноважень на це опитуванн
 msgid "Survey Edit Questions"
 msgstr "Редагувати запитання опитування"
 
-#. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Yes/No"
 msgstr "Так/Ні"
 
@@ -448,11 +448,11 @@ msgstr "Ви вже відповіли на всі запитання в опи�
 msgid "Survey List"
 msgstr "Перелік опитувань"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr "Ви дійсно хочете видалити це запитання? Всі повязані дані будуть ВТРАЧЕНІ"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this answer?"
 msgstr "Ви дійсно хочете видалити це запитання?"
 
@@ -655,4 +655,8 @@ msgstr "Тригер відправки відкладених запитів о
 #. SysConfig
 msgid "Zoom into statistics details."
 msgstr "Перейти в деталі статистики"
+
+#. SysConfig
+msgid "Loader module registration for the public interface."
+msgstr ""
 

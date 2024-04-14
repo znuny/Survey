@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'แบบสอบถาม';
     $Self->{Translation}->{'Create New Survey'} = 'สร้างแบบสอบถามใหม่';
     $Self->{Translation}->{'Introduction'} = 'บทนำ';
     $Self->{Translation}->{'Survey Introduction'} = 'คำนำแบบสอบถาม';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = 'รายละเอียดภายใน';
     $Self->{Translation}->{'Customer conditions'} = '';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '';
-    $Self->{Translation}->{'Public survey key'} = '';
-    $Self->{Translation}->{'Example survey'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'แก้ไขข้อมูลทั่วไป';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'แก้ไขคำถาม';
-    $Self->{Translation}->{'You are here'} = 'คุณอยู่ที่นี่';
     $Self->{Translation}->{'Survey Questions'} = 'คำถามแบบสอบถาม';
     $Self->{Translation}->{'Add Question'} = 'เพิ่มคำถาม';
     $Self->{Translation}->{'Type the question'} = 'ประเภทคำถาม';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = 'ต้องการคำตอบ';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         'เมื่อคุณการแก้ไขคำถามในแบบสอบถามเสร็จสิ้นแล้วเพียงแค่ปิดหน้าจอนี้';
-    $Self->{Translation}->{'Close this window'} = '';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        'คุณแน่ใจหรือไม่ที่จะลบคำถามนี้? ข้อมูลที่เกี่ยวข้องทั้งหมดจะหายไป!';
     $Self->{Translation}->{'Edit Question'} = 'แก้ไขคำถาม';
-    $Self->{Translation}->{'go back to questions'} = 'กลับไปที่คำถาม';
     $Self->{Translation}->{'Question:'} = 'คำถาม:';
-    $Self->{Translation}->{'Possible Answers For'} = 'คำตอบที่เป็นไปได้';
     $Self->{Translation}->{'Add Answer'} = 'เพิ่มคำตอบ';
+    $Self->{Translation}->{'Answer:'} = 'คำตอบ:';
     $Self->{Translation}->{'No answers saved for this question.'} = 'ไม่มีคำตอบบันทึกในคำถามนี้';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'มีบางคำถามที่ยังไม่ตอบ textarea จะปรากฏ ';
+    $Self->{Translation}->{'Yes/No'} = 'ใช่/ไม่ใช่';
+    $Self->{Translation}->{'Possible Answers For'} = 'คำตอบที่เป็นไปได้';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'คุณต้องการลบการตอบนี้หรือไม่?';
     $Self->{Translation}->{'Edit Answer'} = 'แก้ไขคำตอบ';
-    $Self->{Translation}->{'go back to edit question'} = 'กลับไปที่แก้ไขคำถาม';
-    $Self->{Translation}->{'Answer:'} = 'คำตอบ:';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = '';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'สถิติภาพรวมของ';
+    $Self->{Translation}->{'Survey Stat Details'} = 'เนื้อหาของสถิติแบบสอบถาม';
     $Self->{Translation}->{'Requests Table'} = 'การร้องขอตาราง';
     $Self->{Translation}->{'Select all requests'} = '';
     $Self->{Translation}->{'Send Time'} = 'เวลาส่ง';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = '';
     $Self->{Translation}->{'See Details'} = 'ดูเนื้อหา';
     $Self->{Translation}->{'Delete stats'} = '';
-    $Self->{Translation}->{'Survey Stat Details'} = 'เนื้อหาของสถิติแบบสอบถาม';
-    $Self->{Translation}->{'go back to stats overview'} = 'กลับไปที่สถิติภาพรวม';
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'เนื้อหาของแบบสอบถาม';
+    $Self->{Translation}->{'Ticket Services'} = 'การบริการของตั๋ว';
     $Self->{Translation}->{'Survey Information'} = 'ข้อมูลแบบสอบถาม';
     $Self->{Translation}->{'Sent requests'} = 'ส่งคำร้อง';
     $Self->{Translation}->{'Received surveys'} = 'ได้รับแบบสอบถามแล้ว';
-    $Self->{Translation}->{'Survey Details'} = 'เนื้อหาของแบบสอบถาม';
-    $Self->{Translation}->{'Ticket Services'} = 'การบริการของตั๋ว';
     $Self->{Translation}->{'Survey Results Graph'} = 'กราฟคำตอบของแบบสอบถาม';
     $Self->{Translation}->{'No stat results.'} = 'ไม่มีคำตอบของสถิติ';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'แบบสอบถาม';
     $Self->{Translation}->{'Please answer these questions'} = 'โปรดตอบคำถามเหล่านี้';
     $Self->{Translation}->{'Show my answers'} = 'แสดงคำตอบของฉัน';
     $Self->{Translation}->{'These are your answers'} = 'นี่คือคำตอบของคุณ';
-    $Self->{Translation}->{'Survey Title'} = 'หัวข้อแบบสอบถาม';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = '';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = 'เพิ่มแบบสอบถาม';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = '';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = '';
     $Self->{Translation}->{'Survey Edit Questions'} = 'แบบสอบถามแก้ไขคำถาม';
-    $Self->{Translation}->{'Yes/No'} = 'ใช่/ไม่ใช่';
     $Self->{Translation}->{'Radio (List)'} = 'เรดิโอ(รายชื่อ)';
     $Self->{Translation}->{'Checkbox (List)'} = 'กล่องตรวจสอบ (รายชื่อ)';
     $Self->{Translation}->{'Net Promoter Score'} = '';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = '';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        'คุณแน่ใจหรือไม่ที่จะลบคำถามนี้? ข้อมูลที่เกี่ยวข้องทั้งหมดจะหายไป!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'คุณต้องการลบการตอบนี้หรือไม่?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'โมดูลแบบสอบถาม';
@@ -217,6 +210,7 @@ sub Data {
         'การลงทะเบียนโมดูล Frontend สำหรับออบเจกค์แบบสอบถามทั่วไปในพื้นที่สำรวจสาธารณะ';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'ถ้าหาก regex ตรงกัน จะไม่มีการส่งแบบสอบถามให้ลูกค้า';
     $Self->{Translation}->{'Limit.'} = '';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'พารามิเตอร์สำหรับเพจ (ซึ่งจะแสดงแบบสอบถาม) ของภาพรวมแบบสอบถามขนาดเล็ก';
     $Self->{Translation}->{'Public Survey.'} = 'แบบสอบถามสาธารณะ';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'Encuesta';
     $Self->{Translation}->{'Create New Survey'} = 'Crear nueva encuesta';
     $Self->{Translation}->{'Introduction'} = 'Introducción';
     $Self->{Translation}->{'Survey Introduction'} = 'Introducción de la Encuesta';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = 'Descripción Interna';
     $Self->{Translation}->{'Customer conditions'} = 'Condiciones del cliente';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = 'Ellija una propiedad del cliente para agregar una condición.';
-    $Self->{Translation}->{'Public survey key'} = 'Clave de encuesta pública';
-    $Self->{Translation}->{'Example survey'} = 'Encuesta de ejemplo';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Editar información General';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Editar Preguntas';
-    $Self->{Translation}->{'You are here'} = 'Usted está aquí';
     $Self->{Translation}->{'Survey Questions'} = 'Preguntas de la Encuesta';
     $Self->{Translation}->{'Add Question'} = 'Agregar Pregunta';
     $Self->{Translation}->{'Type the question'} = 'Escriba la pregunta';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = 'Respuesta Requerida';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         'Cuando termine de editar las preguntas de la encuesta, cierre esta ventana.';
-    $Self->{Translation}->{'Close this window'} = 'Cerrar ésta ventana';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        '¿Realmente desea eliminar esta pregunta? TODOS los datos asociados se PERDERÁN!';
     $Self->{Translation}->{'Edit Question'} = 'Editar Pregunta';
-    $Self->{Translation}->{'go back to questions'} = 'regresar a preguntas';
     $Self->{Translation}->{'Question:'} = 'Pregunta:';
-    $Self->{Translation}->{'Possible Answers For'} = 'Posibles respuestas para';
     $Self->{Translation}->{'Add Answer'} = 'Agregar Respuesta';
+    $Self->{Translation}->{'Answer:'} = 'Respuesta:';
     $Self->{Translation}->{'No answers saved for this question.'} = 'No hay respuestas almacenadas para esta pregunta.';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'Esta pregunta no tiene varias respuestas, un area de texto será mostrada';
+    $Self->{Translation}->{'Yes/No'} = 'Si/No';
+    $Self->{Translation}->{'Possible Answers For'} = 'Posibles respuestas para';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = '¿Realmente desea eliminar esta respuesta?';
     $Self->{Translation}->{'Edit Answer'} = 'Editar Respuesta';
-    $Self->{Translation}->{'go back to edit question'} = 'volver a editar pregunta';
-    $Self->{Translation}->{'Answer:'} = 'Respuesta:';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Opciones de resumen de encuesta';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Resumen de Estadísticas de';
+    $Self->{Translation}->{'Survey Stat Details'} = 'Detalles de Estadisticas de Encuesta';
     $Self->{Translation}->{'Requests Table'} = 'Tabla de Solicitudes';
     $Self->{Translation}->{'Select all requests'} = 'Seleccionar todas las solicitudes';
     $Self->{Translation}->{'Send Time'} = 'Tiempo de Envío';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = 'Seleccionar esta solicitud';
     $Self->{Translation}->{'See Details'} = 'Ver Detalles';
     $Self->{Translation}->{'Delete stats'} = 'Borrar estadísticas';
-    $Self->{Translation}->{'Survey Stat Details'} = 'Detalles de Estadisticas de Encuesta';
-    $Self->{Translation}->{'go back to stats overview'} = 'regresar a resúmen de estadisticas';
     $Self->{Translation}->{'Previous vote'} = 'Voto anterior';
     $Self->{Translation}->{'Next vote'} = 'Voto próximo';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'Detalles de encuesta';
+    $Self->{Translation}->{'Ticket Services'} = 'Servicios de Tickets';
     $Self->{Translation}->{'Survey Information'} = 'Información de Encuesta';
     $Self->{Translation}->{'Sent requests'} = 'Solicitudes enviadas';
     $Self->{Translation}->{'Received surveys'} = 'Encuestas recibidas';
-    $Self->{Translation}->{'Survey Details'} = 'Detalles de encuesta';
-    $Self->{Translation}->{'Ticket Services'} = 'Servicios de Tickets';
     $Self->{Translation}->{'Survey Results Graph'} = 'Gráfica de Resultados de Encuesta';
     $Self->{Translation}->{'No stat results.'} = 'No hay graficas de resultados.';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'Encuesta';
     $Self->{Translation}->{'Please answer these questions'} = 'Por favor conteste estas preguntas';
     $Self->{Translation}->{'Show my answers'} = 'Mostrar mis respuestas';
     $Self->{Translation}->{'These are your answers'} = 'Estas son sus respuestas';
-    $Self->{Translation}->{'Survey Title'} = 'Título de la Encuesta ';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = 'Clave de encuesta pública';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = 'Añadir nueva Encuesta';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = '¡No tiene permiso para esta encuesta o pregunta!';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = '¡No tiene permiso para esta encuesta, pregunta o respuesta!';
     $Self->{Translation}->{'Survey Edit Questions'} = 'Editar Preguntas de la Encuesta';
-    $Self->{Translation}->{'Yes/No'} = 'Si/No';
     $Self->{Translation}->{'Radio (List)'} = 'Opción (lista) ';
     $Self->{Translation}->{'Checkbox (List)'} = 'Casilla de verificación (lista)';
     $Self->{Translation}->{'Net Promoter Score'} = 'Puntuación Net Promoter';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'Lista de encuestas';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        '¿Realmente desea eliminar esta pregunta? TODOS los datos asociados se PERDERÁN!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = '¿Realmente desea eliminar esta respuesta?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Un Módulo de Encuestas.';
@@ -217,6 +210,7 @@ sub Data {
         'Registro de módulo frontend PublicSurvey en la interface pública.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Si esta expresión regular concuerda, no se enviará ninguna encuesta al cliente.';
     $Self->{Translation}->{'Limit.'} = 'Límite.';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parametros para las páginas (en que las encuestas son mostradas) de la vista de resumen pequeña.';
     $Self->{Translation}->{'Public Survey.'} = 'Encuesta Pública.';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

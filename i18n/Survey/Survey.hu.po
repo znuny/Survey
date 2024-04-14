@@ -42,7 +42,7 @@ msgstr "Ügyfél feltételek"
 msgid "Please choose a Customer property to add a condition."
 msgstr "Válasszon egy ügyféltulajdonságot egy feltételhez való hozzáadáshoz."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
 msgid "Public survey key"
 msgstr "Nyilvános kérdőívkulcs"
 
@@ -250,7 +250,7 @@ msgstr "Kérdőív eredmények grafikonja"
 msgid "No stat results."
 msgstr "Nincsenek statisztika eredmények."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey"
 msgstr "Kérdőív"
 
@@ -298,7 +298,7 @@ msgstr "Nincs jogosultsága ehhez a kérdőívhez, kérdéshez vagy válaszhoz!"
 msgid "Survey Edit Questions"
 msgstr "Kérdőív kérdések szerkesztése"
 
-#. Perl Module: Kernel/Modules/AgentSurveyEditQuestions.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Yes/No"
 msgstr "Igen/Nem"
 
@@ -446,11 +446,11 @@ msgstr "Már kitöltötte a kérdőívet."
 msgid "Survey List"
 msgstr "Kérdőívlista"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this question? ALL associated data will be LOST!"
 msgstr "Valóban törölni szeretné ezt a kérdést? MINDEN kapcsolódó adat el fog VESZNI!"
 
-#. JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
 msgid "Do you really want to delete this answer?"
 msgstr "Valóban törölni szeretné ezt a választ?"
 
@@ -653,4 +653,8 @@ msgstr "Késleltetett kérdőívkérések küldésének aktiválása."
 #. SysConfig
 msgid "Zoom into statistics details."
 msgstr "Nagyítás a statisztikák részleteibe."
+
+#. SysConfig
+msgid "Loader module registration for the public interface."
+msgstr ""
 

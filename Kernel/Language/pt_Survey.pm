@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'Questionário';
     $Self->{Translation}->{'Create New Survey'} = 'Criar novo questionário';
     $Self->{Translation}->{'Introduction'} = 'Introdução';
     $Self->{Translation}->{'Survey Introduction'} = 'Introdução de questionário';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = 'Descrição interna';
     $Self->{Translation}->{'Customer conditions'} = 'Condições do cliente';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = 'Por favor, escolha uma propriedade do cliente para adicionar uma condição.';
-    $Self->{Translation}->{'Public survey key'} = 'Chave pública do questionário';
-    $Self->{Translation}->{'Example survey'} = 'Exemplo';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Editar Informações Gerais';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Editar Perguntas';
-    $Self->{Translation}->{'You are here'} = 'Está aqui';
     $Self->{Translation}->{'Survey Questions'} = 'Perguntas do questionário';
     $Self->{Translation}->{'Add Question'} = 'Adicionar Questão';
     $Self->{Translation}->{'Type the question'} = 'Introduza a questão';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = 'Resposta Obrigatória';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         'Quando terminar de editar as perguntas do questionário, apenas feche a janela.';
-    $Self->{Translation}->{'Close this window'} = 'Fechar esta janela';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        'Tem a certeza que pretende apagar esta pergunta? TODOS os dados associados serão PERDIDOS!';
     $Self->{Translation}->{'Edit Question'} = 'Editar Questão';
-    $Self->{Translation}->{'go back to questions'} = 'voltar às perguntas';
     $Self->{Translation}->{'Question:'} = 'Questão:';
-    $Self->{Translation}->{'Possible Answers For'} = 'Possíveis Respostas Para';
     $Self->{Translation}->{'Add Answer'} = 'Adicionar resposta';
+    $Self->{Translation}->{'Answer:'} = 'Resposta';
     $Self->{Translation}->{'No answers saved for this question.'} = 'Não há respostas definidas para esta pergunta';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'Esta pergunta não possui várias respostas, uma área de texto será mostrada';
+    $Self->{Translation}->{'Yes/No'} = 'Sim/Não';
+    $Self->{Translation}->{'Possible Answers For'} = 'Possíveis Respostas Para';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Tem a certeza que pretende apagar esta resposta?';
     $Self->{Translation}->{'Edit Answer'} = 'Editar resposta';
-    $Self->{Translation}->{'go back to edit question'} = 'voltar para editar pergunta';
-    $Self->{Translation}->{'Answer:'} = 'Resposta';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Opções da visão geral';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Resumo de Estatísticas de';
+    $Self->{Translation}->{'Survey Stat Details'} = 'Detalhes da estatística';
     $Self->{Translation}->{'Requests Table'} = 'Tabela de Pedidos';
     $Self->{Translation}->{'Select all requests'} = 'Selecionar todos os pedidos';
     $Self->{Translation}->{'Send Time'} = 'Hora de Envio';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = 'Selecionar este pedido';
     $Self->{Translation}->{'See Details'} = 'Ver detalhes';
     $Self->{Translation}->{'Delete stats'} = 'Apagar estatística';
-    $Self->{Translation}->{'Survey Stat Details'} = 'Detalhes da estatística';
-    $Self->{Translation}->{'go back to stats overview'} = 'voltar ao resumo de estatísticas';
     $Self->{Translation}->{'Previous vote'} = 'Voto anterior';
     $Self->{Translation}->{'Next vote'} = 'Próximo voto';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'Detalhes do questionário';
+    $Self->{Translation}->{'Ticket Services'} = 'Serviços';
     $Self->{Translation}->{'Survey Information'} = 'Informação acerca do questionário';
     $Self->{Translation}->{'Sent requests'} = 'Pedidos enviados';
     $Self->{Translation}->{'Received surveys'} = 'Pedidos recebidos';
-    $Self->{Translation}->{'Survey Details'} = 'Detalhes do questionário';
-    $Self->{Translation}->{'Ticket Services'} = 'Serviços';
     $Self->{Translation}->{'Survey Results Graph'} = 'Gráfico de resultados';
     $Self->{Translation}->{'No stat results.'} = 'Sem resultados.';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'Questionário';
     $Self->{Translation}->{'Please answer these questions'} = 'Por favor, responda estas questões';
     $Self->{Translation}->{'Show my answers'} = 'Mostrar minhas respostas';
     $Self->{Translation}->{'These are your answers'} = 'Estas são suas respostas';
-    $Self->{Translation}->{'Survey Title'} = 'Título da Pesquisa';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = 'Chave pública do questionário';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = 'Adicionar Novo Questionário';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = 'Não tem permissão para este questionário ou pergunta!';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = 'Não tem permissão para este questionário, pergunta ou resposta!';
     $Self->{Translation}->{'Survey Edit Questions'} = 'Editar Perguntas de Questionério';
-    $Self->{Translation}->{'Yes/No'} = 'Sim/Não';
     $Self->{Translation}->{'Radio (List)'} = 'Radio (Lista)';
     $Self->{Translation}->{'Checkbox (List)'} = 'Caixa de verificação (Lista)';
     $Self->{Translation}->{'Net Promoter Score'} = '';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'Lista de questionários';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        'Tem a certeza que pretende apagar esta pergunta? TODOS os dados associados serão PERDIDOS!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Tem a certeza que pretende apagar esta resposta?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Um Módulo de Questionário.';
@@ -217,6 +210,7 @@ sub Data {
         'Módulo de auto registo de inquéritos de cliente no interface público';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Se esta regex for encontrada, nenhum questionário será enviado para o cliente';
     $Self->{Translation}->{'Limit.'} = 'Limite.';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parâmetros para as páginas (nas quais os questionários são mostrados) da visão geral compacta.';
     $Self->{Translation}->{'Public Survey.'} = 'Inquérito público';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );

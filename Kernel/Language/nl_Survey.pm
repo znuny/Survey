@@ -16,6 +16,7 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Survey'} = 'Enquête';
     $Self->{Translation}->{'Create New Survey'} = 'Nieuwe enquête maken';
     $Self->{Translation}->{'Introduction'} = 'Introductie';
     $Self->{Translation}->{'Survey Introduction'} = 'Enquête introductie';
@@ -24,15 +25,12 @@ sub Data {
     $Self->{Translation}->{'Internal Description'} = 'Interne beschrijving';
     $Self->{Translation}->{'Customer conditions'} = 'Klant voorwaarden';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = 'Kies een klanteigenschap om een voorwaarde toe te voegen.';
-    $Self->{Translation}->{'Public survey key'} = 'Openbare enquêtesleutel';
-    $Self->{Translation}->{'Example survey'} = 'Voorbeeld enquête';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Algemene info bewerken';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEditQuestions.tt
     $Self->{Translation}->{'Edit Questions'} = 'Vragen bewerken';
-    $Self->{Translation}->{'You are here'} = 'Je bevindt je hier';
     $Self->{Translation}->{'Survey Questions'} = 'Enquêtevragen';
     $Self->{Translation}->{'Add Question'} = 'Vraag toevoegen';
     $Self->{Translation}->{'Type the question'} = 'Typ de vraag';
@@ -42,18 +40,19 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = 'Antwoord vereist';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         'Sluit dit scherm als je klaar bent met het bewerken van de vragen.';
-    $Self->{Translation}->{'Close this window'} = 'Sluit dit venster';
+    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
+        'Wil je deze vraag echt verwijderen? ALLE bijbehorende gegevens gaan VERLOREN!';
     $Self->{Translation}->{'Edit Question'} = 'Vraag bewerken';
-    $Self->{Translation}->{'go back to questions'} = 'ga terug naar vragen';
     $Self->{Translation}->{'Question:'} = 'Vraag:';
-    $Self->{Translation}->{'Possible Answers For'} = 'Mogelijke antwoorden voor';
     $Self->{Translation}->{'Add Answer'} = 'Antwoord toevoegen';
+    $Self->{Translation}->{'Answer:'} = 'Antwoord:';
     $Self->{Translation}->{'No answers saved for this question.'} = 'Geen antwoorden opgeslagen voor deze vraag.';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'Dit heeft geen verschillende antwoorden, er wordt een tekstgebied weergegeven.';
+    $Self->{Translation}->{'Yes/No'} = 'Ja/Nee';
+    $Self->{Translation}->{'Possible Answers For'} = 'Mogelijke antwoorden voor';
+    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Wil je dit antwoord echt verwijderen?';
     $Self->{Translation}->{'Edit Answer'} = 'Antwoord bewerken';
-    $Self->{Translation}->{'go back to edit question'} = 'ga terug om de vraag te bewerken';
-    $Self->{Translation}->{'Answer:'} = 'Antwoord:';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyOverviewNavBar.tt
     $Self->{Translation}->{'Survey overview options'} = 'Enquête overzichtopties';
@@ -71,6 +70,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
     $Self->{Translation}->{'Stats Overview of'} = 'Statistieken overzicht van';
+    $Self->{Translation}->{'Survey Stat Details'} = 'Enquêtestatistiekdetails';
     $Self->{Translation}->{'Requests Table'} = 'Verzoeken tabel';
     $Self->{Translation}->{'Select all requests'} = 'Selecteer alle verzoeken';
     $Self->{Translation}->{'Send Time'} = 'Verzend tijd';
@@ -78,26 +78,25 @@ sub Data {
     $Self->{Translation}->{'Select this request'} = 'Selecteer deze aanvraag';
     $Self->{Translation}->{'See Details'} = 'Zie Details';
     $Self->{Translation}->{'Delete stats'} = 'Statistieken verwijderen';
-    $Self->{Translation}->{'Survey Stat Details'} = 'Enquêtestatistiekdetails';
-    $Self->{Translation}->{'go back to stats overview'} = 'ga terug naar het statistiekenoverzicht';
     $Self->{Translation}->{'Previous vote'} = 'Vorige stem';
     $Self->{Translation}->{'Next vote'} = 'Volgende stem';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
+    $Self->{Translation}->{'Survey Details'} = 'Enquête details';
+    $Self->{Translation}->{'Ticket Services'} = 'Ticket Services';
     $Self->{Translation}->{'Survey Information'} = 'Enquête informatie';
     $Self->{Translation}->{'Sent requests'} = 'Verzonden verzoeken';
     $Self->{Translation}->{'Received surveys'} = 'Ontvangen enquêtes';
-    $Self->{Translation}->{'Survey Details'} = 'Enquête details';
-    $Self->{Translation}->{'Ticket Services'} = 'Ticket Services';
     $Self->{Translation}->{'Survey Results Graph'} = 'Enquête resultaten grafiek';
     $Self->{Translation}->{'No stat results.'} = 'Geen statistische resultaten.';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/PublicSurvey.tt
-    $Self->{Translation}->{'Survey'} = 'Enquête';
     $Self->{Translation}->{'Please answer these questions'} = 'Beantwoord deze vragen';
     $Self->{Translation}->{'Show my answers'} = 'Mijn antwoorden weergeven';
     $Self->{Translation}->{'These are your answers'} = 'Dit zijn jouw antwoorden';
-    $Self->{Translation}->{'Survey Title'} = 'Enquêtetitel';
+
+    # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AgentSurveyAdd.tt
+    $Self->{Translation}->{'Public survey key'} = 'Openbare enquêtesleutel';
 
     # Perl Module: Kernel/Modules/AgentSurveyAdd.pm
     $Self->{Translation}->{'Add New Survey'} = 'Nieuwe enquête toevoegen';
@@ -111,7 +110,6 @@ sub Data {
     $Self->{Translation}->{'You have no permission for this survey or question!'} = 'Je hebt geen toestemming voor deze enquête of vraag!';
     $Self->{Translation}->{'You have no permission for this survey, question or answer!'} = 'Je hebt geen toestemming voor deze enquête, vraag of antwoord!';
     $Self->{Translation}->{'Survey Edit Questions'} = 'Enquête vragen bewerken';
-    $Self->{Translation}->{'Yes/No'} = 'Ja/Nee';
     $Self->{Translation}->{'Radio (List)'} = 'Keuzerondje (lijst)';
     $Self->{Translation}->{'Checkbox (List)'} = 'Checkbox (lijst)';
     $Self->{Translation}->{'Net Promoter Score'} = 'Net Promoter Score';
@@ -158,11 +156,6 @@ sub Data {
 
     # Perl Module: Kernel/System/Stats/Dynamic/SurveyList.pm
     $Self->{Translation}->{'Survey List'} = 'Enquête lijst';
-
-    # JS File: var/httpd/htdocs/js/Survey.Agent.SurveyEditQuestions.js
-    $Self->{Translation}->{'Do you really want to delete this question? ALL associated data will be LOST!'} =
-        'Wil je deze vraag echt verwijderen? ALLE bijbehorende gegevens gaan VERLOREN!';
-    $Self->{Translation}->{'Do you really want to delete this answer?'} = 'Wil je dit antwoord echt verwijderen?';
 
     # SysConfig
     $Self->{Translation}->{'A Survey Module.'} = 'Een enquête module.';
@@ -217,6 +210,7 @@ sub Data {
         'Frontend module registratie voor het PublicSurvey-object in het openbare enquêtegebied.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Als deze regex overeenkomt, wordt er geen klant enquête verzonden.';
     $Self->{Translation}->{'Limit.'} = 'Beperk.';
+    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parameters voor de pagina\'s (waarin de enquêtes worden getoond) van het kleine enquête overzicht.';
     $Self->{Translation}->{'Public Survey.'} = 'Openbare enquête.';
@@ -248,8 +242,8 @@ sub Data {
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
-    'Do you really want to delete this answer?',
-    'Do you really want to delete this question? ALL associated data will be LOST!',
+    'Cancel',
+    'Delete',
     'Settings',
     'Submit',
     );
