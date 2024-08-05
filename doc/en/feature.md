@@ -55,7 +55,7 @@ listed answers.
 "Net Promoter Score" questions a user can answer by selecting exactly
 one and just one of the possible scores.
 
-For each answer type the OTRS user can choose if he wants a customer to
+For each answer type the Znuny user can choose if he wants a customer to
 be required to answer this question or if a customer can ignore the
 question.
 

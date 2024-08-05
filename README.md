@@ -1,27 +1,24 @@
 ![Znuny logo](https://znuny.com/assets/images/logo_small.png)
 
-![Build status](https://badge.proxy.znuny.com/Survey/dev)
+![Build status](https://badge.proxy.znuny.com/Survey/rel-7_1)
 
 Survey
 ======
 
-This Module enables you to create new Surveys, add questions to a created Survey, set a Survey live in order to send requests, modify existing Surveys to a certain extent, and view statistics of submitted Survey answers as well as the answers themselves.
+This add-on enables you to create surveys, add questions to a created survey, set a survey live in order to send requests, modify existing surveys to a certain extent, and view statistics of submitted survey answers as well as the answers themselves.
 
 **Prerequisites**
 
-- Znuny 7.0 or newer
+- Znuny 7.1
 
 **Installation**
 
-Install the add-on via the package manager from the repository "Freebie Features". If you like to download the add-on find the version for your Znuny version at https://download.znuny.org/releases/packages/. This file can be installed by uploading it to the package manger or by using the otrs.Console.pl.
+Use the online repository **Znuny Open Source Add-ons** from the package manager to install the add-on. From the command line use this command: `bin/znuny.Console.pl Admin::Package::Install  https://addons.znuny.com/public/:Survey`
 
-**Configuration**
+**Commercial Support**
 
-Check the system configuration for all available setting after choosing Survey in the navigation.
+For this add-on and for Znuny in general visit [www.znuny.com](https://www.znuny.com). Looking forward to hear from you.
 
-**Professional Support**
-
-For this add-on and for Znuny in general visit [www.znuny.com](https://www.znuny.com). Looking forward to hear from you!
 
 Your Znuny Team!
 
