@@ -210,7 +210,6 @@ sub Data {
         'Rexistro módulo frontend para obxecto EnquisaPublica na área Enquisa pública.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Se a expresión regular coincide, non enviaráse enquisa ao cliente.';
     $Self->{Translation}->{'Limit.'} = '';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parámetros para as páxinas (nas cales as enquisas son mostradas) da vista xeral pequena da enquisa.';
     $Self->{Translation}->{'Public Survey.'} = 'Enquisa pública.';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = '';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

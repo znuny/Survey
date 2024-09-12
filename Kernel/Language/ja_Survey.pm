@@ -210,7 +210,6 @@ sub Data {
         '公開インターフェースのPublicSurveyオブジェクトに対するフロントエンド・モジュールの登録です。';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'この正規表現にマッチする場合、調査は顧客に送信されません。';
     $Self->{Translation}->{'Limit.'} = 'リミット';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'アンケート一覧 (Small) の (アンケートが表示される) ページに対するパラメータ';
     $Self->{Translation}->{'Public Survey.'} = '公開インターフェースのPublicSurveyオブジェクトに対するフロントエンドモジュール登録です。';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = '統計情報の詳細をズームインする。';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

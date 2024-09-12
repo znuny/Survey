@@ -210,7 +210,6 @@ sub Data {
         'Frontend module registratie voor het PublicSurvey-object in het openbare enquêtegebied.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Als deze regex overeenkomt, wordt er geen klant enquête verzonden.';
     $Self->{Translation}->{'Limit.'} = 'Beperk.';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parameters voor de pagina\'s (waarin de enquêtes worden getoond) van het kleine enquête overzicht.';
     $Self->{Translation}->{'Public Survey.'} = 'Openbare enquête.';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Zoom in op statistische details.';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

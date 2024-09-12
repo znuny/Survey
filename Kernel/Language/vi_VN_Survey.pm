@@ -210,7 +210,6 @@ sub Data {
         'Đăng ký mô-đun cho đối tượng khảo sát công cộng trong giao diện khảo sát công cộng.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Nếu điều kiện tìm phù hợp, không có khảo sát khách hàng nào được gửi.';
     $Self->{Translation}->{'Limit.'} = '';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Tham số cho trang (mà hiển thị khảo sát) của danh sách khảo sát tổng quát.';
     $Self->{Translation}->{'Public Survey.'} = 'Khảo sát công cộng.';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = '';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

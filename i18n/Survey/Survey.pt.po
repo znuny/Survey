@@ -4,8 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
 "PO-Revision-Date: 2024-09-11 07:35+0000\n"
 "Last-Translator: Rui Martins <rui.martins@fccn.pt>\n"
-"Language-Team: Portuguese <https://translations.znuny.org/projects/znuny/"
-"survey/pt/>\n"
+"Language-Team: Portuguese <https://translations.znuny.org/projects/znuny/survey/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -491,10 +490,7 @@ msgstr "Define o módulo de visão geral para exibir a visão compacta de uma li
 
 #. SysConfig
 msgid "Defines groups which have a permission to change survey status. Array is empty by default and agents from all groups can change survey status."
-msgstr ""
-"Define os grupos que têm permissão para alterar o estado do questionário. "
-"Por defeito, a matriz está vazia e agentes de todos os grupos podem alterar "
-"o estado do questionário."
+msgstr "Define os grupos que têm permissão para alterar o estado do questionário. Por defeito, a matriz está vazia e agentes de todos os grupos podem alterar o estado do questionário."
 
 #. SysConfig
 msgid "Defines if survey requests will be only send to real customers."
@@ -506,11 +502,7 @@ msgstr "Define a quantidade máxima de questionários que são enviados para um 
 
 #. SysConfig
 msgid "Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
-msgstr ""
-"Define a quantidade de horas que um ticket deve estar fechado para enviar um "
-"pedido de questionário (0 significa enviar imediatamente após fecho). Nota: "
-"um envio tardio de questionário é feito pelo OTRS Daemon, sob ativação da "
-"configuração 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' ."
+msgstr "Define a quantidade de horas que um ticket deve estar fechado para enviar um pedido de questionário (0 significa enviar imediatamente após fecho). Nota: um envio tardio de questionário é feito pelo OTRS Daemon, sob ativação da configuração 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' ."
 
 #. SysConfig
 msgid "Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active)."
@@ -667,3 +659,4 @@ msgstr "Zoom em detalhes de estatísticas."
 #. SysConfig
 msgid "Loader module registration for the public interface."
 msgstr ""
+

@@ -210,7 +210,6 @@ sub Data {
         'Регистрација "Frontend" модула за јавне анкетне објекте анкете у простору јавних анкета.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Ако се овај израз поклапа, анкета неће бити послата кориснику.';
     $Self->{Translation}->{'Limit.'} = 'Ограничење.';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Параметри страница (на којима су анкете видљиве) на малом приказу прегледа анкета.';
     $Self->{Translation}->{'Public Survey.'} = 'Јавна анкета.';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Улаз у детаљни приказ статистике.';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

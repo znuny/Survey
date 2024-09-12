@@ -210,7 +210,6 @@ sub Data {
         'Frontend модуль реєстрації, що додає Публічне опитування в публічний інтерфейс';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Якщо регулярний вираз визначає, жодне опитування клієнту не буде відправлено';
     $Self->{Translation}->{'Limit.'} = 'Обмеження.';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Параметри сторінки (в яких показуються опитування) в короткому представленні';
     $Self->{Translation}->{'Public Survey.'} = 'Публічне опитування';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Перейти в деталі статистики';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

@@ -210,7 +210,6 @@ sub Data {
         'Frontend module registration для объекта Публичного опроса в разделе публичных опросов.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Если это регулярное выражение верно, опрос клиенту не посылается.';
     $Self->{Translation}->{'Limit.'} = 'Ограничение.';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Параметры страницы (на которой отображаются опросы) при обзоре опросов в small формате.';
     $Self->{Translation}->{'Public Survey.'} = 'Общедоступный опрос.';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = '';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

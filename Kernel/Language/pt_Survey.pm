@@ -45,7 +45,7 @@ sub Data {
     $Self->{Translation}->{'Edit Question'} = 'Editar Questão';
     $Self->{Translation}->{'Question:'} = 'Questão:';
     $Self->{Translation}->{'Add Answer'} = 'Adicionar resposta';
-    $Self->{Translation}->{'Answer:'} = 'Resposta';
+    $Self->{Translation}->{'Answer:'} = 'Resposta:';
     $Self->{Translation}->{'No answers saved for this question.'} = 'Não há respostas definidas para esta pergunta';
     $Self->{Translation}->{'This doesn\'t have several answers, a textarea will be displayed.'} =
         'Esta pergunta não possui várias respostas, uma área de texto será mostrada';
@@ -173,13 +173,13 @@ sub Data {
     $Self->{Translation}->{'Defines an overview module to show the small view of a survey list.'} =
         'Define o módulo de visão geral para exibir a visão compacta de uma lista de questionários.';
     $Self->{Translation}->{'Defines groups which have a permission to change survey status. Array is empty by default and agents from all groups can change survey status.'} =
-        'Define grupos que têm permissão para alterar o estado do questionário.  A matriz está vazia por padrão, logo, agentes de todos os grupos podem alterar o estado do questionário.';
+        'Define os grupos que têm permissão para alterar o estado do questionário. Por defeito, a matriz está vazia e agentes de todos os grupos podem alterar o estado do questionário.';
     $Self->{Translation}->{'Defines if survey requests will be only send to real customers.'} =
         'Define se os pedidos de questionário serão enviados apenas para clientes reais.';
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         'Define a quantidade máxima de questionários que são enviados para um cliente a cada 30 dias (0 significa que não há máximo; todos os pedidos de questionário serão enviados).';
     $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        'Define a quantidade de horas que um ticket deve estar fechado para enviar um pedido de questionário (0 significa enviar imediatamente após fecho). Nota: um envio tardio de questionário é feito pelo OTRS Daemon, sob ativação da configuração  \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' .';
+        'Define a quantidade de horas que um ticket deve estar fechado para enviar um pedido de questionário (0 significa enviar imediatamente após fecho). Nota: um envio tardio de questionário é feito pelo OTRS Daemon, sob ativação da configuração \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' .';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
         'Define as colunas da lista suspensa para criação de condições de envio (0=> inativo, 1=> ativo).';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =
@@ -210,7 +210,6 @@ sub Data {
         'Módulo de auto registo de inquéritos de cliente no interface público';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Se esta regex for encontrada, nenhum questionário será enviado para o cliente';
     $Self->{Translation}->{'Limit.'} = 'Limite.';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parâmetros para as páginas (nas quais os questionários são mostrados) da visão geral compacta.';
     $Self->{Translation}->{'Public Survey.'} = 'Inquérito público';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Zoom em detalhes de estatísticas.';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

@@ -210,7 +210,6 @@ sub Data {
         'Регистрация на модул Frontend за обекта на общественото проучване в публичния район на проучването.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Ако този регекс съвпада, няма да бъде изпратено проучване на клиентите.';
     $Self->{Translation}->{'Limit.'} = '';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Параметри на страниците (в които са показани проучванията) на общия преглед на изследването.';
     $Self->{Translation}->{'Public Survey.'} = 'Публично проучване.';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Увеличете статистическите данни.';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

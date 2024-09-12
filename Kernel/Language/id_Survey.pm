@@ -210,7 +210,6 @@ sub Data {
         'Pendaftaran modul frontend  untuk objek PublicSurvey di area survey.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Jika regex ini cocok, maka tidak ada survey pelanggan yang akan di kirim.';
     $Self->{Translation}->{'Limit.'} = '';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parameter untuk halaman (dimana survey tersebut di tampilkan) gambaran kecil survey.';
     $Self->{Translation}->{'Public Survey.'} = 'Survey umum';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = '';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',

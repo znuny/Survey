@@ -210,7 +210,6 @@ sub Data {
         'Modulo di registrazione per il sondaggio nell\'area di Sondaggi Pubblici.';
     $Self->{Translation}->{'If this regex matches, no customer survey will be sent.'} = 'Se questa sottostringa viene riconosciuta, il sondaggio non viene inviato.';
     $Self->{Translation}->{'Limit.'} = 'Limite.';
-    $Self->{Translation}->{'Loader module registration for the public interface.'} = '';
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parametri per la visualizzazione "compatta".';
     $Self->{Translation}->{'Public Survey.'} = 'Sondaggio pubblico.';
@@ -241,7 +240,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Ingrandisci i dettagli delle statistiche.';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Settings',
