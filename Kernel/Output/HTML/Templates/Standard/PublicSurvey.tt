@@ -16,7 +16,7 @@
         </div>
 [% RenderBlockStart("PublicTicket") %]
         <div>
-            <h2>[% Config("Ticket::Hook") | html %][% Config("Ticket::HookDivider") | html %][% Data.TicketNumber | html %]</h2>
+            <h2>[% Config("Ticket::Hook") | html %][% Config("Ticket::HookDivider") | html %][% Data.TicketNumber | html %] - <b>[% Data.Title | html %]</b></h2>
         </div>
 [% RenderBlockEnd("PublicTicket") %]
         <div class="WidgetSimple Customer">
