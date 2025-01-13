@@ -9,7 +9,7 @@
 
 [% RenderBlockStart("PublicSurvey") %]
 <div id="MainBox" class="ARIARoleMain LayoutFixedSidebar mainStructure SidebarLast">
-    <div class="ContentWrapper flex-column">
+    <div class="ContentWrapper Survey flex-column">
 
         <div>
             <h1>[% Translate("Survey") | html %]: [% Data.Title | html %]</h1>
@@ -60,12 +60,12 @@
                             [% Data.ErrorText %]
                             <div class="field-wrapper">
                                 <div class="Field">
-                                    <label class="Answer" for="PublicSurveyVote1[% Data.QuestionID | html %]Yes">[% Translate("Yes") | html %]</label>
                                     <input type="radio" id="PublicSurveyVote1[% Data.QuestionID | html %]Yes" name="PublicSurveyVote1[[% Data.QuestionID | html %]]" value="Yes" [% Data.YesSelected | html %] />
+                                    <label class="Answer" for="PublicSurveyVote1[% Data.QuestionID | html %]Yes">[% Translate("Yes") | html %]</label>
                                 </div>
                                 <div class="Field">
-                                    <label class="Answer" for="PublicSurveyVote1[% Data.QuestionID | html %]No">[% Translate("No") | html %]</label>
                                     <input type="radio" id="PublicSurveyVote1[% Data.QuestionID | html %]No" name="PublicSurveyVote1[[% Data.QuestionID | html %]]" value="No" [% Data.NoSelected | html %] />
+                                    <label class="Answer" for="PublicSurveyVote1[% Data.QuestionID | html %]No">[% Translate("No") | html %]</label>
                                 </div>
                             </div>
                         </div>
@@ -80,8 +80,8 @@
                             <div class="field-wrapper">
 [% RenderBlockStart("PublicAnswerRadiob") %]
                                 <div class="Field">
-                                    <label class="Answer" for="PublicSurveyVote2[% Data.QuestionID | html %][% Data.AnswerID | html %]">[% Data.Answer | html %]</label>
                                     <input type="radio" id="PublicSurveyVote2[% Data.QuestionID | html %][% Data.AnswerID | html %]" name="PublicSurveyVote2[[% Data.QuestionID | html %]]" value="[% Data.AnswerID | html %]" [% Data.AnswerSelected | html %]/>
+                                    <label class="Answer" for="PublicSurveyVote2[% Data.QuestionID | html %][% Data.AnswerID | html %]">[% Data.Answer | html %]</label>
                                 </div>
 [% RenderBlockEnd("PublicAnswerRadiob") %]
                             </div>
@@ -97,8 +97,8 @@
                             <div class="field-wrapper">
 [% RenderBlockStart("PublicAnswerCheckboxb") %]
                                 <div class="Field">
-                                    <label class="Answer" for="PublicSurveyVote3[% Data.AnswerID | html %]">[% Data.Answer | html %]</label>
                                     <input type="checkbox" id="PublicSurveyVote3[% Data.AnswerID | html %]" name="PublicSurveyVote3[[% Data.AnswerID | html %]]" value="Yes" [% Data.AnswerSelected | html %]/>
+                                    <label class="Answer" for="PublicSurveyVote3[% Data.AnswerID | html %]">[% Data.Answer | html %]</label>
                                 </div>
 [% RenderBlockEnd("PublicAnswerCheckboxb") %]
                             </div>
@@ -128,8 +128,8 @@
                             <div class="field-wrapper">
 [% RenderBlockStart("PublicAnswerNPSb") %]
                                 <div class="Field">
-                                    <label class="Answer NPS" for="PublicSurveyVote5[% Data.QuestionID | html %][% Data.AnswerID | html %]">[% Data.Answer | html %]</label>
                                     <input type="radio" class="NPS" id="PublicSurveyVote5[% Data.QuestionID | html %][% Data.AnswerID | html %]" name="PublicSurveyVote5[[% Data.QuestionID | html %]]" value="[% Data.AnswerID | html %]" [% Data.AnswerSelected | html %]/>
+                                    <label class="Answer NPS" for="PublicSurveyVote5[% Data.QuestionID | html %][% Data.AnswerID | html %]">[% Data.Answer | html %]</label>
                                 </div>
 [% RenderBlockEnd("PublicAnswerNPSb") %]
                             </div>

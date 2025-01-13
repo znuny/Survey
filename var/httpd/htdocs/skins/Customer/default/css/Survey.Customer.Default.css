@@ -19,4 +19,28 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
         margin-bottom: var(--margin-md);
         font-weight: var(--semi-bold);
     }
+
+    .Survey fieldset {
+        max-width: 800px;
+    }
+
+    .Survey div.Field {
+        flex-direction: row;
+    }
+
+    .Survey .cke_inner {
+        width: 100% !important;
+    }
+
+    .Survey .cke {
+        width: 100% !important;
+    }
+
+    .Survey button.CallForAction {
+        margin: 2ex;
+    }
+
+    .Survey input[type="radio"] + label.Answer {
+        padding-top: 0.4ex;
+    }
 }

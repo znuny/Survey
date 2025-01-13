@@ -11,7 +11,7 @@ package Kernel::System::Survey;
 
 use strict;
 use warnings;
-
+use utf8;
 use Digest::MD5;
 use Mail::Address;
 
@@ -194,38 +194,38 @@ to get all attributes of a survey
 
 Returns:
     %Survey = (
-        "ChangeBy" => 1,
-        "ChangeTime" => "2017-08-30 11:26:41",
-        "ChangeUserFirstname" => "John",
-        "ChangeUserFullname" => "John Doe",
-        "ChangeUserLastname" => "Doe",
-        "ChangeUserLogin" => "john",
-        "CreateBy" => 1,
-        "CreateTime" => "2017-08-30 11:26:41",
-        "CreateUserFirstname" => "John",
-        "CreateUserFullname" => "John Doe",
-        "CreateUserLastname" => "Doe",
-        "CreateUserLogin" => "john",
+        "ChangeBy"               => 1,
+        "ChangeTime"             => "2017-08-30 11:26:41",
+        "ChangeUserFirstname"    => "John",
+        "ChangeUserFullname"     => "John Doe",
+        "ChangeUserLastname"     => "Doe",
+        "ChangeUserLogin"        => "john",
+        "CreateBy"               => 1,
+        "CreateTime"             => "2017-08-30 11:26:41",
+        "CreateUserFirstname"    => "John",
+        "CreateUserFullname"     => "John Doe",
+        "CreateUserLastname"     => "Doe",
+        "CreateUserLogin"        => "john",
         "CustomerUserConditions" => {
             "UserLogin" => [
             {
-                "Negation" => 0,
+                "Negation"    => 0,
                 "RegExpValue" => ""
             }
             ]
         },
         "CustomerUserConditionsJSON" => "{\"UserLogin\":[{\"RegExpValue\":\"\",\"Negation\":\"0\"}]}",
-        "Description" => "Selenium Descriptioncustomer",
-        "Introduction" => "Selenium Introduction",
-        "NotificationBody" => "Dear Customer,\r\n\r\nThanks for using our service. Help us to improve us and our services.\r\n\r\nPlease give us feedback on how to improve our services:\r\n\r\nhttp://localhost/otrs-alpha/public.pl?Action=PublicSurvey;PublicSurveyKey=<OTRS_PublicSurveyKey>\r\n\r\nThanks for your help!\r\n\r\nYour OTRS-Team",
-        "NotificationSender" => "quality\@example.com",
-        "NotificationSubject" => "Help us with your feedback!",
-        "Queues" => [],
-        "SendConditionsRaw" => "---\nCustomerUserConditions:\n  UserLogin:\n  - Negation: 0\n    RegExpValue: ''\n",
-        "Status" => "New",
-        "SurveyID" => 49,
-        "SurveyNumber" => 10049,
-        "Title" => "Survey title",
+        "Description"                => "Selenium Descriptioncustomer",
+        "Introduction"               => "Selenium Introduction",
+        "NotificationBody"           => "Dear Customer,\r\n\r\nThanks for using our service. Help us to improve us and our services.\r\n\r\nPlease give us feedback on how to improve our services:\r\n\r\nhttp://localhost/otrs-alpha/public.pl?Action=PublicSurvey;PublicSurveyKey=<OTRS_PublicSurveyKey>\r\n\r\nThanks for your help!\r\n\r\nYour Znuny-Team",
+        "NotificationSender"         => "quality\@example.com",
+        "NotificationSubject"        => "Help us with your feedback!",
+        "Queues"                     => [],
+        "SendConditionsRaw"          => "---\nCustomerUserConditions:\n  UserLogin:\n  - Negation: 0\n    RegExpValue: ''\n",
+        "Status"                     => "New",
+        "SurveyID"                   => 49,
+        "SurveyNumber"               => 10049,
+        "Title"                      => "Survey title",
     ):
 
 =cut
@@ -374,7 +374,7 @@ to update an existing survey
                     'Negation' => 1,
                     'RegExpValue' => '^Ka'
                 }
-           ],
+            ],
         }, # (optional)
     );
 
