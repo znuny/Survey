@@ -179,7 +179,7 @@ sub Data {
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         'Definiert die maximale Anzahl von Umfragen die ein Kunde innerhalb von 30 Tagen zugesandt bekommt. ( 0 steht für kein Maximum, alle Umfrage-E-Mails werden versandt).';
     $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        '';
+        'Definiert die Anzahl an Stunden für die ein Ticket geschlossen sein muss, um den Versand einer Umfrage auszulösen ( 0 bedeutet, sofort nach Schließen eines Tickets senden ). Hinweis: Das Absenden der verzögerten Umfrage wird durch den Znuny Daemon erledigt, vorherige Aktivierung durch die \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' Einstellung.';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
         'Definiert die Spalten für die Dropdown-Liste für die Erstellung von Sendebedingungen (0 => inaktiv, 1 => aktiv).';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =
@@ -214,7 +214,7 @@ sub Data {
         'Parameter für die Seiten der Umfrageübersicht.';
     $Self->{Translation}->{'Public Survey.'} = 'Öffentliche Umfrage.';
     $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
-        '';
+        'Ergebnisse, die älter als die konfigurierte Anzahl von Tagen sind, werden gelöscht. Hinweis: Löschen Sie die Ergebnisse des Znuny-Daemons, bevor Sie die Einstellung \'Task###SurveyRequestsDelete\' aktivieren.';
     $Self->{Translation}->{'Shows a link in the menu to edit a survey in its zoom view of the agent interface.'} =
         'Zeigt einen Link im Menü der Detailansicht im Agenten-Interface an, der es ermöglicht eine Umfrage zu bearbeiten.';
     $Self->{Translation}->{'Shows a link in the menu to edit survey questions in its zoom view of the agent interface.'} =

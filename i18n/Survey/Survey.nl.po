@@ -501,8 +501,8 @@ msgid "Defines maximum amount of surveys that get sent to a customer per 30 days
 msgstr "Bepaalt het maximale aantal enquêtes dat per 30 dagen naar een klant wordt verzonden. (0 betekent geen maximum, alle enquêteaanvragen worden verzonden)."
 
 #. SysConfig
-msgid "Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
-msgstr "Bepaalt het aantal uren dat een ticket moet zijn gesloten om een enquête te verzenden (0 betekent verzenden direct na sluiting). Opmerking: het vertraagd verzenden van enquêtes wordt gedaan door de OTRS Daemon, voorafgaande activering van de instelling 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend'."
+msgid "Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
+msgstr "Bepaalt het aantal uren dat een ticket moet zijn gesloten om een enquête te verzenden (0 betekent verzenden direct na sluiting). Opmerking: het vertraagd verzenden van enquêtes wordt gedaan door de Znuny Daemon, voorafgaande activering van de instelling 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend'."
 
 #. SysConfig
 msgid "Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active)."
@@ -585,8 +585,8 @@ msgid "Public Survey."
 msgstr "Openbare enquête."
 
 #. SysConfig
-msgid "Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of 'Task###SurveyRequestsDelete' setting."
-msgstr "Resultaten ouder dan het geconfigureerde aantal dagen worden verwijderd. Opmerking: resultaten verwijderen wordt gedaan door de OTRS Daemon, voorafgaande activering van de instelling 'Taak###SurveyRequestsDelete'."
+msgid "Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of 'Task###SurveyRequestsDelete' setting."
+msgstr "Resultaten ouder dan het geconfigureerde aantal dagen worden verwijderd. Opmerking: resultaten verwijderen wordt gedaan door de Znuny Daemon, voorafgaande activering van de instelling 'Taak###SurveyRequestsDelete'."
 
 #. SysConfig
 msgid "Shows a link in the menu to edit a survey in its zoom view of the agent interface."
@@ -658,13 +658,5 @@ msgstr "Zoom in op statistische details."
 
 #. SysConfig
 msgid "Loader module registration for the public interface."
-msgstr ""
-
-#. SysConfig
-msgid "Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
-msgstr ""
-
-#. SysConfig
-msgid "Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of 'Task###SurveyRequestsDelete' setting."
 msgstr ""
 

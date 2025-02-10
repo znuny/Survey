@@ -179,7 +179,7 @@ sub Data {
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         'Максималния брой проучвания, които се изпращат на клиенти на всеки 30 дни. (0 - означава не максимум, всички заявки за проучване ще бъдат изпратени).';
     $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        '';
+        'Сумата в часове, за която билетът трябва да бъде затворен, за да се задейства изпращането на проучване, (0 - означава изпращане веднага след затваряне). Забележка : изпращането със закъснение на изследването се извършва от Znuny Daemon, преди активирането на настройката "Daemon :: SchedulerCronTaskManager :: Task ### SurveyRequestsSend".';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
         '';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =

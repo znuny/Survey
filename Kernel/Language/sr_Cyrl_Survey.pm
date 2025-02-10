@@ -179,7 +179,7 @@ sub Data {
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         'Дефинише максимални број анкета који ће бити послат кориснику током 30 дана. (0 значи да нема максимума, сви захтеви ће бити послати).';
     $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        '';
+        'Дефинише број сати од затварања тикета за покретање слања анкете. (0 значи да се шаље одмах по затварању). Напомена: одлагање слања анкете обавља „Znuny ” сервис пре активирања „Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend” поставке.';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
         'Дефинише колоне за листу приликом прављења услова захтева (0 => искључено, 1 => укључено).';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =
@@ -214,7 +214,7 @@ sub Data {
         'Параметри страница (на којима су анкете видљиве) на малом приказу прегледа анкета.';
     $Self->{Translation}->{'Public Survey.'} = 'Јавна анкета.';
     $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
-        '';
+        'Резултати старији од подешеног броја дана ће бити обрисани. Напомена: резултате брише Znuny системски сервис, по активацији подешавања \'Task###SurveyRequestsDelete\'.';
     $Self->{Translation}->{'Shows a link in the menu to edit a survey in its zoom view of the agent interface.'} =
         'У менију приказује везу за уређивање анкете у детаљном приказу интерфејса оператера.';
     $Self->{Translation}->{'Shows a link in the menu to edit survey questions in its zoom view of the agent interface.'} =

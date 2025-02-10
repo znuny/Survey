@@ -179,7 +179,7 @@ sub Data {
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         'Meghatározza a kérdőívek legnagyobb mennyiségét, amelyet 30 naponta elküldhetnek egy ügyfélnek (a 0 azt jelenti, hogy nincs maximum, minden kérdőív kérés elküldésre kerül).';
     $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        '';
+        'Meghatározza azt a mennyiséget órában, amíg a jegyet le kell zárni, hogy aktiválja a kérdőív kiküldését (a 0 jelentése, hogy azonnal küldje a lezárás után). Megjegyzés: a késleltetett kérdőív kiküldését az Znuny démon végzi el a „Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend” beállítás előzetes bekapcsolása után.';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
         'Meghatározza az oszlopokat a legördülő listánál a küldési feltételek összeállításához (0 => inaktív, 1 => aktív).';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =
@@ -214,7 +214,7 @@ sub Data {
         'Paraméterek a kis kérdőív áttekintő oldalaihoz (amelyekben a kérdőívek megjelennek).';
     $Self->{Translation}->{'Public Survey.'} = 'Nyilvános kérdőív.';
     $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
-        '';
+        'A beállított napok számánál régebbi eredmények törlésre kerülnek. Megjegyzés: az eredmények törlését az Znuny démon végzi el a „Task###SurveyRequestsDelete” beállítás aktiválása előtt.';
     $Self->{Translation}->{'Shows a link in the menu to edit a survey in its zoom view of the agent interface.'} =
         'Egy hivatkozást jelenít meg a menüben egy kérdőív szerkesztéséhez az ügyintézői felületen az elem nagyítási nézetében.';
     $Self->{Translation}->{'Shows a link in the menu to edit survey questions in its zoom view of the agent interface.'} =
