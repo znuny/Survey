@@ -26,8 +26,8 @@ sub Data {
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = 'Por favor, escolha uma propriedade do cliente para adicionar uma condição.';
     $Self->{Translation}->{'Public survey key'} = 'Chave pública do questionário';
     $Self->{Translation}->{'Example survey'} = 'Exemplo';
-    $Self->{Translation}->{'The current ticket state is'} = '';
-    $Self->{Translation}->{'Your email address is'} = '';
+    $Self->{Translation}->{'The current ticket state is'} = 'O estado atual do ticket é';
+    $Self->{Translation}->{'Your email address is'} = 'O seu endereço de e-mail é';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Editar Informações Gerais';
@@ -116,7 +116,7 @@ sub Data {
     $Self->{Translation}->{'Yes/No'} = 'Sim/Não';
     $Self->{Translation}->{'Radio (List)'} = 'Radio (Lista)';
     $Self->{Translation}->{'Checkbox (List)'} = 'Caixa de verificação (Lista)';
-    $Self->{Translation}->{'Net Promoter Score'} = '';
+    $Self->{Translation}->{'Net Promoter Score'} = 'Pontuação Net Promoter';
     $Self->{Translation}->{'Question Type'} = 'Tipo de questão';
     $Self->{Translation}->{'Complete'} = 'Concluído';
     $Self->{Translation}->{'Incomplete'} = 'Incompleto';
@@ -223,7 +223,7 @@ sub Data {
         'Parâmetros para as páginas (nas quais os questionários são mostrados) da visão geral compacta.';
     $Self->{Translation}->{'Public Survey.'} = 'Inquérito público';
     $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
-        '';
+        'Os resultados mais antigos do que a quantidade de dias configuradas serão apagados. Nota: eliminação de resultados feitas pelo OTRS Daemon, antes da ativação da \'Task###SurveyRequestsDelete\' definição .';
     $Self->{Translation}->{'Shows a link in the menu to edit a survey in its zoom view of the agent interface.'} =
         'Exibe um link no menu para editar um questionário na interface do agente.';
     $Self->{Translation}->{'Shows a link in the menu to edit survey questions in its zoom view of the agent interface.'} =
@@ -249,7 +249,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Zoom em detalhes de estatísticas.';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Do you really want to delete this answer?',
     'Do you really want to delete this question? ALL associated data will be LOST!',
     'Settings',

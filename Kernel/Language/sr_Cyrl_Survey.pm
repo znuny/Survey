@@ -249,7 +249,7 @@ sub Data {
     $Self->{Translation}->{'Zoom into statistics details.'} = 'Улаз у детаљни приказ статистике.';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Do you really want to delete this answer?',
     'Do you really want to delete this question? ALL associated data will be LOST!',
     'Settings',
