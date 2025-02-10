@@ -178,8 +178,8 @@ sub Data {
         '定义调查请求是否只发送给真实客户。';
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         '定义每30天发送给一个客户的最大调查数（ 0 代表没有最大数限制，将发送所有的调查请求）。';
-    $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        '定义一个工单关闭后触发发送一个调查的小时数（ 0 代表在工单关闭后立即发送调查请求）。注意：延迟发送的调查由OTRS守护程序（即先前激活的设置\'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\'）完成。';
+    $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
+        '';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
         '定义建立发送条件的下拉列表的列（0 => 不激活，1 => 激活）。';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =
@@ -213,8 +213,8 @@ sub Data {
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         '调查概览简洁模式显示调查的页面参数。';
     $Self->{Translation}->{'Public Survey.'} = '公共调查。';
-    $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
-        '超过配置的天数的调查结果将被删除。 注意：删除调查结果由先前激活的 \'Task###SurveyRequestsDelete\' 设置的OTRS守护程序完成。';
+    $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
+        '';
     $Self->{Translation}->{'Shows a link in the menu to edit a survey in its zoom view of the agent interface.'} =
         '在服务人员界面调查详情窗口，在菜单中显示一个编辑调查的链接。';
     $Self->{Translation}->{'Shows a link in the menu to edit survey questions in its zoom view of the agent interface.'} =

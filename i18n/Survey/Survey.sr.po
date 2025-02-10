@@ -658,3 +658,11 @@ msgstr "Улаз у детаљни приказ статистике."
 msgid "Loader module registration for the public interface."
 msgstr ""
 
+#. SysConfig
+msgid "Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of 'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend' setting."
+msgstr ""
+
+#. SysConfig
+msgid "Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of 'Task###SurveyRequestsDelete' setting."
+msgstr ""
+

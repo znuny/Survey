@@ -178,8 +178,8 @@ sub Data {
         'Визначає чи запитання опитування повинні бути надіслані клієнтам';
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         'Визначає таксимальне значення кількості опитувань, що можуть бути наіслані користувачу протягом 30 днів (0-всі)';
-    $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        'Визначає значення затримки надсилання опитування після закриття заявки в годинах (0-одразу)';
+    $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
+        '';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
         'Визначає колонки для випадаючого списку для побудови умов (0/1 - неактивний/активний)';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =
@@ -213,8 +213,8 @@ sub Data {
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Параметри сторінки (в яких показуються опитування) в короткому представленні';
     $Self->{Translation}->{'Public Survey.'} = 'Публічне опитування';
-    $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
-        'Результати, старші ніж визначена кількість днів будуть видалені. Замітка: налаштовується OTRS Daemon Task###SurveyRequestsDelete';
+    $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
+        '';
     $Self->{Translation}->{'Shows a link in the menu to edit a survey in its zoom view of the agent interface.'} =
         'Показує лінк в меню для редагування опитування в розширеному перегляді агента';
     $Self->{Translation}->{'Shows a link in the menu to edit survey questions in its zoom view of the agent interface.'} =

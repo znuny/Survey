@@ -178,8 +178,8 @@ sub Data {
         'Define se os pedidos de questionário serão enviados apenas para clientes reais.';
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         'Define a quantidade máxima de questionários que são enviados para um cliente a cada 30 dias (0 significa que não há máximo; todos os pedidos de questionário serão enviados).';
-    $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        'Define a quantidade de horas que um ticket deve estar fechado para enviar um pedido de questionário (0 significa enviar imediatamente após fecho). Nota: um envio tardio de questionário é feito pelo OTRS Daemon, sob ativação da configuração \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' .';
+    $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
+        '';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
         'Define as colunas da lista suspensa para criação de condições de envio (0=> inativo, 1=> ativo).';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =
@@ -213,7 +213,7 @@ sub Data {
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'Parâmetros para as páginas (nas quais os questionários são mostrados) da visão geral compacta.';
     $Self->{Translation}->{'Public Survey.'} = 'Inquérito público';
-    $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
+    $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
         '';
     $Self->{Translation}->{'Shows a link in the menu to edit a survey in its zoom view of the agent interface.'} =
         'Exibe um link no menu para editar um questionário na interface do agente.';

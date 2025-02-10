@@ -178,8 +178,8 @@ sub Data {
         'アンケートが実際の顧客に送信されるかどうかを定義します。';
     $Self->{Translation}->{'Defines maximum amount of surveys that get sent to a customer per 30 days. ( 0 means no maximum, all survey requests will be sent).'} =
         '30日の間に顧客に送信する調査の最大数を定義します。(0は無制限を意味し、全ての調査要求が送信されます)';
-    $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the OTRS Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
-        'アンケートの送信をトリガーするためにチケットをクローズする時間数を定義します（0はクローズ直後に送信されます）。 注：遅延アンケート送信は、OTRSデーモンによって実行され、事前に \'Daemon :: SchedulerCronTaskManager :: Task ### SurveyRequestsSend\'の設定が有効になっています。';
+    $Self->{Translation}->{'Defines the amount in hours a ticket has to be closed to trigger the sending of a survey, ( 0 means send immediately after close ). Note: delayed survey sending is done by the Znuny Daemon, prior activation of \'Daemon::SchedulerCronTaskManager::Task###SurveyRequestsSend\' setting.'} =
+        '';
     $Self->{Translation}->{'Defines the columns for the dropdown list for building send conditions (0 => inactive, 1 => active).'} =
         '送信条件を作成するためのドロップダウンリストの列を定義します。（0 =>無効、1 =>有効）';
     $Self->{Translation}->{'Defines the default height for Richtext views for SurveyZoom elements.'} =
@@ -213,8 +213,8 @@ sub Data {
     $Self->{Translation}->{'Parameters for the pages (in which the surveys are shown) of the small survey overview.'} =
         'アンケート一覧 (Small) の (アンケートが表示される) ページに対するパラメータ';
     $Self->{Translation}->{'Public Survey.'} = '公開インターフェースのPublicSurveyオブジェクトに対するフロントエンドモジュール登録です。';
-    $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the OTRS Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
-        '設定された日数より古い結果は削除されます。 注： \'Task ### SurveyRequestsDelete\'設定を有効にする前に、OTRSデーモンによって行われた結果を削除して下さい。';
+    $Self->{Translation}->{'Results older than the configured amount of days will be deleted. Note: delete results done by the Znuny Daemon, prior activation of \'Task###SurveyRequestsDelete\' setting.'} =
+        '';
     $Self->{Translation}->{'Shows a link in the menu to edit a survey in its zoom view of the agent interface.'} =
         '担当者インタフェースの統計ズームビューで編集リンクをメニューを表示する。';
     $Self->{Translation}->{'Shows a link in the menu to edit survey questions in its zoom view of the agent interface.'} =
