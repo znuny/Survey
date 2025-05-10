@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Survey\n"
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
-"PO-Revision-Date: 2022-03-18 15:53+0000\n"
-"Last-Translator: Denny Korsukéwitz <dk@znuny.com>\n"
-"Language-Team: German <https://translations.znuny.org/projects/znuny/survey/de/>\n"
+"PO-Revision-Date: 2025-05-10 18:18+0000\n"
+"Last-Translator: Roy Kaldung <rk@znuny.com>\n"
+"Language-Team: German <https://translations.znuny.org/projects/znuny-lts/"
+"survey/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Create New Survey"
@@ -419,6 +420,8 @@ msgstr "Modul nicht akiviert."
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "This functionality is not enabled, please contact your administrator."
 msgstr ""
+"Diese Funktion ist nicht aktiviert, bitte wenden Sie sich an Ihren "
+"Administrator."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "Survey Error!"
@@ -658,9 +661,8 @@ msgstr "Statistik-Details erhöhen."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "The current ticket state is"
-msgstr ""
+msgstr "Der aktuell Status des Tickets ist"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Your email address is"
-msgstr ""
-
+msgstr "Ihre E-Mail-Adresse ist"
