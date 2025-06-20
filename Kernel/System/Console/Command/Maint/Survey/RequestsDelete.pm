@@ -134,7 +134,7 @@ sub Run {
                     ' ', "Survey:" . $Row[0] . "\t",
                     "TicketNumber:" . $Row[1] . "\t",
                     "SendTime:" . $Row[2] . "\t",
-                    "VoteTime:" . $Row[3] . "\t",
+                    "VoteTime:" . ($Row[3] // '') . "\t",
                     "CreateTime:" . $Row[4] . "\t"
                 );
 
