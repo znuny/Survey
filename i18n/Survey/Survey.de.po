@@ -4,8 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
 "PO-Revision-Date: 2025-05-10 18:18+0000\n"
 "Last-Translator: Roy Kaldung <rk@znuny.com>\n"
-"Language-Team: German <https://translations.znuny.org/projects/znuny-lts/"
-"survey/de/>\n"
+"Language-Team: German <https://translations.znuny.org/projects/znuny-lts/survey/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -419,9 +418,7 @@ msgstr "Modul nicht akiviert."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "This functionality is not enabled, please contact your administrator."
-msgstr ""
-"Diese Funktion ist nicht aktiviert, bitte wenden Sie sich an Ihren "
-"Administrator."
+msgstr "Diese Funktion ist nicht aktiviert, bitte wenden Sie sich an Ihren Administrator."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "Survey Error!"
@@ -666,3 +663,4 @@ msgstr "Der aktuell Status des Tickets ist"
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Your email address is"
 msgstr "Ihre E-Mail-Adresse ist"
+

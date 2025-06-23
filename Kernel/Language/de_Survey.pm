@@ -26,8 +26,8 @@ sub Data {
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = 'Bitte wählen Sie eine Kundeneigenschaft, um eine Bedingung hinzuzufügen.';
     $Self->{Translation}->{'Public survey key'} = 'Öffentlicher Umfrageschlüssel';
     $Self->{Translation}->{'Example survey'} = 'Beispielumfrage';
-    $Self->{Translation}->{'The current ticket state is'} = '';
-    $Self->{Translation}->{'Your email address is'} = '';
+    $Self->{Translation}->{'The current ticket state is'} = 'Der aktuell Status des Tickets ist';
+    $Self->{Translation}->{'Your email address is'} = 'Ihre E-Mail-Adresse ist';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Allgemeine Angaben bearbeiten';
@@ -149,7 +149,7 @@ sub Data {
     $Self->{Translation}->{'Survey Message!'} = 'Umfragenachricht!';
     $Self->{Translation}->{'Module not enabled.'} = 'Modul nicht akiviert.';
     $Self->{Translation}->{'This functionality is not enabled, please contact your administrator.'} =
-        '';
+        'Diese Funktion ist nicht aktiviert, bitte wenden Sie sich an Ihren Administrator.';
     $Self->{Translation}->{'Survey Error!'} = 'Umfragefehler!';
     $Self->{Translation}->{'Invalid survey key.'} = '';
     $Self->{Translation}->{'The inserted survey key is invalid, if you followed a link maybe this is obsolete or broken.'} =
