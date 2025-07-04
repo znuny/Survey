@@ -467,7 +467,10 @@ sub RequestSend {
         );
 
         # fetch the result
+        ROW:
         while ( my @Row = $DBObject->FetchrowArray() ) {
+            next ROW if !IsStringWithData( $Row[0] );
+
             $LastSentDateTime = $Kernel::OM->Create(
                 'Kernel::System::DateTime',
                 ObjectParams => {
