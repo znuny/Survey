@@ -2,17 +2,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Survey\n"
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-07-22 11:59+0000\n"
+"Last-Translator: Spyros <spyros.veronikis@gmail.com>\n"
+"Language-Team: Greek <https://translations.znuny.org/projects/znuny-lts/"
+"survey/el/>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Create New Survey"
-msgstr ""
+msgstr "Δημιουργία Νέας Επισκόπησης"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Introduction"
@@ -20,11 +23,11 @@ msgstr "Εισαγωγή"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Survey Introduction"
-msgstr ""
+msgstr "Εισαγωγή Επισκόπησης"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Notification Body"
-msgstr ""
+msgstr "Φορέας Ειδοποίησης"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Ticket Types"
@@ -656,9 +659,8 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "The current ticket state is"
-msgstr ""
+msgstr "Η τρέχουσα κατάσταση δελτίου είναι"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Your email address is"
 msgstr ""
-
