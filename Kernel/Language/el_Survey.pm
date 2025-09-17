@@ -16,17 +16,17 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
-    $Self->{Translation}->{'Create New Survey'} = '';
+    $Self->{Translation}->{'Create New Survey'} = 'Δημιουργία Νέας Επισκόπησης';
     $Self->{Translation}->{'Introduction'} = 'Εισαγωγή';
-    $Self->{Translation}->{'Survey Introduction'} = '';
-    $Self->{Translation}->{'Notification Body'} = '';
+    $Self->{Translation}->{'Survey Introduction'} = 'Εισαγωγή Επισκόπησης';
+    $Self->{Translation}->{'Notification Body'} = 'Φορέας Ειδοποίησης';
     $Self->{Translation}->{'Ticket Types'} = 'Τύποι Δελτίων';
     $Self->{Translation}->{'Internal Description'} = '';
     $Self->{Translation}->{'Customer conditions'} = '';
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = '';
     $Self->{Translation}->{'Public survey key'} = '';
     $Self->{Translation}->{'Example survey'} = '';
-    $Self->{Translation}->{'The current ticket state is'} = '';
+    $Self->{Translation}->{'The current ticket state is'} = 'Η τρέχουσα κατάσταση δελτίου είναι';
     $Self->{Translation}->{'Your email address is'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
