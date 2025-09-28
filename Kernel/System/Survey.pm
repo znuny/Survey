@@ -138,7 +138,7 @@ sub SurveyAdd {
         Bind => [
             \$Param{Title},              \$Param{Introduction},        \$Param{Description},
             \$Param{NotificationSender}, \$Param{NotificationSubject}, \$Param{NotificationBody},
-            \$Status, \$SendConditionStrg, \$Param{UserID},
+            \$Status,                    \$SendConditionStrg,          \$Param{UserID},
             \$Param{UserID},
         ],
     );
@@ -428,7 +428,7 @@ sub SurveyUpdate {
         Bind => [
             \$Param{Title},              \$Param{Introduction},        \$Param{Description},
             \$Param{NotificationSender}, \$Param{NotificationSubject}, \$Param{NotificationBody},
-            \$SendConditionStrg, \$Param{UserID}, \$Param{SurveyID},
+            \$SendConditionStrg,         \$Param{UserID},              \$Param{SurveyID},
         ],
     );
 

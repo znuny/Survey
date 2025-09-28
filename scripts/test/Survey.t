@@ -1065,7 +1065,7 @@ $Self->True(
 my @SortedIDs = $SurveyObject->SurveySearch(
     NotificationSender => 'quality@unittest.com',
     OrderBy            => [ 'SurveyID', 'Title' ],    # (optional)
-    OrderByDirection   => [ 'Down', 'Up' ],           # (optional)
+    OrderByDirection   => [ 'Down',     'Up' ],       # (optional)
     Limit              => 150,                        # (optional)
     UserID             => 1,
 );
