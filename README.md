@@ -16,7 +16,7 @@ This add-on enables you to create surveys, add questions to a created survey, se
 
 **Prerequisites**
 
-- Znuny 7.1
+- Znuny 7.3
 
 **Installation**
 
@@ -25,7 +25,6 @@ Use the online repository **Znuny Open Source Add-ons** from the package manager
 **Commercial Support**
 
 For this add-on and for Znuny in general visit [www.znuny.com](https://www.znuny.com). Looking forward to hear from you.
-
 
 Your Znuny Team!
 

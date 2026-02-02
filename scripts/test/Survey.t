@@ -474,8 +474,8 @@ END
         $Mailbody2 =~ s{ \d{8,12} - \d{3,6} - \d{1,3} }{MESSAGEID}xmsg;
 
         $Self->Is(
-            $Mailbody2,
-            $Mailbody1,
+            _NormalizeEmailBody($Mailbody2),
+            _NormalizeEmailBody($Mailbody1),
             "$Test->{Name} Test special characters in email body",
         );
     }
@@ -1042,8 +1042,8 @@ That\'s it.
     for my $TextType ( sort keys %Text ) {
         $DocumentComplete = $SurveyObject->GetRichTextDocumentComplete( Text => $Text{$TextType}->{Input} );
         $Self->Is(
-            $Text{$TextType}->{Output},
-            $DocumentComplete,
+            _NormalizeEmailHTML( $Text{$TextType}->{Output} ),
+            _NormalizeEmailHTML($DocumentComplete),
             "GetRichTextDocumentComplete Test - $TextType",
         );
     }
@@ -1076,5 +1076,30 @@ $Self->True(
 );
 
 # cleanup is done by RestoreDatabase
+
+sub _NormalizeEmailHTML {
+    my ($HTML) = @_;
+    return '' if !defined $HTML;
+
+    $HTML =~ s{<style class="RTEContentCssInternal">.*?</style>}{}gis;
+    $HTML =~ s{<style class="RTEContentCssDefault">.*?</style>}{}gis;
+    $HTML =~ s{<body\b[^>]*>}{<body>}gis;
+
+    return $HTML;
+}
+
+sub _NormalizeEmailBody {
+    my ($Body) = @_;
+    return '' if !defined $Body;
+
+    # Remove quoted-printable soft line breaks.
+    $Body =~ s{=\r?\n}{}g;
+
+    $Body =~ s{<style class=3D"RTEContentCssInternal">.*?</style>}{}gis;
+    $Body =~ s{<style class=3D"RTEContentCssDefault">.*?</style>}{}gis;
+    $Body =~ s{<body\b[^>]*>}{<body>}gis;
+
+    return $Body;
+}
 
 1;

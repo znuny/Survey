@@ -22,6 +22,14 @@ $Selenium->RunTest(
         my $Helper       = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
         my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
 
+        my $DismissMessages = sub {
+
+            # Close floating alert messages that can block clicks.
+            $Selenium->execute_script(
+                q{if (typeof($) === 'function') { $('.modMessages .messageClose').trigger('click'); $('.modMessages .message').remove(); }}
+            );
+        };
+
         # Create test survey.
         my $SurveyTitle = 'Survey ' . $Helper->GetRandomID();
         my $SurveyID    = $SurveyObject->SurveyAdd(
@@ -44,6 +52,10 @@ $Selenium->RunTest(
             Groups => [ 'admin', 'users' ],
         ) || die "Did not get test user";
 
+        _SetUserTimeZoneUTC(
+            UserLogin => $TestUserLogin,
+        );
+
         $Selenium->Login(
             Type     => 'Agent',
             User     => $TestUserLogin,
@@ -54,6 +66,7 @@ $Selenium->RunTest(
 
         # Navigate to AgentSurveyOverview of created test survey.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentSurveyOverview");
+        $DismissMessages->();
 
         # Check screen.
         $Selenium->find_element( "table",             'css' );
@@ -67,6 +80,7 @@ $Selenium->RunTest(
         );
 
         # Click on test created survey.
+        $DismissMessages->();
         $Selenium->find_element("//div[\@title='$SurveyTitle']")->VerifiedClick();
 
         # Verify we are in AgentSurveyZoom screen.
@@ -79,10 +93,12 @@ $Selenium->RunTest(
 
         # Navigate to AgentSurveyOverview of created test survey.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentSurveyOverview");
+        $DismissMessages->();
 
+        # Open settings dialog without waiting for PageLoadComplete.
         $Selenium->find_element( '#SurveySearch', 'css' )->click();
         my $DialogFound = $Selenium->WaitFor(
-            JavaScript => 'return typeof($) === "function" && $("#SurveyOverviewSettingsDialog").length'
+            JavaScript => 'return typeof($) === "function" && $(".Dialog.Modal #SurveyOverviewSettingsDialog").length'
         );
 
         $Self->True(
@@ -91,12 +107,15 @@ $Selenium->RunTest(
         );
 
         # Send SurveyID.
-        $Selenium->find_element( '#SurveyOverviewSettingsDialog input[name="Fulltext"]', 'css' )->send_keys($SurveyID);
+        $Selenium->InputFieldValueSet(
+            Element => '.Dialog.Modal #SurveyOverviewSettingsDialog input[name="Fulltext"]',
+            Value   => $SurveyID,
+        );
 
         # Make sure that following fields are displayed.
-        $Selenium->find_element( '#SurveyOverviewSettingsDialog #States_Search', 'css' );
-        $Selenium->find_element( '#SurveyOverviewSettingsDialog #NoTimeSet',     'css' );
-        $Selenium->find_element( '#SurveyOverviewSettingsDialog #DateRange',     'css' );
+        $Selenium->find_element( '.Dialog.Modal #SurveyOverviewSettingsDialog #States_Search', 'css' );
+        $Selenium->find_element( '.Dialog.Modal #SurveyOverviewSettingsDialog #NoTimeSet',     'css' );
+        $Selenium->find_element( '.Dialog.Modal #SurveyOverviewSettingsDialog #DateRange',     'css' );
 
         $Selenium->find_element( '#DialogButton1', 'css' )->click();
         $Selenium->WaitFor( JavaScript => 'return !$(".Dialog.Modal").length' );
@@ -127,6 +146,7 @@ $Selenium->RunTest(
 
         # Go to AgentSurveyZoom screen.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentSurveyZoom;SurveyID=$SurveyID");
+        $DismissMessages->();
 
         $Selenium->WaitFor( JavaScript => "return \$('#NewStatus.Modernize').length === 1;" );
 
@@ -138,14 +158,13 @@ $Selenium->RunTest(
         # Switch status of survey.
         for my $Status (qw(Master Valid)) {
 
-            $Selenium->execute_script('window.Core.App.PageLoadComplete = false;');
-            $Selenium->execute_script(
-                "\$('#NewStatus').val('$Status').trigger('redraw.InputField').trigger('change');"
+            $Selenium->InputFieldValueSet(
+                Element => '#NewStatus',
+                Value   => $Status,
             );
 
             $Selenium->WaitFor(
-                JavaScript =>
-                    'return typeof(Core) == "object" && typeof(Core.App) == "object" && Core.App.PageLoadComplete'
+                JavaScript => "return \$('label:contains(Status)').next().text().trim() === '$Status';"
             );
 
             $Self->Is(
@@ -188,5 +207,25 @@ $Selenium->RunTest(
         );
     }
 );
+
+sub _SetUserTimeZoneUTC {
+    my (%Param) = @_;
+
+    return if !$Param{UserLogin};
+
+    my $UserObject = $Kernel::OM->Get('Kernel::System::User');
+    my $UserID     = $UserObject->UserLookup(
+        UserLogin => $Param{UserLogin},
+    );
+
+    return if !$UserID;
+
+    # Set test user's time zone to avoid the preferences popup.
+    return $UserObject->SetPreferences(
+        Key    => 'UserTimeZone',
+        Value  => 'UTC',
+        UserID => $UserID,
+    );
+}
 
 1;
