@@ -21,6 +21,7 @@ $Selenium->RunTest(
 
         my $Helper       = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
         my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
+        my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
 
         # Create test survey.
         my $SurveyTitle = 'Survey ' . $Helper->GetRandomID();
@@ -50,7 +51,7 @@ $Selenium->RunTest(
             Password => $TestUserLogin,
         );
 
-        my $ScriptAlias = $Kernel::OM->Get('Kernel::Config')->Get('ScriptAlias');
+        my $ScriptAlias = $ConfigObject->Get('ScriptAlias');
 
         # Navigate to AgentSurveyOverview of created test survey.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentSurveyOverview");

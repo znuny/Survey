@@ -11,6 +11,7 @@ package var::packagesetup::Survey;
 
 use strict;
 use warnings;
+use utf8;
 
 use Kernel::Output::Template::Provider;
 

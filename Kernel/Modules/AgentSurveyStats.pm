@@ -27,8 +27,10 @@ sub new {
     # get common objects
     %{$Self} = %Param;
 
+    my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+
     # get config of frontend module
-    $Self->{Config} = $Kernel::OM->Get('Kernel::Config')->Get("Survey::Frontend::$Self->{Action}");
+    $Self->{Config} = $ConfigObject->Get("Survey::Frontend::$Self->{Action}");
 
     return $Self;
 }
@@ -39,10 +41,12 @@ sub Run {
     my $Output;
 
     # get needed object
-    my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
-    my $ParamObject  = $Kernel::OM->Get('Kernel::System::Web::Request');
-    my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
-    my $GroupObject  = $Kernel::OM->Get('Kernel::System::Group');
+    my $SurveyObject    = $Kernel::OM->Get('Kernel::System::Survey');
+    my $ParamObject     = $Kernel::OM->Get('Kernel::System::Web::Request');
+    my $LayoutObject    = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
+    my $GroupObject     = $Kernel::OM->Get('Kernel::System::Group');
+    my $ConfigObject    = $Kernel::OM->Get('Kernel::Config');
+    my $HTMLUtilsObject = $Kernel::OM->Get('Kernel::System::HTMLUtils');
 
     my $SurveyID  = $ParamObject->GetParam( Param => "SurveyID" )  || '';
     my $RequestID = $ParamObject->GetParam( Param => "RequestID" ) || '';
@@ -87,7 +91,7 @@ sub Run {
         );
 
         # get config of AgentSurveyStats
-        my $ShowDeleteArray = $Kernel::OM->Get('Kernel::Config')->Get('SurveyStats::ShowDelete');
+        my $ShowDeleteArray = $ConfigObject->Get('SurveyStats::ShowDelete');
         my $ShowDelete      = 0;
 
         if ( IsArrayRefWithData($ShowDeleteArray) ) {
@@ -295,7 +299,7 @@ sub Run {
                         Text           => $Data{Answer},
                         HTMLResultMode => 1,
                     );
-                    $Data{Answer} = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToAscii(
+                    $Data{Answer} = $HTMLUtilsObject->ToAscii(
                         String => $Data{Answer},
                     );
                 }

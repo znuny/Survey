@@ -19,7 +19,9 @@ $Kernel::OM->ObjectParamAdd(
         RestoreDatabase => 1,
     },
 );
-my $Helper = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+
+my $Helper      = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+my $QueueObject = $Kernel::OM->Get('Kernel::System::Queue');
 
 # set send period to always send survey
 $Helper->ConfigSettingChange(
@@ -34,7 +36,7 @@ $Helper->ConfigSettingChange(
 );
 
 my $QueueRand = 'SomeQueue' . $Helper->GetRandomID();
-my $QueueID   = $Kernel::OM->Get('Kernel::System::Queue')->QueueAdd(
+my $QueueID   = $QueueObject->QueueAdd(
     Name            => $QueueRand,
     ValidID         => 1,
     GroupID         => 1,

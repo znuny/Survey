@@ -20,10 +20,12 @@ my $Selenium = $Kernel::OM->Get('Kernel::System::UnitTest::Selenium');
 $Selenium->RunTest(
     sub {
 
-        my $Helper       = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
-        my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
-        my $DBObject     = $Kernel::OM->Get('Kernel::System::DB');
-        my $TicketObject = $Kernel::OM->Get('Kernel::System::Ticket');
+        my $Helper        = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+        my $SurveyObject  = $Kernel::OM->Get('Kernel::System::Survey');
+        my $DBObject      = $Kernel::OM->Get('Kernel::System::DB');
+        my $TicketObject  = $Kernel::OM->Get('Kernel::System::Ticket');
+        my $ConfigObject  = $Kernel::OM->Get('Kernel::Config');
+        my $ArticleObject = $Kernel::OM->Get('Kernel::System::Ticket::Article');
 
         # Do not really send emails.
         $Helper->ConfigSettingChange(
@@ -186,7 +188,7 @@ $Selenium->RunTest(
             "Ticket ID $TicketID is created",
         );
 
-        my $ArticleInternalBackendObject = $Kernel::OM->Get('Kernel::System::Ticket::Article')->BackendForChannel(
+        my $ArticleInternalBackendObject = $ArticleObject->BackendForChannel(
             ChannelName => 'Internal',
         );
 
@@ -231,7 +233,7 @@ $Selenium->RunTest(
             $PublicSurveyKey = $Row[0];
         }
 
-        my $ScriptAlias = $Kernel::OM->Get('Kernel::Config')->Get('ScriptAlias');
+        my $ScriptAlias = $ConfigObject->Get('ScriptAlias');
 
         # Navigate to PublicSurvey of created test survey.
         $Selenium->VerifiedGet("${ScriptAlias}public.pl?Action=PublicSurvey;PublicSurveyKey=$PublicSurveyKey");

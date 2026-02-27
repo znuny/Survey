@@ -1,6 +1,13 @@
-![Znuny logo](https://znuny.com/assets/images/logo_small.png)
+<div align="center">
+  <a href="https://www.znuny.org">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://www.znuny.com/assets/znuny-logo.svg">
+      <img alt="Znuny" src="https://www.znuny.com/assets/znuny-logo-black.svg" width="300">
+    </picture>
+  </a>
 
-![Build status](https://badge.proxy.znuny.com/Survey/rel-7_1)
+  ![Build status](https://badge.proxy.znuny.com/Survey/rel-7_2)
+</div>
 
 Survey
 ======
@@ -9,7 +16,7 @@ This add-on enables you to create surveys, add questions to a created survey, se
 
 **Prerequisites**
 
-- Znuny 7.1
+- Znuny 7.2
 
 **Installation**
 

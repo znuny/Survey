@@ -15,20 +15,19 @@
             <h1>[% Translate("Edit Questions") | html %]: [% Translate(Config("Survey::Hook")) | html %][% Data.SurveyNumber | html %] - [% Data.Title | html %]</h1>
         </div>
         <div>
-           <a class="CancelClosePopup btn-cancel-ghost btn-main btn-width-md" href="#">
-            [% Translate("Close and Back") | html %]
-           </a>
+            <a class="CancelClosePopup btn-cancel-ghost btn-main btn-width-md" href="#">
+                [% Translate("Close and Back") | html %]
+            </a>
         </div>
     </div>
     <div class="Content">
         <div class="Header">
+            <ul class="BreadCrumb">
+                <li>
+                    <a id="BreadCrumbSurveyQuestions" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=AgentSurveyEditQuestions;SurveyID=[% Data.SurveyID | uri %]">[% Translate("Survey Questions") | html %]</a>
+                </li>
+            </ul>
         </div>
-
-        <ul class="BreadCrumb">
-            <li>
-                [% Translate("Survey Questions") | html %]</a>
-            </li>
-        </ul>
 
 [% RenderBlockStart("SurveyAddQuestion") %]
 
@@ -40,45 +39,42 @@
                 <h2>[% Translate("Add Question") | html %]</h2>
             </div>
             <div class="Content">
-                <fieldset class="TableLike card-item-wrapper">
-                    <div class="card-item col-wide-100 col-desktop-100 col-tablet-100">
-                        <h2 class="card-title">[% Translate("Add Question") | html %]</h2>
+                <div class="col-wide-100 col-desktop-100 col-tablet-100">
 
-                        <form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data" name="SurveyQuestions" id="SurveyQuestions" class="Validate PreventMultipleSubmits">
-                            <input type="hidden" name="Action" value="[% Env("Action") %]" />
-                            <input type="hidden" name="Subaction" value="QuestionAdd" />
-                            <input type="hidden" name="SurveyID" value="[% Data.SurveyID | html %]" />
+                    <form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data" name="SurveyQuestions" id="SurveyQuestions" class="Validate PreventMultipleSubmits">
+                        <input type="hidden" name="Action" value="[% Env("Action") %]" />
+                        <input type="hidden" name="Subaction" value="QuestionAdd" />
+                        <input type="hidden" name="SurveyID" value="[% Data.SurveyID | html %]" />
 
 
-                            <div class="field-wrapper">
-                                <label class="Mandatory" for="Question">[% Translate("Type the question") | html %]:</label>
-                                <div class="Field">
-                                    <input type="text" id="Question" name="Question" class="Validate_Required [% Data.QuestionErrorClass | html %] " size="60" />
-                                    [% Data.SelectionType %]
+                        <div class="field-wrapper">
+                            <label class="Mandatory" for="Question">[% Translate("Type the question") | html %]:</label>
+                            <div class="Field">
+                                <input type="text" id="Question" name="Question" class="Validate_Required [% Data.QuestionErrorClass | html %] " size="60" />
+                                [% Data.SelectionType %]
 
-                                    <div id="QuestionError" class="TooltipErrorMessage">
-                                        <p>[% Translate("This field is required.") | html %]</p>
-                                    </div>
+                                <div id="QuestionError" class="TooltipErrorMessage">
+                                    <p>[% Translate("This field is required.") | html %]</p>
+                                </div>
 
-                                    <div id="QuestionServerError" class="TooltipErrorMessage">
-                                        <p>[% Translate("This field is required.") | html %]</p>
-                                    </div>
+                                <div id="QuestionServerError" class="TooltipErrorMessage">
+                                    <p>[% Translate("This field is required.") | html %]</p>
                                 </div>
                             </div>
-                            <div class="field-wrapper">
-                                <label for="AnswerRequired"> [% Translate("Answer required") | html %]:&nbsp;</label>
-                                    <div class="Field">
-                                        [% Data.AnswerRequiredSelect %]
-                                    </div>
-                            </div>
-                            <div class="field-wrapper">
+                        </div>
+                        <div class="field-wrapper">
+                            <label for="AnswerRequired"> [% Translate("Answer required") | html %]:&nbsp;</label>
                                 <div class="Field">
-                                    <button class="CallForAction Primary btn-primary btn-main btn-width-md" type="submit" value="[% Translate("Add") | html %]"><span>[% Translate("Add") | html %]</span></button>
+                                    [% Data.AnswerRequiredSelect %]
                                 </div>
+                        </div>
+                        <div class="field-wrapper">
+                            <div class="Field">
+                                <button class="CallForAction Primary btn-primary btn-main btn-width-md" type="submit" value="[% Translate("Add") | html %]"><span>[% Translate("Add") | html %]</span></button>
                             </div>
-                        </form>
-                    </div>
-                </fieldset>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 [% RenderBlockEnd("SurveyAddQuestion") %]
@@ -91,140 +87,136 @@
                 <h2>[% Translate("Survey Questions") | html %]</h2>
             </div>
             <div class="Content">
-                <fieldset class="TableLike card-item-wrapper">
-                    <div class="card-item col-wide-100 col-desktop-100 col-tablet-100">
-                        <h2 class="card-title">[% Translate("Survey Questions") | html %]</h2>
+                <div class="col-wide-100 col-desktop-100 col-tablet-100">
 
 [% RenderBlockStart("SurveyNoQuestionsSaved") %]
-                        <p>
-                            [% Translate("No questions saved for this survey.") | html %]
-                        </p>
+                    <p>
+                        [% Translate("No questions saved for this survey.") | html %]
+                    </p>
 [% RenderBlockEnd("SurveyNoQuestionsSaved") %]
 
 [% RenderBlockStart("SurveyQuestionsTable") %]
-                        <table class="DataTable">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        [% Translate("Question") | html %]
-                                    </th>
-                                    <th>
-                                        [% Translate("Type") | html %]
-                                    </th>
+                    <table class="DataTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    [% Translate("Question") | html %]
+                                </th>
+                                <th>
+                                    [% Translate("Type") | html %]
+                                </th>
 [% RenderBlockStart("SurveyStatusColumn") %]
-                                    <th>
-                                        [% Translate("Status") | html %]
-                                    </th>
+                                <th>
+                                    [% Translate("Status") | html %]
+                                </th>
 [% RenderBlockEnd("SurveyStatusColumn") %]
-                                    <th>
-                                        [% Translate("Answer Required") | html %]
-                                    </th>
-                                    <th class="Center">
-                                        [% Translate("Edit") | html %]
-                                    </th>
-                                    <th class="Center">
-                                        [% Translate("Up") | html %]
-                                    </th>
-                                    <th class="Center">
-                                        [% Translate("Down") | html %]
-                                    </th>
+                                <th>
+                                    [% Translate("Answer Required") | html %]
+                                </th>
+                                <th class="Center">
+                                    [% Translate("Edit") | html %]
+                                </th>
+                                <th class="Center">
+                                    [% Translate("Up") | html %]
+                                </th>
+                                <th class="Center">
+                                    [% Translate("Down") | html %]
+                                </th>
 [% RenderBlockStart("SurveyDeleteColumn") %]
-                                    <th class="Center">
-                                        [% Translate("Delete") | html %]
-                                    </th>
+                                <th class="Center">
+                                    [% Translate("Delete") | html %]
+                                </th>
 [% RenderBlockEnd("SurveyDeleteColumn") %]
-                                </tr>
-                            </thead>
-                            <tbody>
+                            </tr>
+                        </thead>
+                        <tbody>
 
 [% RenderBlockStart("SurveyQuestionsSaved") %]
-                                <tr>
-                                    <td title="[% Data.Question | html %]">
-                                        [% Data.Question | truncate(90) | html %]
-                                    </td>
-                                    <td>
-                                        [% Translate(Data.TypeTranslation) | html %]
-                                    </td>
-                                    <td>
-                                        [% Translate(Data.AnswerRequired) | html %]
-                                    </td>
-                                    <td class="Center">
-                                        <a class="AsBlock table-icon-hover-md QuestionEdit" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionEdit;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Edit") | html %]">
-                                            <i class="fa fa-pencil-square-o"></i>
-                                            <span>[% Translate("Edit") | html %]</span>
-                                        </a>
-                                    </td>
-                                    <td class="Center">
-                                        <a class="AsBlock table-icon-hover-md ArrowUp[% Data.ClassUp | html %]" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionUp;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Up") | html %]">
-                                            <i class="fa fa-chevron-up"></i>
-                                            <span>[% Translate("Up") | html %]</span>
-                                        </a>
-                                    </td>
-                                    <td class="Center">
-                                        <a class="AsBlock table-icon-hover-md ArrowDown[% Data.ClassDown | html %]" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionDown;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Down") | html %]">
-                                            <i class="fa fa-chevron-down"></i>
-                                            <span>[% Translate("Down") | html %]</span>
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td title="[% Data.Question | html %]">
+                                    [% Data.Question | truncate(90) | html %]
+                                </td>
+                                <td>
+                                    [% Translate(Data.TypeTranslation) | html %]
+                                </td>
+                                <td>
+                                    [% Translate(Data.AnswerRequired) | html %]
+                                </td>
+                                <td class="Center">
+                                    <a class="AsBlock table-icon-hover-md QuestionEdit" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionEdit;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Edit") | html %]">
+                                        <i class="fa fa-pencil-square-o"></i>
+                                        <span>[% Translate("Edit") | html %]</span>
+                                    </a>
+                                </td>
+                                <td class="Center">
+                                    <a class="AsBlock table-icon-hover-md ArrowUp[% Data.ClassUp | html %]" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionUp;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Up") | html %]">
+                                        <i class="fa fa-chevron-up"></i>
+                                        <span>[% Translate("Up") | html %]</span>
+                                    </a>
+                                </td>
+                                <td class="Center">
+                                    <a class="AsBlock table-icon-hover-md ArrowDown[% Data.ClassDown | html %]" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionDown;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Down") | html %]">
+                                        <i class="fa fa-chevron-down"></i>
+                                        <span>[% Translate("Down") | html %]</span>
+                                    </a>
+                                </td>
+                            </tr>
 [% RenderBlockEnd("SurveyQuestionsSaved") %]
 
 [% RenderBlockStart("SurveyQuestionsRow") %]
-                                <tr>
-                                    <td title="[% Data.Question | html %]">
-                                        [% Data.Question | truncate(90) | html %]
-                                    </td>
-                                    <td>
-                                        [% Translate(Data.TypeTranslation) | html %]
-                                    </td>
-                                    <td class="[% Data.Class | html %]">
-                                        [% Translate(Data.Status) | html %]
-                                    </td>
-                                    <td>
-                                        [% Translate(Data.AnswerRequired) | html %]
-                                    </td>
-                                    <td class="Center">
-                                        <a class="AsBlock table-icon-hover-md QuestionEdit" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionEdit;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Edit") | html %]">
-                                            <i class="fa fa-pencil-square-o"></i>
-                                            <span>[% Translate("Edit") | html %]</span>
-                                        </a>
-                                    </td>
-                                    <td class="Center">
-                                        <a title="[% Translate("Up") | html %]" class="AsBlock table-icon-hover-md ArrowUp[% Data.ClassUp | html %]" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionUp;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Up") | html %]">
-                                            <i class="fa fa-chevron-up"></i>
-                                            <span class="InvisibleText">[% Translate("Up") | html %]</span>
-                                        </a>
-                                    </td>
-                                    <td class="Center">
-                                        <a title="[% Translate("Down") | html %]" class="AsBlock table-icon-hover-md ArrowDown[% Data.ClassDown | html %]" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionDown;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]">
-                                            <i class="fa fa-chevron-down" title="[% Translate("Down") | html %]"></i>
-                                            <span class="InvisibleText">[% Translate("Down") | html %]</span>
-                                        </a>
-                                    </td>
+                            <tr>
+                                <td title="[% Data.Question | html %]">
+                                    [% Data.Question | truncate(90) | html %]
+                                </td>
+                                <td>
+                                    [% Translate(Data.TypeTranslation) | html %]
+                                </td>
+                                <td class="[% Data.Class | html %]">
+                                    [% Translate(Data.Status) | html %]
+                                </td>
+                                <td>
+                                    [% Translate(Data.AnswerRequired) | html %]
+                                </td>
+                                <td class="Center">
+                                    <a class="AsBlock table-icon-hover-md QuestionEdit" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionEdit;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Edit") | html %]">
+                                        <i class="fa fa-pencil-square-o"></i>
+                                        <span>[% Translate("Edit") | html %]</span>
+                                    </a>
+                                </td>
+                                <td class="Center">
+                                    <a title="[% Translate("Up") | html %]" class="AsBlock table-icon-hover-md ArrowUp[% Data.ClassUp | html %]" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionUp;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]" title="[% Translate("Up") | html %]">
+                                        <i class="fa fa-chevron-up"></i>
+                                        <span class="InvisibleText">[% Translate("Up") | html %]</span>
+                                    </a>
+                                </td>
+                                <td class="Center">
+                                    <a title="[% Translate("Down") | html %]" class="AsBlock table-icon-hover-md ArrowDown[% Data.ClassDown | html %]" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionDown;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]">
+                                        <i class="fa fa-chevron-down" title="[% Translate("Down") | html %]"></i>
+                                        <span class="InvisibleText">[% Translate("Down") | html %]</span>
+                                    </a>
+                                </td>
 [% RenderBlockStart("SurveyQuestionsDeleteButton") %]
-                                    <td class="Center">
-                                        <a title="[% Translate("Delete") | html %]" class="AsBlock table-icon-hover-md QuestionDelete" href="#" data-query-string="Action=[% Env("Action") %];Subaction=QuestionDelete;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]">
-                                            <i class="fa fa-trash"></i>
-                                            <span class="InvisibleText">[% Translate("Delete") | html %]</span>
-                                        </a>
-                                    </td>
+                                <td class="Center">
+                                    <a title="[% Translate("Delete") | html %]" class="AsBlock table-icon-hover-md QuestionDelete" href="#" data-query-string="Action=[% Env("Action") %];Subaction=QuestionDelete;SurveyID=[% Data.SurveyID | uri %];QuestionID=[% Data.QuestionID | uri %]">
+                                        <i class="fa fa-trash"></i>
+                                        <span class="InvisibleText">[% Translate("Delete") | html %]</span>
+                                    </a>
+                                </td>
 [% RenderBlockEnd("SurveyQuestionsDeleteButton") %]
-                                </tr>
+                            </tr>
 [% RenderBlockEnd("SurveyQuestionsRow") %]
-                            </tbody>
-                        </table>
+                        </tbody>
+                    </table>
 [% RenderBlockEnd("SurveyQuestionsTable") %]
-                        <div class="SpacingTop">
-                            <span class="FieldExplanation">[% Translate("When you finish to edit the survey questions just close this screen.") | html %]</span>
+                    <div class="SpacingTop">
+                        <span class="FieldExplanation">[% Translate("When you finish to edit the survey questions just close this screen.") | html %]</span>
+                    </div>
+                    <div class="Hidden" id="DeleteQuestionDialogContainer">
+                        <div id ="DeleteQuestionDialog" class="InnerContent">
+                            <p class="Center Spacing">[% Translate("Do you really want to delete this question? ALL associated data will be LOST!") | html %]</p>
+                            <div class="SpacingTop"></div>
                         </div>
                     </div>
-                        <div class="Hidden" id="DeleteQuestionDialogContainer">
-                            <div id ="DeleteQuestionDialog" class="InnerContent">
-                                <p class="Center Spacing">[% Translate("Do you really want to delete this question? ALL associated data will be LOST!") | html %]</p>
-                                <div class="SpacingTop"></div>
-                            </div>
-                        </div>
-                </fieldset>
             </div>
         </div>
 
@@ -242,24 +234,24 @@
             <h1>[% Translate("Edit Question") | html %]: [% Translate(Data.Question) | html %]</h1>
         </div>
         <div>
-           <a class="CancelClosePopup btn-cancel-ghost btn-main btn-width-md" href="#">
-            [% Translate("Close and Back") | html %]
-           </a>
+            <a class="CancelClosePopup btn-cancel-ghost btn-main btn-width-md" href="#">
+                [% Translate("Close and Back") | html %]
+            </a>
         </div>
     </div>
     <div class="Content">
         <div class="Header">
+            <ul class="BreadCrumb">
+                <li>
+                    <a id="BreadCrumbSurveyQuestions" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=AgentSurveyEditQuestions;SurveyID=[% Data.SurveyID | uri %]">[% Translate("Survey Questions") | html %]</a>
+                </li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li>
+                    [% Translate("Question:") | html %] [% Data.Question | html %]
+                </li>
+            </ul>
         </div>
 
-        <ul class="BreadCrumb">
-            <li>
-                <a id="BreadCrumbSurveyQuestions" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=AgentSurveyEditQuestions;SurveyID=[% Data.SurveyID | uri %]">[% Translate("Survey Questions") | html %]</a>
-            </li>
-            <li><i class="fa fa-angle-right"></i></li>
-            <li>
-                [% Translate("Question:") | html %] [% Data.Question | html %]
-            </li>
-        </ul>
 
         <div class="WidgetSimple">
             <div class="Header">
@@ -269,9 +261,7 @@
                 <h2>[% Translate("Edit Question") | html %]</h2>
             </div>
             <div class="Content">
-                <fieldset class="TableLike card-item-wrapper">
-                    <div class="card-item col-wide-100 col-desktop-100 col-tablet-100">
-                        <h2 class="card-title">[% Translate("Edit Question") | html %]</h2>
+                    <div class="col-wide-100 col-desktop-100 col-tablet-100">
                         <form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data" name="SurveyQuestion" id="SurveyQuestion" class="Validate PreventMultipleSubmits">
                             <input type="hidden" name="Action" value="[% Env("Action") %]" />
                             <input type="hidden" name="Subaction" value="QuestionSave" />
@@ -304,7 +294,6 @@
                             </div>
                         </form>
                     </div>
-                </fieldset>
             </div>
         </div>
 
@@ -317,9 +306,7 @@
                 <h2>[% Translate("Add Answer") | html %]</h2>
             </div>
             <div class="Content">
-                <fieldset class="TableLike card-item-wrapper">
-                    <div class="card-item col-wide-100 col-desktop-100 col-tablet-100">
-                        <h2 class="card-title">[% Translate("Add Answer") | html %]</h2>
+                    <div class="col-wide-100 col-desktop-100 col-tablet-100">
 
 [% RenderBlockStart("QuestionEditAddAnswer") %]
                         <form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data" name="AnswerAdd" id="AnswerAdd" class="Validate PreventMultipleSubmits">
@@ -363,7 +350,6 @@
                         </p>
 [% RenderBlockEnd("NoAnswersYesNo") %]
                     </div>
-                </fieldset>
             </div>
         </div>
 
@@ -377,9 +363,7 @@
                 <h2>[% Translate("Possible Answers For") | html %] [% Translate(Data.TypeTranslation) | html %]</h2>
             </div>
             <div class="Content">
-                <fieldset class="TableLike card-item-wrapper">
-                    <div class="card-item col-wide-100 col-desktop-100 col-tablet-100">
-                        <h2 class="card-title">[% Translate("Possible Answers For") | html %] [% Translate(Data.TypeTranslation) | html %]</h2>
+                    <div class="col-wide-100 col-desktop-100 col-tablet-100">
 
                         <table class="DataTable">
                             <thead>
@@ -515,8 +499,7 @@
                                 <div class="SpacingTop"></div>
                             </div>
                         </div>
-                    </div> <!-- card-item -->
-                </fieldset>
+                    </div> <!-- -->
             </div> <!-- WidgetSimple -> Content -->
         </div> <!-- WidgetSimple -->
 [% RenderBlockEnd("QuestionEditTable") %]
@@ -534,28 +517,28 @@
             <h1>[% Translate("Edit Answer") | html %]: [% Data.Answer | html %]</h1>
         </div>
         <div>
-           <a class="CancelClosePopup btn-cancel-ghost btn-main btn-width-md" href="#">
-            [% Translate("Close and Back") | html %]
-           </a>
+            <a class="CancelClosePopup btn-cancel-ghost btn-main btn-width-md" href="#">
+                [% Translate("Close and Back") | html %]
+            </a>
         </div>
     </div>
     <div class="Content">
         <div class="Header">
+            <ul class="BreadCrumb">
+                <li>
+                    <a id="BreadCrumbSurveyQuestions" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=AgentSurveyEditQuestions;SurveyID=[% Data.SurveyID | uri %]">[% Translate("Survey Questions") | html %]</a>
+                </li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li>
+                    <a href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionEdit;QuestionID=[% Data.QuestionID | uri %];SurveyID=[% Data.SurveyID | uri %]">[% Translate("Question:") | html %] [% Data.Question | html %]</a>
+                </li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li>
+                    [% Translate("Answer:") | html %] [% Data.Answer | html %]
+                </li>
+            </ul>
         </div>
 
-        <ul class="BreadCrumb">
-            <li>
-                <a id="BreadCrumbSurveyQuestions" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=AgentSurveyEditQuestions;SurveyID=[% Data.SurveyID | uri %]">[% Translate("Survey Questions") | html %]</a>
-            </li>
-            <li><i class="fa fa-angle-right"></i></li>
-            <li>
-                <a href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=QuestionEdit;QuestionID=[% Data.QuestionID | uri %];SurveyID=[% Data.SurveyID | uri %]">[% Translate("Question:") | html %] [% Data.Question | html %]</a>
-            </li>
-            <li><i class="fa fa-angle-right"></i></li>
-            <li>
-                [% Translate("Answer:") | html %] [% Data.Answer | html %]
-            </li>
-        </ul>
 
         <div class="WidgetSimple">
             <div class="Header">
@@ -565,9 +548,7 @@
                 <h2>[% Translate("Edit Answer") | html %]</h2>
             </div>
             <div class="Content">
-                <fieldset class="TableLike card-item-wrapper">
-                    <div class="card-item col-wide-100 col-desktop-100 col-tablet-100">
-                        <h2 class="card-title">[% Translate("Edit Answer") | html %]</h2>
+                    <div class="col-wide-100 col-desktop-100 col-tablet-100">
 
                         <form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data" name="AnswerEdit" id="AnswerEdit" class="Validate PreventMultipleSubmits">
                             <input type="hidden" name="Action" value="[% Env("Action") %]" />
@@ -597,7 +578,6 @@
                             </div>
                         </form>
                     </div>
-                </fieldset>
             </div>
         </div>
 

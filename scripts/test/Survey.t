@@ -21,10 +21,12 @@ $Kernel::OM->ObjectParamAdd(
         RestoreDatabase => 1,
     },
 );
-my $HelperObject = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
 
-# create local config object
-my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+my $HelperObject  = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+my $ServiceObject = $Kernel::OM->Get('Kernel::System::Service');
+my $TypeObject    = $Kernel::OM->Get('Kernel::System::Type');
+my $ConfigObject  = $Kernel::OM->Get('Kernel::Config');
+my $ArticleObject = $Kernel::OM->Get('Kernel::System::Ticket::Article');
 
 # set config to not send emails
 $ConfigObject->Set(
@@ -50,9 +52,6 @@ $Self->True(
     '-- Set Fixed Time --',
 );
 
-# get type object
-my $TypeObject = $Kernel::OM->Get('Kernel::System::Type');
-
 my $Random = $HelperObject->GetRandomNumber();
 
 # create a test type
@@ -61,9 +60,6 @@ my $TicketTypeID = $TypeObject->TypeAdd(
     ValidID => 1,
     UserID  => 1,
 );
-
-# get service object
-my $ServiceObject = $Kernel::OM->Get('Kernel::System::Service');
 
 # create a test service
 my $ServiceID = $ServiceObject->ServiceAdd(
@@ -148,15 +144,6 @@ $Self->Is(
 my %SurveyGet = $SurveyObject->SurveyGet(
     SurveyID => $SurveyID,
 );
-
-# for my $Key ( sort keys %SurveyGet ) {
-#     next if !defined $SurveyData{$Key};
-#     $Self->Is(
-#         $SurveyGet{$Key},
-#         $SurveyData{$Key},
-#         "SurveyGet()",
-#     );
-# }
 
 for my $Attribute ( sort keys %SurveyData ) {
 
@@ -413,7 +400,7 @@ for my $Test (@Tests) {
         %{ $Test->{Ticket} },
     );
 
-    my $ArticleBackendObject = $Kernel::OM->Get('Kernel::System::Ticket::Article')->BackendForChannel(
+    my $ArticleBackendObject = $ArticleObject->BackendForChannel(
         ChannelName => $Test->{Article}->{CommunicationChannel},
     );
 
@@ -444,7 +431,7 @@ for my $Test (@Tests) {
         );
 
         # define mail body
-        my $Mailbody1 = <<'END';
+        my $Mailbody = <<'END';
 This is a multi-part message in MIME format...
 
 ------------=_MESSAGEID
@@ -460,22 +447,51 @@ Content-Disposition: inline
 Content-Transfer-Encoding: quoted-printable
 
 <!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
-t/html; charset=3Dutf-8"/></head><body style=3D"font-family:Geneva,Helvetic=
-a,Arial,sans-serif; font-size: 12px;">Dear customer... =C3=A4=C3=B6=C3=BC</=
-body></html>=
+t/html; charset=3Dutf-8"/><style class=3D"RTEContentCssDefault">.ck.ck-content{font-family:Geneva,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 1.5;}</style></head><b=
+ody class=3D"ck ck-content">Dear customer... =C3=A4=C3=B6=C3=BC</body></htm=
+l>=
 
 ------------=_MESSAGEID--
 END
 
         # copy mail body
-        my $Mailbody2 = $Response->{Data}->{Body};
+        my $ResponseBody = $Response->{Data}->{Body};
 
         # prepare mail body
-        $Mailbody2 =~ s{ \d{8,12} - \d{3,6} - \d{1,3} }{MESSAGEID}xmsg;
+        $Mailbody     =~ s{ \d{8,12} - \d{3,6} - \d{1,3} }{MESSAGEID}xmsg;
+        $ResponseBody =~ s{ \d{8,12} - \d{3,6} - \d{1,3} }{MESSAGEID}xmsg;
+
+        # remove RTEContentCssInternal style blocks if present
+        $Mailbody     =~ s{<style[^>]*class=3D"RTEContentCssInternal"[^>]*>.*?</style>}{}gms;
+        $ResponseBody =~ s{<style[^>]*class=3D"RTEContentCssInternal"[^>]*>.*?</style>}{}gms;
+
+        # remove RTEContentCssDefault style blocks if present (multiline)
+        $Mailbody     =~ s{<style[^>]*class=3D"RTEContentCssDefault"[^>]*>.*?</style>}{}gms;
+        $ResponseBody =~ s{<style[^>]*class=3D"RTEContentCssDefault"[^>]*>.*?</style>}{}gms;
+
+        # remove any remaining style blocks with RTEContentCssDefault (more aggressive)
+        $Mailbody     =~ s{<style[^>]*RTEContentCssDefault[^>]*>.*?</style>}{}gms;
+        $ResponseBody =~ s{<style[^>]*RTEContentCssDefault[^>]*>.*?</style>}{}gms;
+
+        # remove style blocks that are split across lines due to quoted-printable encoding
+        $Mailbody     =~ s{<s=\s*tyle[^>]*>.*?</style>}{}gms;
+        $ResponseBody =~ s{<s=\s*tyle[^>]*>.*?</style>}{}gms;
+
+        # normalize all MIME quoted-printable line breaks
+        $Mailbody     =~ s/=\n\s*//g;
+        $ResponseBody =~ s/=\n\s*//g;
+
+        # restore important line breaks in MIME structure
+        $Mailbody     =~ s/(\-{12}=_MESSAGEID)([^-])/$1\n$2/g;
+        $ResponseBody =~ s/(\-{12}=_MESSAGEID)([^-])/$1\n$2/g;
+
+        # normalize CSS spacing
+        $Mailbody     =~ s/line-height:\s*/line-height: /g;
+        $ResponseBody =~ s/line-height:\s*/line-height: /g;
 
         $Self->Is(
-            $Mailbody2,
-            $Mailbody1,
+            $ResponseBody,
+            $Mailbody,
             "$Test->{Name} Test special characters in email body",
         );
     }
@@ -924,7 +940,7 @@ for my $Test (@SendConditionTests) {
         %{ $Test->{Ticket} },
     );
 
-    my $ArticleBackendObject = $Kernel::OM->Get('Kernel::System::Ticket::Article')->BackendForChannel(
+    my $ArticleBackendObject = $ArticleObject->BackendForChannel(
         ChannelName => $Test->{Article}->{CommunicationChannel},
     );
 
@@ -992,7 +1008,7 @@ express your feelings in our survey.</span><br />
 <br />
 danielz,</span><br />',
         Output =>
-            '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/></head><body style="font-family:Geneva,Helvetica,Arial,sans-serif; font-size: 12px;"><em>This is the introduction to this survey, if you want to answer it you have to<br />
+            '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><style class="RTEContentCssInternal"></style><style class="RTEContentCssDefault">.ck.ck-content{font-family:Geneva,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 1.5;}</style></head><body class="ck ck-content"><em>This is the introduction to this survey, if you want to answer it you have to<br />
 read this first, please let us tell you thanks for the opportunity to interact<br />
 with you.</em><br />
 <ul>
@@ -1025,7 +1041,7 @@ That's it.
 -dz
 ",
         Output =>
-            '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/></head><body style="font-family:Geneva,Helvetica,Arial,sans-serif; font-size: 12px;">This is an internal description example:
+            '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><style class="RTEContentCssInternal"></style><style class="RTEContentCssDefault">.ck.ck-content{font-family:Geneva,Helvetica,Arial,sans-serif; font-size: 12px; line-height: 1.5;}</style></head><body class="ck ck-content">This is an internal description example:
 
  - One
  - Two

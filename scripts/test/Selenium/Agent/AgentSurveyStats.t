@@ -17,7 +17,9 @@ my $Selenium = $Kernel::OM->Get('Kernel::System::UnitTest::Selenium');
 
 $Selenium->RunTest(
     sub {
-        my $Helper = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+        my $Helper       = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+        my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+        my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
 
         # Do not really send emails.
         $Helper->ConfigSettingChange(
@@ -44,9 +46,8 @@ $Selenium->RunTest(
         );
 
         # Create test survey.
-        my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
-        my $SurveyTitle  = 'Survey ' . $Helper->GetRandomID();
-        my $SurveyID     = $SurveyObject->SurveyAdd(
+        my $SurveyTitle = 'Survey ' . $Helper->GetRandomID();
+        my $SurveyID    = $SurveyObject->SurveyAdd(
             UserID              => 1,
             Title               => $SurveyTitle,
             Introduction        => 'Survey Introduction',
@@ -90,7 +91,7 @@ $Selenium->RunTest(
             ChannelName => 'Internal',
         );
 
-        my $ScriptAlias = $Kernel::OM->Get('Kernel::Config')->Get('ScriptAlias');
+        my $ScriptAlias = $ConfigObject->Get('ScriptAlias');
 
         my @TicketNumbers;
         my @TicketIDs;

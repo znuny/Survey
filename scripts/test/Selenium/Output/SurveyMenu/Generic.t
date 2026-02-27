@@ -21,11 +21,13 @@ $Selenium->RunTest(
     sub {
 
         # get helper object
-        my $Helper = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+        my $Helper       = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+        my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+        my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
 
         # create test survey
         my $SurveyTitle = 'Survey ' . $Helper->GetRandomID();
-        my $SurveyID    = $Kernel::OM->Get('Kernel::System::Survey')->SurveyAdd(
+        my $SurveyID    = $SurveyObject->SurveyAdd(
             UserID              => 1,
             Title               => $SurveyTitle,
             Introduction        => 'Survey Introduction',
@@ -52,7 +54,7 @@ $Selenium->RunTest(
         );
 
         # get script alias
-        my $ScriptAlias = $Kernel::OM->Get('Kernel::Config')->Get('ScriptAlias');
+        my $ScriptAlias = $ConfigObject->Get('ScriptAlias');
 
         # navigate to AgentSurveyZoom of created test survey
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentSurveyZoom;SurveyID=$SurveyID");

@@ -19,7 +19,9 @@ my $Selenium = $Kernel::OM->Get('Kernel::System::UnitTest::Selenium');
 $Selenium->RunTest(
     sub {
 
-        my $Helper = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+        my $Helper       = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
+        my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+        my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
 
         # Do not check RichText.
         $Helper->ConfigSettingChange(
@@ -48,7 +50,7 @@ $Selenium->RunTest(
             Password => $TestUserLogin,
         );
 
-        my $ScriptAlias = $Kernel::OM->Get('Kernel::Config')->Get('ScriptAlias');
+        my $ScriptAlias = $ConfigObject->Get('ScriptAlias');
 
         # Navigate to AgentSurveyAdd.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentSurveyAdd");
@@ -114,7 +116,7 @@ $Selenium->RunTest(
             $SurveyID = $Row[0];
         }
 
-        my %Survey = $Kernel::OM->Get('Kernel::System::Survey')->SurveyGet(
+        my %Survey = $SurveyObject->SurveyGet(
             SurveyID => $SurveyID,
         );
 

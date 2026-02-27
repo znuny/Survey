@@ -22,9 +22,8 @@ $Kernel::OM->ObjectParamAdd(
     },
 );
 my $HelperObject = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
-
-# Create local config object.
 my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+my $QueueObject  = $Kernel::OM->Get('Kernel::System::Queue');
 
 # Set send period to always send survey.
 $HelperObject->ConfigSettingChange(
@@ -58,7 +57,7 @@ my $RandomID = $HelperObject->GetRandomID();
 
 # Creating Queue.
 my $QueueRand = "SomeQueue$RandomID ";
-my $QueueID   = $Kernel::OM->Get('Kernel::System::Queue')->QueueAdd(
+my $QueueID   = $QueueObject->QueueAdd(
     Name            => $QueueRand,
     ValidID         => 1,
     GroupID         => 1,

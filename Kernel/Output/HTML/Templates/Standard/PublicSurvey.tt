@@ -6,6 +6,7 @@
 # the enclosed file COPYING for license information (GPL). If you
 # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
+## nofilter(TidyAll::Plugin::Znuny::TT::ScriptUsage)
 
 [% RenderBlockStart("PublicSurvey") %]
 <div id="MainBox" class="ARIARoleMain LayoutFixedSidebar mainStructure SidebarLast">
@@ -30,7 +31,7 @@
             </div>
             <div class="Content">
                 <div class="MessageBody">
-                    [% Data.Introduction %]
+                    <iframe class="SurveyIntroductionIframe" width="100%" frameborder="0" title="[% Translate("Introduction") | html %]" srcdoc="[% Data.Introduction | html %]" seamless></iframe>
                 </div>
             </div>
         </div>
@@ -54,8 +55,7 @@
                     <p>[% Translate("All fields marked with an asterisk (*) are mandatory.") | html %]</p>
 [% RenderBlockStart("PublicQuestions") %]
 [% RenderBlockStart("PublicAnswerYesNo") %]
-                    <fieldset class="TableLike card-item-wrapper">
-                        <div class="card-item col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
+                        <div class="col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
                             <h2 class="card-title">[% Data.RequiredText | html %] [% Data.Question | html %]</h2>
                             [% Data.ErrorText %]
                             <div class="field-wrapper">
@@ -69,12 +69,10 @@
                                 </div>
                             </div>
                         </div>
-                    </fieldset>
 [% RenderBlockEnd("PublicAnswerYesNo") %]
 
 [% RenderBlockStart("PublicAnswerRadio") %]
-                    <fieldset class="TableLike card-item-wrapper">
-                        <div class="card-item col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
+                        <div class="col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
                             <h2 class="card-title">[% Data.RequiredText | html %][% Data.Question %]</h2>
                             [% Data.ErrorText %]
                             <div class="field-wrapper">
@@ -86,12 +84,10 @@
 [% RenderBlockEnd("PublicAnswerRadiob") %]
                             </div>
                         </div>
-                    </fieldset>
 [% RenderBlockEnd("PublicAnswerRadio") %]
 
 [% RenderBlockStart("PublicAnswerCheckbox") %]
-                    <fieldset class="TableLike card-item-wrapper">
-                        <div class="card-item col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
+                        <div class="col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
                             <h2 class="card-title">[% Data.RequiredText | html %][% Data.Question %]</h2>
                             [% Data.ErrorText %]
                             <div class="field-wrapper">
@@ -103,12 +99,10 @@
 [% RenderBlockEnd("PublicAnswerCheckboxb") %]
                             </div>
                         </div>
-                    </fieldset>
 [% RenderBlockEnd("PublicAnswerCheckbox") %]
 
 [% RenderBlockStart("PublicAnswerTextarea") %]
-                    <fieldset class="TableLike card-item-wrapper">
-                        <div class="card-item col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
+                        <div class="col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
                             <h2 class="card-title">[% Data.RequiredText | html %][% Data.Question %]</h2>
                             [% Data.ErrorText %]
                             <div class="field-wrapper">
@@ -117,12 +111,10 @@
                                 </div>
                             </div>
                         </div>
-                    </fieldset>
 [% RenderBlockEnd("PublicAnswerTextarea") %]
 
 [% RenderBlockStart("PublicAnswerNPS") %]
-                    <fieldset class="TableLike card-item-wrapper">
-                        <div class="card-item col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
+                        <div class="col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
                             <h2 class="card-title">[% Data.RequiredText | html %][% Data.Question %]</h2>
                             [% Data.ErrorText %]
                             <div class="field-wrapper">
@@ -134,7 +126,6 @@
 [% RenderBlockEnd("PublicAnswerNPSb") %]
                             </div>
                         </div>
-                    </fieldset>
 [% RenderBlockEnd("PublicAnswerNPS") %]
 
 [% RenderBlockEnd("PublicQuestions") %]
@@ -210,7 +201,7 @@
             </div>
             <div class="Content">
                 <div class="MessageBody">
-                    [% Data.Introduction %]
+                    <iframe class="SurveyIntroductionIframe" width="100%" frameborder="0" title="[% Translate("Introduction") | html %]" srcdoc="[% Data.Introduction | html %]" seamless></iframe>
                 </div>
             </div>
         </div>
@@ -228,8 +219,7 @@
                 <p>[% Translate("All fields marked with an asterisk (*) are mandatory.") | html %]</p>
 
 [% RenderBlockStart("PublicSurveyVoteQuestion") %]
-                <fieldset class="TableLike card-item-wrapper">
-                    <div class="card-item col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
+                    <div class="col-wide-100 col-desktop-100 col-tablet-100 Question [% Data.Class | html %]">
                         <h2 class="card-title">[% Data.RequiredText | html %][% Data.Question | html %]</h2>
                         <div class="field-wrapper">
                             <div class="Field">
@@ -238,7 +228,6 @@
 [% RenderBlockEnd("PublicSurveyVoteAnswer") %]
                             </div>
                         </div>
-                </fieldset>
 [% RenderBlockEnd("PublicSurveyVoteQuestion") %]
             </div>
         </div>
@@ -246,3 +235,30 @@
     </div>
 </div>
 [% RenderBlockEnd("PublicSurveyVoteData") %]
+
+<script type="text/javascript">//<![CDATA[
+(function () {
+    function resizeIntroductionIframe(iframe) {
+        try {
+            var doc = iframe.contentDocument;
+            if (doc && doc.body) {
+                var height = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight) + 20;
+                iframe.style.height = height + 'px';
+            }
+        } catch (e) {}
+    }
+    function initSurveyIntroductionIframes() {
+        var iframes = document.querySelectorAll('.SurveyIntroductionIframe');
+        for (var i = 0; i < iframes.length; i++) {
+            var iframe = iframes[i];
+            iframe.onload = function () { resizeIntroductionIframe(this); };
+            resizeIntroductionIframe(iframe);
+        }
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSurveyIntroductionIframes);
+    } else {
+        initSurveyIntroductionIframes();
+    }
+})();
+//]]></script>
