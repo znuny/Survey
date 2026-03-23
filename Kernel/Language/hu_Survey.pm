@@ -112,7 +112,7 @@ sub Data {
     $Self->{Translation}->{'Survey Edit Questions'} = 'Kérdőív kérdések szerkesztése';
     $Self->{Translation}->{'Radio (List)'} = 'Választógomb (lista)';
     $Self->{Translation}->{'Checkbox (List)'} = 'Jelölőnégyzet (lista)';
-    $Self->{Translation}->{'Net Promoter Score'} = 'Valós ügyféltámogatottsági érték';
+    $Self->{Translation}->{'Net Promoter Score'} = 'Valós ügyfél-támogatottsági érték';
     $Self->{Translation}->{'Question Type'} = 'Kérdés típusa';
     $Self->{Translation}->{'Complete'} = 'Kész';
     $Self->{Translation}->{'Incomplete'} = 'Befejezetlen';
