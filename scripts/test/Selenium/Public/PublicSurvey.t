@@ -56,9 +56,9 @@ $Selenium->RunTest(
         );
 
         # Create test survey.
-        my $SurveryIntroduction    = 'Survey Introduction',
+        my $SurveryIntroduction = 'Survey Introduction',
             my $SurveryDescription = 'Survey Description',
-            my $SurveyTitle        = 'Survey ' . $Helper->GetRandomID();
+            my $SurveyTitle = 'Survey ' . $Helper->GetRandomID();
         my $SurveyID = $SurveyObject->SurveyAdd(
             UserID              => 1,
             Title               => $SurveyTitle,

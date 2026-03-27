@@ -75,7 +75,7 @@ sub QuestionAdd {
             VALUES (?, ?, ?, 255, ?, current_timestamp, ?, current_timestamp, ?)',
         Bind => [
             \$Param{SurveyID}, \$Param{Question}, \$Param{Type}, \$Param{AnswerRequired},
-            \$Param{UserID}, \$Param{UserID},
+            \$Param{UserID},   \$Param{UserID},
         ],
     );
 }

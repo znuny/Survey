@@ -197,7 +197,7 @@ $Selenium->RunTest(
             "NotificationSender"  => "$NotificationSender edited",
             "NotificationSubject" => "$NotificationSubject edited",
             "Queues"              => [2],
-            "SendConditionsRaw" =>
+            "SendConditionsRaw"   =>
                 "---\nCustomerUserConditions:\n  UserLogin:\n  - Negation: 0\n    RegExpValue: John edited\n",
             "Status"   => "New",
             "SurveyID" => $SurveyID,

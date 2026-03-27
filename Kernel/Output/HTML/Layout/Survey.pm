@@ -298,7 +298,7 @@ sub SurveyListShow {
     $Self->AddJSData(
         Key   => 'JSData',
         Value => \%JSData,
-        ,
+
     );
 
     # build HTML content

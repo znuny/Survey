@@ -53,7 +53,7 @@ sub Run {
     # get groups
     my $Action   = $Param{Config}->{Action};
     my $GroupsRo = $ConfigObject->Get('Frontend::Module')->{$Action}->{GroupRo} || [];
-    my $GroupsRw = $ConfigObject->Get('Frontend::Module')->{$Action}->{Group} || [];
+    my $GroupsRw = $ConfigObject->Get('Frontend::Module')->{$Action}->{Group}   || [];
 
     # get layout object
     my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
