@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Survey\n"
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
-"PO-Revision-Date: 2022-03-18 15:53+0000\n"
-"Last-Translator: Denny Korsukéwitz <dk@znuny.com>\n"
+"PO-Revision-Date: 2026-04-01 21:51+0000\n"
+"Last-Translator: Weblate Admin <operations@znuny.com>\n"
 "Language-Team: German <https://translations.znuny.org/projects/znuny/survey/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
 msgid "Create New Survey"
@@ -418,7 +418,7 @@ msgstr "Modul nicht akiviert."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "This functionality is not enabled, please contact your administrator."
-msgstr ""
+msgstr "Diese Funktion ist nicht aktiviert, bitte kontaktieren Sie den Administrator."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "Survey Error!"
@@ -426,7 +426,7 @@ msgstr "Umfragefehler!"
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "Invalid survey key."
-msgstr ""
+msgstr "Ungültiger Umfrageschlüssel."
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "The inserted survey key is invalid, if you followed a link maybe this is obsolete or broken."

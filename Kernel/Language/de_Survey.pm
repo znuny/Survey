@@ -145,9 +145,9 @@ sub Data {
     $Self->{Translation}->{'Survey Message!'} = 'Umfragenachricht!';
     $Self->{Translation}->{'Module not enabled.'} = 'Modul nicht akiviert.';
     $Self->{Translation}->{'This functionality is not enabled, please contact your administrator.'} =
-        '';
+        'Diese Funktion ist nicht aktiviert, bitte kontaktieren Sie den Administrator.';
     $Self->{Translation}->{'Survey Error!'} = 'Umfragefehler!';
-    $Self->{Translation}->{'Invalid survey key.'} = '';
+    $Self->{Translation}->{'Invalid survey key.'} = 'Ungültiger Umfrageschlüssel.';
     $Self->{Translation}->{'The inserted survey key is invalid, if you followed a link maybe this is obsolete or broken.'} =
         'Der eingegebene Umfrageschlüssel ist ungültig. Wenn Sie einem Link gefolgt sind, ist dieser möglicherweise veraltet oder beschädigt.';
     $Self->{Translation}->{'Survey Vote'} = 'Umfragestimme';
