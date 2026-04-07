@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <otrs_package version="1.0">
     <Name>Survey</Name>
-    <Version>6.1.1</Version>
+    <Version>6.1.2</Version>
+    <ChangeLog Version="6.1.2" Date="2026-04-07 09:42:36 +0200">Applied codepolicy.</ChangeLog>
     <ChangeLog Version="6.1.1" Date="2021-09-14 13:38:46 +0200">Ported to 6.1</ChangeLog>
     <Framework>6.1.x</Framework>
     <Vendor>Znuny</Vendor>
