@@ -26,8 +26,8 @@ sub Data {
     $Self->{Translation}->{'Please choose a Customer property to add a condition.'} = 'Válasszon egy ügyféltulajdonságot egy feltételhez való hozzáadáshoz.';
     $Self->{Translation}->{'Public survey key'} = 'Nyilvános kérdőívkulcs';
     $Self->{Translation}->{'Example survey'} = 'Példa kérdőív';
-    $Self->{Translation}->{'The current ticket state is'} = '';
-    $Self->{Translation}->{'Your email address is'} = '';
+    $Self->{Translation}->{'The current ticket state is'} = 'A jegy jelenlegi állapota';
+    $Self->{Translation}->{'Your email address is'} = 'Az e-mail-címe';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyEdit.tt
     $Self->{Translation}->{'Edit General Info'} = 'Általános információk szerkesztése';
@@ -44,7 +44,7 @@ sub Data {
     $Self->{Translation}->{'Answer Required'} = 'Válasz kötelező';
     $Self->{Translation}->{'When you finish to edit the survey questions just close this screen.'} =
         'Amikor befejezte a kérdőív kérdéseinek szerkesztését, akkor egyszerűen zárja be ezt a képernyőt.';
-    $Self->{Translation}->{'Close this window'} = 'Ablak bezárása';
+    $Self->{Translation}->{'Close this window'} = 'Az ablak bezárása';
     $Self->{Translation}->{'Edit Question'} = 'Kérdés szerkesztése';
     $Self->{Translation}->{'go back to questions'} = 'vissza a kérdésekhez';
     $Self->{Translation}->{'Question:'} = 'Kérdés:';
