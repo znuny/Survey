@@ -660,3 +660,7 @@ msgstr "Zoom em detalhes de estatísticas."
 msgid "Loader module registration for the public interface."
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
+msgid "All fields marked with an asterisk (*) are mandatory."
+msgstr ""
+

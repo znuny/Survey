@@ -80,6 +80,7 @@ sub Data {
     $Self->{Translation}->{'Delete stats'} = 'Elimina le statistiche';
     $Self->{Translation}->{'Previous vote'} = 'Voto precedente';
     $Self->{Translation}->{'Next vote'} = 'Voto successivo';
+    $Self->{Translation}->{'All fields marked with an asterisk (*) are mandatory.'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Details'} = 'Dettagli sul sondaggio';

@@ -17,7 +17,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyAdd.tt
     $Self->{Translation}->{'Survey'} = '';
-    $Self->{Translation}->{'Create New Survey'} = '';
+    $Self->{Translation}->{'Create New Survey'} = 'Creează chestionar nou';
     $Self->{Translation}->{'Introduction'} = 'Introducere';
     $Self->{Translation}->{'Survey Introduction'} = '';
     $Self->{Translation}->{'Notification Body'} = '';
@@ -80,6 +80,7 @@ sub Data {
     $Self->{Translation}->{'Delete stats'} = '';
     $Self->{Translation}->{'Previous vote'} = '';
     $Self->{Translation}->{'Next vote'} = '';
+    $Self->{Translation}->{'All fields marked with an asterisk (*) are mandatory.'} = '';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Details'} = '';
