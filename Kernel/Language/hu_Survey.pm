@@ -80,7 +80,7 @@ sub Data {
     $Self->{Translation}->{'Delete stats'} = 'Statisztikák törlése';
     $Self->{Translation}->{'Previous vote'} = 'Előző szavazat';
     $Self->{Translation}->{'Next vote'} = 'Következő szavazat';
-    $Self->{Translation}->{'All fields marked with an asterisk (*) are mandatory.'} = '';
+    $Self->{Translation}->{'All fields marked with an asterisk (*) are mandatory.'} = 'A csillaggal (*) megjelölt összes mező kötelező.';
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyZoom.tt
     $Self->{Translation}->{'Survey Details'} = 'Kérdőív részletek';
