@@ -656,10 +656,6 @@ msgstr "Wyzwalacz opóźnionej wysyłki próśb o wypełnienie ankiety."
 msgid "Zoom into statistics details."
 msgstr "Podgląd szczegółów statystyk."
 
-#. SysConfig
-msgid "Loader module registration for the public interface."
-msgstr "Rejestracja modułu łądującego dla interfejsu publicznego."
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "All fields marked with an asterisk (*) are mandatory."
 msgstr ""

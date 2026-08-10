@@ -656,10 +656,6 @@ msgstr "Activeer het verzenden van vertraagde enquêteaanvragen."
 msgid "Zoom into statistics details."
 msgstr "Zoom in op statistische details."
 
-#. SysConfig
-msgid "Loader module registration for the public interface."
-msgstr ""
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "All fields marked with an asterisk (*) are mandatory."
 msgstr ""

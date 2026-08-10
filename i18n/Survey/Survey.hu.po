@@ -656,10 +656,6 @@ msgstr "Késleltetett kérdőívkérések küldésének aktiválása."
 msgid "Zoom into statistics details."
 msgstr "Nagyítás a statisztikák részleteibe."
 
-#. SysConfig
-msgid "Loader module registration for the public interface."
-msgstr "Betöltőmodul regisztráció a nyilvános felülethez."
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "All fields marked with an asterisk (*) are mandatory."
 msgstr "A csillaggal (*) megjelölt összes mező kötelező."
