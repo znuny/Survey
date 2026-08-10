@@ -438,11 +438,7 @@ msgstr "Umfragestimme"
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "Survey Vote Data"
-<<<<<<< HEAD
-msgstr "Umfrage-Abstimmungsdaten"
-=======
 msgstr "Umfrageergebnisse"
->>>>>>> weblate/dev
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "You have already answered the survey."
@@ -660,13 +656,6 @@ msgstr "Auslöser zum Senden von verzögerten Anfragen."
 msgid "Zoom into statistics details."
 msgstr "Statistik-Details erhöhen."
 
-<<<<<<< HEAD
-=======
-#. SysConfig
-msgid "Loader module registration for the public interface."
-msgstr "Lade-Modulregistrierung für das öffentliche Interface."
-
->>>>>>> weblate/dev
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "All fields marked with an asterisk (*) are mandatory."
 msgstr "Alle mit einem Sternchen (*) gekennzeichneten Felder sind Pflichtfelder."
