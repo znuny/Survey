@@ -162,6 +162,17 @@ $Selenium->RunTest(
             SurveyID => $SurveyID,
         );
 
+        $Self->Is(
+            $Survey{SurveyID},
+            $SurveyID,
+            'SurveyID matches created survey',
+        );
+
+        # Resolve create-user data dynamically (root lastname is Znuny).
+        my %CreateUserInfo = $Kernel::OM->Get('Kernel::System::User')->GetUserData(
+            UserID => 1,
+        );
+
         # Delete keys that we don't want to compare.
         # Note that CustomerUserConditionsJSON has sometimes different order and therefore
         # it's not evaluated.
@@ -179,14 +190,14 @@ $Selenium->RunTest(
             "ChangeUserFullname"     => "$TestUserLogin $TestUserLogin",
             "ChangeUserLastname"     => $TestUserLogin,
             "ChangeUserLogin"        => $TestUserLogin,
-            "CreateUserFirstname"    => 'Admin',
-            "CreateUserFullname"     => 'Admin OTRS',
-            "CreateUserLastname"     => 'OTRS',
-            "CreateUserLogin"        => 'root@localhost',
+            "CreateUserFirstname"    => $CreateUserInfo{UserFirstname},
+            "CreateUserFullname"     => $CreateUserInfo{UserFullname},
+            "CreateUserLastname"     => $CreateUserInfo{UserLastname},
+            "CreateUserLogin"        => $CreateUserInfo{UserLogin},
             "CustomerUserConditions" => {
                 "UserLogin" => [
                     {
-                        "Negation"    => 0,
+                        "Negation"    => '0',
                         "RegExpValue" => "John edited",
                     },
                 ],
@@ -200,7 +211,7 @@ $Selenium->RunTest(
             "SendConditionsRaw"   =>
                 "---\nCustomerUserConditions:\n  UserLogin:\n  - Negation: 0\n    RegExpValue: John edited\n",
             "Status"   => "New",
-            "SurveyID" => $SurveyID,
+            "SurveyID" => $Survey{SurveyID},
             "Title"    => "$SurveyTitle edited",
         );
 
