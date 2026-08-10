@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Survey\n"
 "POT-Creation-Date: 2020-01-24 14:38+0000\n"
-"PO-Revision-Date: 2026-08-05 13:40+0000\n"
+"PO-Revision-Date: 2026-08-10 07:33+0000\n"
 "Last-Translator: Matthias Freitag <mfreitag@hri-itc.com>\n"
 "Language-Team: German <https://translations.znuny.org/projects/znuny/survey/de/>\n"
 "Language: de\n"
@@ -438,7 +438,7 @@ msgstr "Umfragestimme"
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "Survey Vote Data"
-msgstr ""
+msgstr "Umfrageergebnisse"
 
 #. Perl Module: Kernel/Modules/PublicSurvey.pm
 msgid "You have already answered the survey."
@@ -658,7 +658,7 @@ msgstr "Statistik-Details erhöhen."
 
 #. SysConfig
 msgid "Loader module registration for the public interface."
-msgstr ""
+msgstr "Lade-Modulregistrierung für das öffentliche Interface."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentSurveyStats.tt
 msgid "All fields marked with an asterisk (*) are mandatory."
