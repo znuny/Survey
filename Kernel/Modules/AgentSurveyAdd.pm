@@ -11,6 +11,7 @@ package Kernel::Modules::AgentSurveyAdd;
 
 use strict;
 use warnings;
+use utf8;
 
 use Kernel::Language qw(Translatable);
 
@@ -46,7 +47,8 @@ sub Run {
     elsif ( $Self->{Subaction} eq 'SurveyNew' ) {
 
         # get param object
-        my $ParamObject = $Kernel::OM->Get('Kernel::System::Web::Request');
+        my $ParamObject  = $Kernel::OM->Get('Kernel::System::Web::Request');
+        my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
 
         # get params
         my $SurveyID = $ParamObject->GetParam( Param => "SurveyID" );
@@ -135,12 +137,13 @@ sub Run {
 
         # save if no errors
         if ( !%ServerError ) {
-            my $SurveyID = $Kernel::OM->Get('Kernel::System::Survey')->SurveyAdd(
+            my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
+            my $SurveyID     = $SurveyObject->SurveyAdd(
                 %FormElements,
                 UserID => $Self->{UserID},
             );
 
-            return $Kernel::OM->Get('Kernel::Output::HTML::Layout')->Redirect(
+            return $LayoutObject->Redirect(
                 OP => "Action=AgentSurveyZoom;SurveyID=$SurveyID",
             );
         }

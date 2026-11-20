@@ -16,7 +16,7 @@ This add-on enables you to create surveys, add questions to a created survey, se
 
 **Prerequisites**
 
-- Znuny 7.3
+- Znuny 7.5
 
 **Installation**
 

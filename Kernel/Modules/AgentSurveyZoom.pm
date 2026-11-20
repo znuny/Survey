@@ -13,6 +13,7 @@ package Kernel::Modules::AgentSurveyZoom;
 
 use strict;
 use warnings;
+use utf8;
 
 use Kernel::System::VariableCheck qw(:all);
 use Kernel::Language              qw(Translatable);
@@ -41,6 +42,7 @@ sub Run {
     my $SurveyObject = $Kernel::OM->Get('Kernel::System::Survey');
     my $ParamObject  = $Kernel::OM->Get('Kernel::System::Web::Request');
     my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
+    my $LogObject    = $Kernel::OM->Get('Kernel::System::Log');
 
     my $SurveyID = $ParamObject->GetParam( Param => "SurveyID" ) || '';
 
@@ -63,7 +65,7 @@ sub Run {
         # needed params
         for my $Needed (qw( SurveyID SurveyField )) {
             if ( !$Needed ) {
-                $Kernel::OM->Get('Kernel::System::Log')->Log(
+                $LogObject->Log(
                     Message  => "Needed Param: $Needed!",
                     Priority => 'error',
                 );
@@ -73,7 +75,7 @@ sub Run {
         }
 
         if ( $SurveyField ne 'Introduction' && $SurveyField ne 'Description' ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Message  => "Invalid SurveyField Param: $SurveyField!",
                 Priority => 'error',
             );
@@ -83,7 +85,7 @@ sub Run {
 
         # check if survey exists
         if ( $SurveyExists ne 'Yes' ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Message  => "Invalid SurveyID: $SurveyID!",
                 Priority => 'error',
             );

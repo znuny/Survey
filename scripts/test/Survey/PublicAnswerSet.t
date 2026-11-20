@@ -33,8 +33,9 @@ $Helper->ConfigSettingChange(
     Value => 0,
 );
 
-my $QueueRand = 'SomeQueue' . $Helper->GetRandomID();
-my $QueueID   = $Kernel::OM->Get('Kernel::System::Queue')->QueueAdd(
+my $QueueRand   = 'SomeQueue' . $Helper->GetRandomID();
+my $QueueObject = $Kernel::OM->Get('Kernel::System::Queue');
+my $QueueID     = $QueueObject->QueueAdd(
     Name            => $QueueRand,
     ValidID         => 1,
     GroupID         => 1,

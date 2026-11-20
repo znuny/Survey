@@ -11,6 +11,7 @@ package Kernel::System::Stats::Dynamic::SurveyList;
 
 use strict;
 use warnings;
+use utf8;
 
 use List::Util qw( first );
 

@@ -11,6 +11,7 @@ package var::packagesetup::Survey;
 
 use strict;
 use warnings;
+use utf8;
 
 use Kernel::Output::Template::Provider;
 
@@ -275,7 +276,9 @@ sub _MigrateDTLInSysConfig {
     # create needed objects
     my $ConfigObject    = $Kernel::OM->Get('Kernel::Config');
     my $SysConfigObject = $Kernel::OM->Get('Kernel::System::SysConfig');
-    my $ProviderObject  = Kernel::Output::Template::Provider->new();
+    my $LogObject       = $Kernel::OM->Get('Kernel::System::Log');
+
+    my $ProviderObject = Kernel::Output::Template::Provider->new();
 
     # get setting's content
     my $Setting = $ConfigObject->Get('Survey::Frontend::MenuModule');
@@ -294,7 +297,7 @@ sub _MigrateDTLInSysConfig {
             $TTContent = $ProviderObject->MigrateDTLtoTT( Content => $SettingContent );
         };
         if ($@) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "$MenuModule->Link : $@!",
             );

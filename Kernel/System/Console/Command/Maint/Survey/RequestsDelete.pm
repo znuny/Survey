@@ -11,6 +11,7 @@ package Kernel::System::Console::Command::Maint::Survey::RequestsDelete;
 
 use strict;
 use warnings;
+use utf8;
 
 use parent qw(Kernel::System::Console::BaseCommand);
 

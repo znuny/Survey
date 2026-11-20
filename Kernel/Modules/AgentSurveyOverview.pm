@@ -11,6 +11,7 @@ package Kernel::Modules::AgentSurveyOverview;
 
 use strict;
 use warnings;
+use utf8;
 
 use Kernel::Language qw(Translatable);
 

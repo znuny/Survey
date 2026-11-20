@@ -103,6 +103,8 @@ to add a new survey
 sub SurveyAdd {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     for my $Argument (
         qw(
@@ -112,7 +114,7 @@ sub SurveyAdd {
         )
     {
         if ( !$Param{$Argument} ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "Need $Argument!",
             );
@@ -233,9 +235,11 @@ Returns:
 sub SurveyGet {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     if ( !$Param{SurveyID} ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => 'Need SurveyID!',
         );
@@ -298,7 +302,7 @@ sub SurveyGet {
     }
 
     if ( !%Data ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => "No such SurveyID $Param{SurveyID}!",
         );
@@ -383,6 +387,8 @@ to update an existing survey
 sub SurveyUpdate {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     for my $Argument (
         qw(
@@ -392,7 +398,7 @@ sub SurveyUpdate {
         )
     {
         if ( !$Param{$Argument} ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "Need $Argument!",
             );
@@ -403,7 +409,7 @@ sub SurveyUpdate {
 
     # check queues
     if ( $Param{Queues} && ref $Param{Queues} ne 'ARRAY' ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => 'Queues must be an array reference.',
         );
@@ -526,9 +532,11 @@ search in surveys
 sub SurveySearch {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     if ( !$Param{UserID} ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => "Need UserID!",
         );
@@ -547,7 +555,7 @@ sub SurveySearch {
         }
 
         if ( ref $Param{$Argument} ne 'ARRAY' ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "$Argument must be an array reference!",
             );
@@ -582,7 +590,7 @@ sub SurveySearch {
         if ( !$OrderBy || !$OrderByTable{$OrderBy} || $OrderBySeen{$OrderBy} ) {
 
             # found an error
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "OrderBy contains invalid value '$OrderBy' "
                     . 'or the value is used more than once!',
@@ -605,7 +613,7 @@ sub SurveySearch {
         next DIRECTION if $Direction eq 'Down';
 
         # found an error
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => "OrderByDirection can only contain 'Up' or 'Down'!",
         );
@@ -833,7 +841,7 @@ sub SurveySearch {
 
         # check format
         if ( $Param{$TimeParam} !~ /\d\d\d\d-(\d\d|\d)-(\d\d|\d) (\d\d|\d):(\d\d|\d):(\d\d|\d)/ ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "The parameter $TimeParam has an invalid date format!",
             );
@@ -898,10 +906,12 @@ to set a new survey status (Valid, Invalid, Master)
 sub SurveyStatusSet {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     for my $Argument (qw(SurveyID NewStatus)) {
         if ( !$Param{$Argument} ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "Need $Argument!",
             );
@@ -1100,9 +1110,11 @@ my $QueuesRef = $SurveyObject->SurveyQueueGet(
 sub SurveyQueueGet {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     if ( !$Param{SurveyID} ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => 'Need SurveyID!',
         );
@@ -1146,10 +1158,12 @@ my $Result = $SurveyObject->SurveyQueueSet(
 sub SurveyQueueSet {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     for my $Argument (qw(SurveyID QueueIDs)) {
         if ( !$Param{$Argument} ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "Need $Argument!"
             );
@@ -1198,9 +1212,11 @@ my $PublicSurveyKeysRef = $SurveyObject->PublicSurveyKeyGet(
 sub PublicSurveyKeyGet {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     if ( !$Param{SurveyID} ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => 'Need SurveyID!',
         );
@@ -1246,9 +1262,11 @@ to get all public attributes of a survey
 sub PublicSurveyGet {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     if ( !defined $Param{PublicSurveyKey} ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => 'Need SurveyID!',
         );
@@ -1325,9 +1343,11 @@ to set a request invalid
 sub PublicSurveyInvalidSet {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     if ( !$Param{PublicSurveyKey} ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => 'Need SurveyID!'
         );
@@ -1381,10 +1401,12 @@ exists an survey-, question-, answer- or request-element
 sub ElementExists {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     for my $Argument (qw(ElementID Element)) {
         if ( !defined $Param{$Argument} ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "Need $Argument!",
             );
@@ -1402,7 +1424,7 @@ sub ElementExists {
 
     my $Table = $LookupTable{ $Param{Element} };
     if ( !$Table ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => "Element: '$Param{Element}' is not valid!",
         );
@@ -1450,10 +1472,12 @@ get some text ready to show as rich-text attachment in-line
 sub GetRichTextDocumentComplete {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # check needed stuff
     for my $Argument (qw(Text)) {
         if ( !defined $Param{$Argument} ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Priority => 'error',
                 Message  => "Need $Argument parameter!",
             );
@@ -1501,6 +1525,8 @@ build send condition string with the single items
 sub _BuildSendConditionStrg {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     # build send condition hash
     my %SendConditions;
 
@@ -1544,8 +1570,10 @@ Returns one field config information.
 sub _SendConditionCheckCustomerField {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     if ( !$Param{FieldName} ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => "Need FieldName!"
         );
@@ -1591,8 +1619,10 @@ In OTRS 6, there is a function in the CustomerUser.pm that should be used instea
 sub _SendConditionGetFieldSelections {
     my ( $Self, %Param ) = @_;
 
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
+
     if ( !$Param{FieldName} ) {
-        $Kernel::OM->Get('Kernel::System::Log')->Log(
+        $LogObject->Log(
             Priority => 'error',
             Message  => "Need FieldName!"
         );

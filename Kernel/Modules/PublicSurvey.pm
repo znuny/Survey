@@ -11,6 +11,7 @@ package Kernel::Modules::PublicSurvey;
 
 use strict;
 use warnings;
+use utf8;
 
 use Kernel::Language qw(Translatable);
 
@@ -43,6 +44,7 @@ sub Run {
     my $ParamObject  = $Kernel::OM->Get('Kernel::System::Web::Request');
     my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
     my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+    my $LogObject    = $Kernel::OM->Get('Kernel::System::Log');
 
     # ------------------------------------------------------------ #
     # public survey vote
@@ -285,7 +287,7 @@ sub Run {
             Element   => 'Request'
         );
         if ( $SurveyExists ne 'Yes' || $RequestExists ne 'Yes' ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
+            $LogObject->Log(
                 Message  => "Wrong public survey key: $PublicSurveyKey!",
                 Priority => 'info',
             );
